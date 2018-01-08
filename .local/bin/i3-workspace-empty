@@ -1,0 +1,8 @@
+#!/bin/bash
+output=$(i3-msg -t get_tree | json_reformat | grep '"focused": true')
+if ! [ -n "$output" ]; then
+    exit 0
+else
+    exit 1
+fi
+

@@ -1,0 +1,255 @@
+# header {{{
+# i3 config file (v4)
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# vim:fdm=marker
+# }}}
+
+set_from_resource	  $color15_i3wmthemer	    color15
+set_from_resource	  $color14_i3wmthemer	    color14
+set_from_resource	  $color13_i3wmthemer	    color13
+set_from_resource	  $color12_i3wmthemer	    color12
+set_from_resource	  $color11_i3wmthemer	    color11
+set_from_resource	  $color10_i3wmthemer	    color10
+set_from_resource	  $color09_i3wmthemer		  color9
+set_from_resource	  $color08_i3wmthemer		  color8
+set_from_resource	  $color07_i3wmthemer		  color7
+set_from_resource 	$color06_i3wmthemer		  color6
+set_from_resource 	$color05_i3wmthemer 	    color5
+set_from_resource 	$color04_i3wmthemer 	    color4
+set_from_resource 	$color03_i3wmthemer 	    color3
+set_from_resource 	$color02_i3wmthemer 	    color2
+set_from_resource 	$color01_i3wmthemer 	    color1
+set_from_resource	  $color00_i3wmthemer		  color0
+set_from_resource	  $foreground_i3wmthemer	foreground
+set_from_resource	  $background_i3wmthemer	background
+
+
+# fonts {{{
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+#font pango:monospace 8
+
+# This font is widely installed, provides lots of unicode glyphs, right-to-left
+# text rendering and scalability on retina/hidpi displays (thanks to pango).
+font pango:DejaVu Sans Mono 8
+
+# Before i3 v4.8, we used to recommend this one as the default:
+# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# The font above is very space-efficient, that is, it looks good, sharp and
+# clear in small sizes. However, its unicode glyph coverage is limited, the old
+# X core fonts rendering does not support right-to-left and this being a bitmap
+# font, it doesn’t scale on retina/hidpi displays.
+# }}}
+# workspaces and applications {{{
+
+# workspace definition {{{
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+set $ws_idea "idea"
+set $ws_git "git"
+set $ws_mail "mail"
+set $ws_browse "browse"
+set $ws_comm "comm"
+set $ws_media "media"
+
+
+# }}}
+
+# app rules {{{
+for_window [class="Slack"] move workspace $ws_comm
+for_window [class="Mumble"] move workspace $ws_comm
+for_window [class="Thunderbird"] move workspace $ws_mail; border pixel 0
+for_window [class="jetbrains-idea"] move workspace $ws_idea
+for_window [class="GitKraken"] move workspace $ws_git
+for_window [class="Firefox"] move workspace $ws_browse
+for_window [class="Nightly"] move workspace $ws_browse
+for_window [class="Spotify"] move workspace $ws_media
+# }}}
+
+# autostart {{{
+exec session autostart
+# }}}
+
+
+# keybindings {{{
+
+# general {{{
+# call 'xmodmap' to display modifier names
+set $mod mod4
+set $alt mod1
+set $control control
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+bindsym $mod+Shift+q exit
+bindsym $mod+Shift+r "reload; exec i3-refresh"
+
+bindsym $mod+d exec --no-startup-id "rofi -modi 'window,drun,run,ssh' -show drun"
+bindsym Control+$alt+l exec lock
+# }}}
+
+# {{{ workspaces
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+bindsym $mod+i workspace $ws_idea
+bindsym $mod+g workspace $ws_git
+bindsym $mod+m workspace $ws_mail
+bindsym $mod+numbersign workspace $ws_comm
+bindsym $mod+plus workspace $ws_browse
+bindsym $mod+minus workspace $ws_media
+
+# move workspace to other monitor
+bindsym $mod+period move workspace to output down; move workspace to output left
+# }}}
+
+# focus {{{
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+t focus child
+# }}}
+
+# layout control {{{
+# split in horizontal orientation
+bindsym $mod+b split h
+# split in vertical orientation
+bindsym $mod+v split v
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+# }}}
+
+# container manipulation {{{
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+bindsym $mod+c kill
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+i move container to workspace $ws_idea
+bindsym $mod+Shift+g move container to workspace $ws_git
+bindsym $mod+Shift+m move container to workspace $ws_mail
+bindsym $mod+Shift+numbersign move container to workspace $ws_comm
+bindsym $mod+Shift+plus move container to workspace $ws_browse
+bindsym $mod+Shift+minus move container to workspace $ws_media
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+# }}}
+
+# resize mode {{{
+# resize window (you can also use the mouse for that)
+mode "resize" {
+# These bindings trigger as soon as you enter the resize mode
+    bindsym l resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym j resize shrink height 10 px or 10 ppt
+        bindsym h resize grow width 10 px or 10 ppt
+
+# back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+# }}}
+# }}}
+
+# launchers {{{
+bindsym $mod+Return exec i3-sensible-terminal # start a terminal
+# }}}
+
+# multimedia control {{{
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/polybar/pavolume.sh --up
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/polybar/pavolume.sh --down
+bindsym XF86AudioMute exec --no-startup-id ~/.config/polybar/pavolume.sh --togmute
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioStop exec --no-startup-id playerctl stop
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+
+bindsym XF86Tools exec --no-startup-id spotify
+
+bindsym XF86HomePage exec --no-startup-id firefox-nightly
+bindsym XF86Explorer exec --no-startup-id dolphin
+
+# brightness control
+bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
+
+# }}}
+# }}}
+# style {{{
+# disable titlebars -- a bit of a hack
+new_window pixel 2
+
+#client.focused #g1a2be #81a2be #1d1f21 #282a2e
+client.focused         	$foreground_i3wmthemer	$background_i3wmthemer	$foreground_i3wmthemer	#de9028		#000000
+client.focused_inactive	$foreground_i3wmthemer	$background_i3wmthemer	$foreground_i3wmthemer	#de9028		   #000000
+client.unfocused       	$foreground_i3wmthemer	$background_i3wmthemer	$foreground_i3wmthemer	#de9028	    #000000
+client.urgent		        $foreground_i3wmthemer	$background_i3wmthemer	$foreground_i3wmthemer	#de9028		    #000000
+# }}}
+bindsym $mod+F10 "exec $HOME/.screenlayout/home_one.sh"
+bindsym $mod+F11 "exec $HOME/.screenlayout/home.sh"
+bindsym $mod+F12 "exec $HOME/.screenlayout/dblab.sh"
+
+
+
+bindsym Print exec --no-startup-id GTK_THEME=Arc-Breath-Dark xfce4-screenshooter
+
+
+exec --no-startup-id compton -bc &
+
+exec --no-startup-id exec feh --bg-scale ~/.wallpaper.png &
+
+# applets
+exec --no-startup-id nm-applet &
+
+exec --no-startup-id $HOME/.config/polybar/launch.sh
+
+exec --no-startup-id redshift &
+exec --no-startup-id jetbrains-toolbox --minimize &
+exec --no-startup-id octopi-notifier &
+exec --no-startup-id xautolock -time 5 -locker lock &

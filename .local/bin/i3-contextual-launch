@@ -1,0 +1,22 @@
+#!/bin/bash  
+ws=$(i3-current-workspace)
+case $ws in 
+    "board")
+        board;;
+    "idea")
+        idea;;
+    "browse")
+        chromium;;
+    "explore")
+        terminator -e vifm;;
+    "mail")
+        thunderbird;;
+    "comm")
+        slack;;
+    "git")
+        gitkraken;;
+    "jenkins")
+        jenkins-web;;
+    "vsphere")
+        vsphere;;
+esac

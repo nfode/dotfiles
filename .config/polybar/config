@@ -1,0 +1,234 @@
+;-------------------------------------------------
+;                                                ;
+;           Polybar config for my themes         ;
+; 				                 ;
+;                                                ;
+;-------------------------------------------------
+
+
+[colors]
+color15_i3wmthemer	    = ${xrdb:color15}
+color14_i3wmthemer	    = ${xrdb:color14}
+color13_i3wmthemer	    = ${xrdb:color13}
+color12_i3wmthemer	    = ${xrdb:color12}
+color11_i3wmthemer	    = ${xrdb:color11}
+color10_i3wmthemer	    = ${xrdb:color10}
+color09_i3wmthemer	      = ${xrdb:color9}
+color08_i3wmthemer	      = ${xrdb:color8}
+color07_i3wmthemer	      = ${xrdb:color7}
+color06_i3wmthemer	      = ${xrdb:color6}
+color05_i3wmthemer	      = ${xrdb:color5}
+color04_i3wmthemer	      = ${xrdb:color4}
+color03_i3wmthemer	      = ${xrdb:color3}
+color02_i3wmthemer	      = ${xrdb:color2}
+color01_i3wmthemer      = ${xrdb:color1}
+color00_i3wmthemer	      = ${xrdb:color0}
+foreground_i3wmthemer 	= ${xrdb:foreground}
+background_i3wmthemer 	= ${xrdb:background}
+
+;My colors are set from .Xresources to match everything else
+my_background 	= ${xrdb:background}
+my_foreground 	= ${xrdb:foreground}
+my_color0	= ${xrdb:color0}
+my_color1	= ${xrdb:color1}
+my_color2	= ${xrdb:color2}
+my_color3	= ${xrdb:color3}
+my_color4	= ${xrdb:color4}
+my_color5	= ${xrdb:color5}
+my_color6	= ${xrdb:color6}
+my_color7	= ${xrdb:color7}
+my_color8	= ${xrdb:color8}
+my_color9	= ${xrdb:color9}
+my_color10	= ${xrdb:color10}
+my_color11	= ${xrdb:color11}
+my_color12	= ${xrdb:color12}
+my_color13	= ${xrdb:color13}
+my_color14	= ${xrdb:color14}
+my_color15	= ${xrdb:color15}
+
+
+[bar/big]
+monitor = ${env:MONITOR:fallback-value}
+bottom = false
+width = 100%
+height = 30
+offset-x = 0
+offset-y = 0
+radius = 0.0
+fixed-center = true
+
+
+background = ${colors.background_i3wmthemer}
+foreground =  ${colors.foreground_i3wmthemer}
+
+line-size = 2.5
+line-color = ${colors.foreground_i3wmthemer}
+
+border-size = 0
+border-color = ${colors.color02_i3wmthemer}
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-2 = FontAwesome:fontformat=truetype:size=12;1
+font-0 = DeJaVu Sans:fontformat=truetype:size=11;1
+font-1 = monofur:fontformat=truetype:size=11;1
+
+
+modules-left = i3
+modules-center = date
+modules-right = musicinfo hamster pavolume  redshift battery powermenu
+
+tray-position = right
+tray-padding = 9
+tray-transparent = false
+tray-offset-y = 0%
+tray-offset-x = 0%
+tray-maxsize = 18
+tray-detached = false
+tray-background = ${colors.background_i3wmthemer}
+
+wm-restack = i3
+
+;override-redirect = true
+
+[module/pavolume]
+type = custom/script
+tail = true
+label = %output%
+exec = ~/.config/polybar/pavolume.sh --listen
+click-right = exec pavucontrol
+click-left = ~/.config/polybar/pavolume.sh --togmute
+scroll-up = ~/.config/polybar/pavolume.sh --up
+scroll-down = ~/.config/polybar/pavolume.sh --down
+
+[module/redshift]
+type = custom/script
+interval = 5
+
+format-padding = 1
+format-margin = 0.5
+
+exec = ~/.config/polybar/redshift.sh
+
+[module/hamster]
+type = custom/script
+interval = 2
+
+format-padding = 3
+
+exec = ~/.config/polybar/hamster.sh
+
+format-prefix = " "
+# format-prefix-foreground = ${colors.magenta}
+
+[module/i3]
+type = internal/i3
+
+label-unfocused-background = ${colors.background_i3wmthemer}
+label-unfocused-foreground = ${colors.foreground_i3wmthemer}
+
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-background = ${colors.background_i3wmthemer}
+
+label-focused = %name%
+label-focused-foreground = ${colors.color04_i3wmthemer}
+label-focused-background = ${colors.background_i3wmthemer}
+label-focused-underline = ${colors.color04_i3wmthemer}
+label-focused-padding = 2
+
+label-unfocused = %name%
+label-unfocused-padding = 2
+
+label-visible = %name%
+label-visible-underline = ${colors.color04_i3wmthemer}
+label-visible-padding = 4
+
+label-urgent = %name%
+label-urgent-foreground = ${colors.foreground_i3wmthemer}
+label-urgent-background = ${colors.background_i3wmthemer}
+label-urgent-underline = ${colors.foreground_i3wmthemer}
+label-urgent-padding = 2
+
+[module/musicinfo]
+type = custom/script
+
+exec = ~/.config/polybar/music.sh
+interval = 5
+format = <label>
+label = %output:0:30:...%
+format-padding = 2
+format-foreground = #1ed760
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = "%d/%m/%Y"
+
+time = "%a %b %d, %H:%M"
+
+time-alt = %H:%M
+
+format-prefix-foreground = ${colors.my_foreground}
+format-undeline =
+
+
+label = %date% %time%
+
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 99
+
+format-padding = 2
+
+format-full-background = ${colors.background_i3wmthemer}
+format-charging-background = ${colors.background_i3wmthemer}
+format-charging = "⁣  <label-charging> "
+format-charging-underline = ${colors.my_color2}
+
+format-discharging-background = ${colors.background_i3wmthemer}
+format-discharging = "⁣  <label-discharging> "
+format-discharging-underline = ${self.format-charging-underline}
+
+format-full-prefix-foreground = ${colors.my_background}
+format-full-underline = ${self.format-charging-underline}
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+format-padding = 2
+
+label-open = 
+label-open-foreground = ${colors.my_color1}
+label-close =  cancel
+label-close-foreground = ${colors.my_color1}
+label-separator = |
+label-separator-foreground = ${colors.my_foreground}
+
+menu-0-0 = reboot
+menu-0-0-exec = reboot
+menu-0-1 = power off
+menu-0-1-exec = poweroff

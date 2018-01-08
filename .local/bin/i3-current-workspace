@@ -1,0 +1,2 @@
+i3-msg -t get_workspaces | sed 's/.\{1,\}"name":"\([a-z]*\)","visible":true.\{1,\}/\1/'
+
