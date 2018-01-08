@@ -1,0 +1,74 @@
+#!/bin/bash  
+# vim: fdm=marker:fdl=0
+# update submodules {{{
+yadm submodule update --recursive --init
+# }}} 
+# install function definitions {{{
+function enqueue {
+    for package in "$@"; do
+        packages+="$package "
+    done
+}
+
+function install_key {
+    gpg -k $key 2>&1 > /dev/null || gpg --recv-key $key
+}
+# }}}
+# shell: zsh {{{
+# zsh as shell
+enqueue zsh oh-my-zsh-git fzf
+[ $SHELL = "/usr/bin/zsh" ] || su -c "usermod -s /usr/bin/zsh $USER"
+# }}}
+# vim {{{
+enqueue vim neovim neovim-remote neovim-qt
+# }}}
+# audio / sound {{{
+enqueue pulseaudio paman pavumeter paprefs pavucontrol pulsemixer 
+# }}}
+# theming {{{
+enqueue fontconfig qt5ct lxappearance arc-gtk-theme arc-icon-theme
+# }}}
+# fonts {{{
+enqueue adobe-source-code-pro-fonts ttf-font-awesome powerline-fonts awesome-terminal-fonts noto-fonts
+# }}}
+# basic applications {{{
+enqueue i3lock feh chromium nextcloud-client youtube-dl youtube-viewer gimp inkscape mumble slack-desktop thunderbird thunderbird-i18n-de vlc skypeforlinux-bin 
+# }}}
+# password managing {{{
+install_key 011FDC52DA839335
+enqueue libgnome-keyring gnome-keyring libsecret qtkeychain seahorse pass browserpass rofi-pass qtpass
+# automatic keyring unlock
+cat /etc/pam.d/login | grep pam_gnome_keyring.so > /dev/null || 
+	echo "For automated keyring unlocking upon login, follow instructions (regarding PAM) at https://wiki.archlinux.org/index.php/GNOME/Keyring#Using_the_keyring_outside_GNOME"
+# }}}
+# dev applications {{{
+enqueue gitkraken 
+# ]}}
+
+# install packages {{{
+demanded=$(echo $packages | wc -w)
+installed=$(yaourt -Q $packages | wc -l)
+# this is mutch faster than asking pacman to install a package x times
+# and no root pwd must be supplied if no package install is required
+toInstall=$(( demanded - installed ))
+if [ $installed -lt $demanded ]; then
+    echo "Installing $toInstall new package(s)"
+    IFS=' ' read -a packageArray <<< "$packages"
+    for package in "${packageArray[@]}"; do
+        if yaourt -Q $package > /dev/null; then
+            state=x
+        else
+            state=missing
+        fi
+        printf "%-40s %s\n" $package $state
+        if [ $state = missing ]; then
+            echo "Install $package now [y/N]?"
+            read confirm
+            [ "$confirm" = y ] && yaourt -S $package
+        fi
+    done
+else
+    echo all packages already installed
+fi
+# }}}
+echo bootstrapping done
