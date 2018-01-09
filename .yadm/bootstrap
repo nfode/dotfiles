@@ -18,13 +18,12 @@ function install_key {
 # zsh as shell
 enqueue zsh oh-my-zsh-git fzf
 [ $SHELL = "/usr/bin/zsh" ] || su -c "usermod -s /usr/bin/zsh $USER"
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 # }}}
 # vim {{{
 enqueue vim neovim neovim-remote neovim-qt
 # }}}
 # audio / sound {{{
-enqueue pulseaudio paman pavumeter paprefs pavucontrol pulsemixer 
+enqueue pulseaudio paman pavumeter paprefs pavucontrol pulsemixer spotify 
 # }}}
 # theming {{{
 enqueue fontconfig qt5ct lxappearance arc-gtk-theme arc-icon-theme
@@ -43,7 +42,7 @@ enqueue hamster-time-tracker thunderbird thunderbird-i18n-de slack-desktop
  }}}
 # }}}
 # utility tools {{{
-enqueue pdfgrep xclip
+enqueue pdfgrep xclip highlight exa-git
 #}}}
 # password managing {{{
 install_key 011FDC52DA839335
@@ -53,7 +52,8 @@ cat /etc/pam.d/login | grep pam_gnome_keyring.so > /dev/null ||
     echo "For automated keyring unlocking upon login, follow instructions (regarding PAM) at https://wiki.archlinux.org/index.php/GNOME/Keyring#Using_the_keyring_outside_GNOME"
 # }}}
 # dev applications {{{
-enqueue gitkraken jetbrains-toolbox atom visual-studio-code filezilla 
+enqueue gitkraken jetbrains-toolbox atom visual-studio-code filezilla docker 
+enqueue nodejs npm
 # }}}
 # install packages {{{
 demanded=$(echo $packages | wc -w)
@@ -81,4 +81,17 @@ else
     echo all packages already installed
 fi
 # }}}
+# set up {{{
+mkdir .node
+echo "prefix = ~/.node" > .npmrc
+npm install ionic cordova
+
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# }}}
+
+
 echo bootstrapping done
