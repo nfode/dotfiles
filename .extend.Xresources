@@ -47,24 +47,3 @@ URxvt*foreground: 		                #c5c8c6
 URxvt*cursorColor:		                #c5c8c6
 URxvt*saveLines:                      5000
 
-! ROFI SETUP HERE !
-
-! Enable the extended coloring options
-rofi.color-enabled: true
-!                  bg       border   separator
-rofi.color-window: #1e1e20, #b6beb8, #b6beb8
-!                  bg       fg       bg-alt   hl-bg    hl-fg
-rofi.color-normal: #1e1e20, #c5c8c6, #1e1e20, #1e1e20, #e4952b
-rofi.color-active: #1e1e20, #c5c8c6, #1e1e20, #1e1e20, #e4952b
-rofi.color-urgent: #1e1e20, #c5c8c6, #1e1e20, #1e1e20, #e4952b
-
-
-rofi.separator-style: solid
-rofi.sidebar-mode: false
-rofi.lines: 5
-rofi.font: monofur 13
-rofi.bw: 1
-rofi.columns: 2
-rofi.padding: 5
-rofi.fixed-num-lines: true
-rofi.hide-scrollbar: true

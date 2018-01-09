@@ -1,9 +1,9 @@
 # header {{{
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# vim:fdm=marker
+# vim:fdm=marker:fdl=0
 # }}}
-
+# colors {{{
 set_from_resource	  $color15_i3wmthemer	    color15
 set_from_resource	  $color14_i3wmthemer	    color14
 set_from_resource	  $color13_i3wmthemer	    color13
@@ -22,23 +22,6 @@ set_from_resource 	$color01_i3wmthemer 	    color1
 set_from_resource	  $color00_i3wmthemer		  color0
 set_from_resource	  $foreground_i3wmthemer	foreground
 set_from_resource	  $background_i3wmthemer	background
-
-
-# fonts {{{
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-#font pango:monospace 8
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
-
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
 # }}}
 # workspaces and applications {{{
 
@@ -92,7 +75,7 @@ floating_modifier $mod
 bindsym $mod+Shift+q exit
 bindsym $mod+Shift+r "reload; exec i3-refresh"
 
-bindsym $mod+d exec --no-startup-id "rofi -modi 'window,drun,run,ssh' -show drun"
+bindsym $mod+d exec --no-startup-id "rofi -modi 'window,drun,run,ssh' -config $XDG_CONFIG_HOME/rofi/rofi.conf -theme $XDG_CONFIG_HOME/rofi/themes/custom.rasi -show drun"
 bindsym Control+$alt+l exec lock
 # }}}
 
@@ -231,25 +214,12 @@ client.focused_inactive	$foreground_i3wmthemer	$background_i3wmthemer	$foregroun
 client.unfocused       	$foreground_i3wmthemer	$background_i3wmthemer	$foreground_i3wmthemer	#de9028	    #000000
 client.urgent		        $foreground_i3wmthemer	$background_i3wmthemer	$foreground_i3wmthemer	#de9028		    #000000
 # }}}
+# monitor keybindings {{{
 bindsym $mod+F10 "exec $HOME/.screenlayout/home_one.sh"
 bindsym $mod+F11 "exec $HOME/.screenlayout/home.sh"
 bindsym $mod+F12 "exec $HOME/.screenlayout/dblab.sh"
-
-
-
 bindsym Print exec --no-startup-id GTK_THEME=Arc-Breath-Dark xfce4-screenshooter
-
-
-exec --no-startup-id compton -bc &
-
-exec --no-startup-id exec feh --bg-scale ~/.wallpaper.png &
-
+}}}
 # applets
-exec --no-startup-id nm-applet &
-
 exec --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec --no-startup-id redshift &
-exec --no-startup-id jetbrains-toolbox --minimize &
-exec --no-startup-id octopi-notifier &
-exec --no-startup-id xautolock -time 5 -locker lock &

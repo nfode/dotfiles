@@ -1,0 +1,23 @@
+#
+# ~/.xprofile
+#
+#
+
+# if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
+#     eval "$(dbus-launch --sh-syntax --exit-with-session)"
+# fi
+
+# Environment variables
+#
+
+[[ -f ~/.extend.xprofile ]] && . ~/.extend.xprofile
+compton -bc &
+feh --bg-scale ~/.wallpaper.png &
+nm-applet &
+redshift &
+jetbrains-toolbox --minimize &
+octopi-notifier &
+xautolock -time 5 -locker lock &
+
+xset -b
+

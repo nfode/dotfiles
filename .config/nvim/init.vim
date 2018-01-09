@@ -67,7 +67,7 @@ syntax enable
 colorscheme onedark
 set background=dark
 
-set guifont=Monospace\ Regular\ 12
+set guifont=Monospace\ Regular\ 13
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8

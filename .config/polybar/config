@@ -74,7 +74,7 @@ module-margin-left = 0
 module-margin-right = 0
 
 font-2 = FontAwesome:fontformat=truetype:size=12;1
-font-0 = DeJaVu Sans:fontformat=truetype:size=11;1
+font-0 = DeJaVu Sans:fontformat=truetype:size=13;1
 font-1 = monofur:fontformat=truetype:size=11;1
 
 
