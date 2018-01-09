@@ -18,6 +18,7 @@ function install_key {
 # zsh as shell
 enqueue zsh oh-my-zsh-git fzf
 [ $SHELL = "/usr/bin/zsh" ] || su -c "usermod -s /usr/bin/zsh $USER"
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 # }}}
 # vim {{{
 enqueue vim neovim neovim-remote neovim-qt
@@ -31,20 +32,29 @@ enqueue fontconfig qt5ct lxappearance arc-gtk-theme arc-icon-theme
 # fonts {{{
 enqueue adobe-source-code-pro-fonts ttf-font-awesome powerline-fonts awesome-terminal-fonts noto-fonts
 # }}}
-# basic applications {{{
-enqueue i3lock feh chromium nextcloud-client youtube-dl youtube-viewer gimp inkscape mumble slack-desktop thunderbird thunderbird-i18n-de vlc skypeforlinux-bin 
+# system applications {{{
+enqueue i3-gaps i3lock xautolock compton light polybar rofi feh 
 # }}}
+# basic applications {{{
+enqueue konsole
+enqueue i3lock chromium nextcloud-client youtube-dl youtube-viewer gimp inkscape mumble vlc skypeforlinux-bin 
+# work {{{
+enqueue hamster-time-tracker thunderbird thunderbird-i18n-de slack-desktop 
+ }}}
+# }}}
+# utility tools {{{
+enqueue pdfgrep xclip
+#}}}
 # password managing {{{
 install_key 011FDC52DA839335
 enqueue libgnome-keyring gnome-keyring libsecret qtkeychain seahorse pass browserpass rofi-pass qtpass
 # automatic keyring unlock
 cat /etc/pam.d/login | grep pam_gnome_keyring.so > /dev/null || 
-	echo "For automated keyring unlocking upon login, follow instructions (regarding PAM) at https://wiki.archlinux.org/index.php/GNOME/Keyring#Using_the_keyring_outside_GNOME"
+    echo "For automated keyring unlocking upon login, follow instructions (regarding PAM) at https://wiki.archlinux.org/index.php/GNOME/Keyring#Using_the_keyring_outside_GNOME"
 # }}}
 # dev applications {{{
-enqueue gitkraken 
-# ]}}
-
+enqueue gitkraken jetbrains-toolbox atom visual-studio-code filezilla 
+# }}}
 # install packages {{{
 demanded=$(echo $packages | wc -w)
 installed=$(yaourt -Q $packages | wc -l)

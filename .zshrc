@@ -18,10 +18,8 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME
 
 # export texlive path
 export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
-
-EDITOR=nvim
-VISUAL=$EDITOR
-export EDITOR VISUAL
+export VISUAL=nvim
+export EDITOR="$VISUAL"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="powerlevel9k/powerlevel9k"

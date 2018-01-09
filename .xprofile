@@ -9,15 +9,16 @@
 
 # Environment variables
 #
-
-[[ -f ~/.extend.xprofile ]] && . ~/.extend.xprofile
-compton -bc &
-feh --bg-scale ~/.wallpaper.png &
+sh $HOME/.config/polybar/launch.sh
 nm-applet &
-redshift &
+redshift-gtk &
 jetbrains-toolbox --minimize &
 octopi-notifier &
 xautolock -time 5 -locker lock &
 
+
+[[ -f ~/.extend.xprofile ]] && . ~/.extend.xprofile
+compton -c &
+feh --bg-scale ~/.wallpaper.png &
 xset -b
 
