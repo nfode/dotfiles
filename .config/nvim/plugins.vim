@@ -1,4 +1,18 @@
 call plug#begin('~/.local/share/nvim/plugged')
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+    if has('nvim')
+      !cargo build --release
+    else
+      !cargo build --release --no-default-features --features json-rpc
+    endif
+  endif
+endfunction
+
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+Plug 'rhysd/vim-gfm-syntax'
+Plug 'vimwiki/vimwiki'
+Plug 'vim-pandoc/vim-pandoc'
 Plug 'stephpy/vim-yaml'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'

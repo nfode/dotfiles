@@ -6,11 +6,34 @@ nnoremap <leader><leader> :noh<cr>
 " Toggle folds (<Space>) {{{
 nnoremap <silent> <C-space> :exe 'silent! normal! za'<CR>
   " }}}
+" Formating text {{{
+" auto indent file
+nnoremap <leader>f <Esc>gg<s-V>G=''<Esc>zz
+" }}}
+" Easy quoting {{{
+nnoremap <leader>' viw<esc>a'<esc>bi'<esc>
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>
+vnoremap <leader>' di''<esc>P
+vnoremap <leader>" di""<esc>P
+" }}}
+" Window navigation {{{
+nnoremap <C-J> <c-w><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+if has("nvim")
+    tnoremap <C-h> <C-\><C-n><C-w>h
+    tnoremap <C-j> <C-\><C-n><C-w>j
+    tnoremap <C-k> <C-\><C-n><C-w>k
+    tnoremap <C-l> <C-\><C-n><C-w>l
+endif
+" }}}
 " Disable navigation with arrow keys {{{
 noremap <up> <Nop>
 noremap <down> <Nop>
 noremap <right> <Nop>
 noremap <left> <Nop>
+noremap <space> <Nop>
 inoremap <up> <Nop>
 inoremap <down> <Nop>
 inoremap <right> <Nop>
@@ -101,6 +124,9 @@ set cursorline!
 set lazyredraw
 set synmaxcol=256
 syntax sync minlines=256
-
+" vim-markdown-composer {{{
+let g:markdown_composer_browser = 'chromium'
+let g:markdown_composer_open_browser = 0
+" }}}
 nmap <F8> :TagbarToggle<CR>
 " vim:foldmethod=marker

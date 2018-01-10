@@ -10,7 +10,7 @@ export TERM="xterm-256color"
 export PATH=$PATH:$HOME/.node/bin
 
 export PATH=$PATH:/usr/local/go/bin
-XDG_CONFIG_HOME=.config
+export XDG_CONFIG_HOME=$HOME/.config
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/ndk-bundle
@@ -45,3 +45,9 @@ _fzf_compgen_dir() {
 }
 #bindkey '\e[A' history-search-backward
 #bindkey '\e[B' history-search-forward
+# mkdir and cd together {{{
+function mkcd {
+    mkdir -p -- "$1" &&
+        cd -P -- "$1"
+}
+# }}}	
