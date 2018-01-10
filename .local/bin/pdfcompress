@@ -1,0 +1,12 @@
+#!/bin/bash
+
+LEVEL="screen"
+
+case $1 in
+    low) LEVEL="screen" ;;
+    good) LEVEL="ebook" ;;
+    high) LEVEL="prepress" ;;
+esac
+
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/${LEVEL} -dNOPAUSE -dQUIET -dBATCH -sOutputFile=${3} ${2}
+
