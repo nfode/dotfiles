@@ -1,7 +1,4 @@
 #!/bin/bash
-cd ~/.fzf && git pull 
-yes|./install
-cd ~
 sudo pacman -Syyu
 yaourt -Syu --aur
 
