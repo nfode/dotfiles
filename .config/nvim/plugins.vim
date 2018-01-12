@@ -12,7 +12,6 @@ endfunction
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 Plug 'rhysd/vim-gfm-syntax'
 Plug 'vimwiki/vimwiki'
-Plug 'vim-pandoc/vim-pandoc'
 Plug 'stephpy/vim-yaml'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'

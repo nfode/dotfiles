@@ -129,4 +129,5 @@ let g:markdown_composer_browser = 'chromium'
 let g:markdown_composer_open_browser = 0
 " }}}
 nmap <F8> :TagbarToggle<CR>
+"let g:markdown_composer_external_renderer='pandoc -f markdown -t html'
 " vim:foldmethod=marker
