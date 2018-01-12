@@ -48,7 +48,7 @@ my_color15	= ${xrdb:color15}
 
 
 [bar/big]
-monitor = ${env:MONITOR:fallback-value}
+; monitor = ${env:MONITOR:fallback-value}
 bottom = false
 width = 100%
 height = 30

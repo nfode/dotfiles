@@ -10,7 +10,6 @@ export TERM="xterm-256color"
 export PATH=$PATH:$HOME/.node/bin
 
 export PATH=$PATH:/usr/local/go/bin
-export XDG_CONFIG_HOME=$HOME/.config
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/ndk-bundle
@@ -27,7 +26,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 plugins=(kubectl git yarn docker mvn sudo history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.config/.private/vpn.zsh
+# source ~/.config/.private/vpn.zsh
 for file in ~/.zshconfig/*; do
     source "$file"
 done
