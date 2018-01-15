@@ -9,7 +9,7 @@ function! BuildComposer(info)
   endif
 endfunction
 
-" Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 Plug 'rhysd/vim-gfm-syntax'
 Plug 'vimwiki/vimwiki'
 Plug 'stephpy/vim-yaml'
