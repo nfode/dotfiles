@@ -9,4 +9,5 @@ Parent=FALLBACK/
 ShowTerminalSizeHint=false
 
 [Scrolling]
+HistoryMode=0
 ScrollBarPosition=2
