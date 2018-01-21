@@ -9,6 +9,7 @@ function! BuildComposer(info)
   endif
 endfunction
 
+Plug 'matze/vim-move'
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 Plug 'rhysd/vim-gfm-syntax'
 Plug 'vimwiki/vimwiki'

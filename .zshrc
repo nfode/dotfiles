@@ -1,38 +1,35 @@
-# vim: fdm=marker
-setopt NO_HUP
-setopt NO_CHECK_JOBS
-alias evince="GTK_THEME=Breath-Dark evince"
-alias spec="evince /home/nfode/Nextcloud/uni/5.Semester/stupro/TOSCA-Simple-Profile-YAML-v1.1-cos01.pdf &> /dev/null &"
-bindkey -v
+# vim: fdm=marker:fdl=0
+# setup path {{{
 export PATH=$PATH:$HOME/.local/bin
-export TERM="xterm-256color"
-#yarn
 export PATH=$PATH:$HOME/.node/bin
-
 export PATH=$PATH:/usr/local/go/bin
-
-export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/ndk-bundle
-
-
-# export texlive path
 export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
+# }}}
+# setup environment {{{
+export TERM="xterm-256color"
+export ANDROID_HOME=$HOME/Android/Sdk
 export VISUAL=nvim
 export EDITOR="$VISUAL"
-# Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="powerlevel9k/powerlevel9k"
-
-plugins=(kubectl git yarn docker mvn sudo history-substring-search)
-
+# }}}
+# plugin setup {{{
+plugins=(vi-mode zsh-syntax-highlighting kubectl git yarn docker mvn history-substring-search)
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+POWERLEVEL9K_SHORTEN_DELIMITER=".."
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vi_mode time virtualenv pyenv)
+# }}}
+# source all the settings {{{
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
-# source ~/.config/.private/vpn.zsh
+source ~/.config/.private/vpn.zsh
 for file in ~/.zshconfig/*; do
     source "$file"
 done
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time virtualenv pyenv)
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time vi_mode)
-export KEYTIMEOUT=1
+# }}}
+# fzf {{{
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 _fzf_compgen_path() {
     command  fd --follow --exclude ".git" . "$1"
@@ -42,11 +39,11 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
     command fd --type d --follow --exclude ".git" . "$1"
 }
-#bindkey '\e[A' history-search-backward
-#bindkey '\e[B' history-search-forward
-# mkdir and cd together {{{
-function mkcd {
-    mkdir -p -- "$1" &&
-        cd -P -- "$1"
-}
-# }}}	
+# }}}
+# misc {{{
+setopt NO_HUP
+setopt NO_CHECK_JOBS
+
+bindkey -v
+export KEYTIMEOUT=1
+# }}}

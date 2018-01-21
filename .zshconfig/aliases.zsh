@@ -1,4 +1,7 @@
 # aliases
+alias evince="GTK_THEME=Breath-Dark evince"
+alias spec="evince /home/nfode/Nextcloud/uni/5.Semester/stupro/TOSCA-Simple-Profile-YAML-v1.1-cos01.pdf &> /dev/null &"
+
 alias vim=nvim
 alias vi=nvim
 alias :q=exit
