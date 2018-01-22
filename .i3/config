@@ -220,7 +220,7 @@ client.urgent		        $foreground_i3wmthemer	$background_i3wmthemer	$foreground
 # monitor keybindings {{{
 bindsym $mod+F10 "exec $HOME/.screenlayout/home_one.sh"
 bindsym $mod+F11 "exec $HOME/.screenlayout/home.sh"
-bindsym $mod+F12 "exec $HOME/.screenlayout/dblab.sh"
+bindsym $mod+F12 "exec $HOME/.screenlayout/dblab_left.sh"
 bindsym Print exec --no-startup-id GTK_THEME=Arc-Breath-Dark xfce4-screenshooter
 # }}}
 # gaps {{{
