@@ -11,11 +11,10 @@
 #
 sh $HOME/.config/polybar/launch.sh
 nm-applet &
-redshift-gtk &
 jetbrains-toolbox --minimize &
 octopi-notifier &
 xautolock -time 5 -locker lock &
-
+redshift-gtk &
 
 [[ -f ~/.extend.xprofile ]] && . ~/.extend.xprofile
 compton -c &

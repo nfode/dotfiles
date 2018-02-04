@@ -131,3 +131,8 @@ let g:markdown_composer_open_browser = 0
 nmap <F8> :TagbarToggle<CR>
 "let g:markdown_composer_external_renderer='pandoc -f markdown -t html'
 " vim:foldmethod=marker
+augroup config-github-complete
+        autocmd!
+        autocmd FileType gitcommit setl omnifunc=github_complete#complete
+    augroup END
+let g:github_complete_enable_neocomplete = 1

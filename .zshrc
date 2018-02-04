@@ -19,7 +19,7 @@ plugins=(vi-mode zsh-syntax-highlighting kubectl git yarn docker mvn history-sub
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_SHORTEN_DELIMITER=".."
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vi_mode time virtualenv pyenv)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vi_mode virtualenv pyenv)
 # }}}
 # source all the settings {{{
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

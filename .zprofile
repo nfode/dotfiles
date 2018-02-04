@@ -6,7 +6,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export PATH="$HOME/.local/bin:$PATH"
-export TERM=konsole
+export TERM=termite
 export TERMINAL=$TERM
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
     exec startx &> /dev/null

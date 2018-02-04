@@ -8,7 +8,8 @@ function! BuildComposer(info)
     endif
   endif
 endfunction
-
+"Plug 'rhysd/github-complete.vim'
+"Plug 'jaxbot/github-issues.vim'
 Plug 'matze/vim-move'
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 Plug 'rhysd/vim-gfm-syntax'

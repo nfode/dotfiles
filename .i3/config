@@ -196,9 +196,10 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 bindsym XF86Tools exec --no-startup-id spotify
 
-bindsym XF86HomePage exec --no-startup-id firefox-nightly
+bindsym XF86HomePage exec --no-startup-id firefox-nighty
 bindsym XF86Explorer exec --no-startup-id dolphin
 
+bindsym Print exec --no-startup-id GTK_THEME=Arc-Breath-Dark xfce4-screenshooter
 # brightness control
 bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
@@ -218,10 +219,10 @@ client.unfocused       	$foreground_i3wmthemer	$background_i3wmthemer	$foregroun
 client.urgent		        $foreground_i3wmthemer	$background_i3wmthemer	$foreground_i3wmthemer	#de9028		    #000000
 # }}}
 # monitor keybindings {{{
+bindsym $mod+F9 "exec $HOME/.screenlayout/laptop.sh"
 bindsym $mod+F10 "exec $HOME/.screenlayout/home_one.sh"
 bindsym $mod+F11 "exec $HOME/.screenlayout/home.sh"
 bindsym $mod+F12 "exec $HOME/.screenlayout/dblab_left.sh"
-bindsym Print exec --no-startup-id GTK_THEME=Arc-Breath-Dark xfce4-screenshooter
 # }}}
 # gaps {{{
 for_window [class="^.*"] border pixel 1 

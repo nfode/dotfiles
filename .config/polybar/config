@@ -46,7 +46,6 @@ my_color13	= ${xrdb:color13}
 my_color14	= ${xrdb:color14}
 my_color15	= ${xrdb:color15}
 
-
 [bar/big]
 monitor = ${env:MONITOR:fallback-value}
 bottom = false
