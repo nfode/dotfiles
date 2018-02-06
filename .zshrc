@@ -7,7 +7,6 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME
 export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
 # }}}
 # setup environment {{{
-export TERM="xterm-256color"
 export ANDROID_HOME=$HOME/Android/Sdk
 export VISUAL=nvim
 export EDITOR="$VISUAL"
@@ -24,7 +23,10 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vi_mode virtualenv pyenv)
 # source all the settings {{{
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
-source ~/.config/.private/vpn.zsh
+hostname=$(hostname)
+if [ "$hostname" = "nick-laptop" ]; then
+    source ~/.config/.private/vpn.zsh
+fi
 for file in ~/.zshconfig/*; do
     source "$file"
 done

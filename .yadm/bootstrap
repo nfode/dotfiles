@@ -20,10 +20,10 @@ enqueue zsh oh-my-zsh-git fzf
 [ $SHELL = "/usr/bin/zsh" ] || su -c "usermod -s /usr/bin/zsh $USER"
 # }}}
 # vim {{{
-enqueue vim neovim neovim-remote neovim-qt
+enqueue neovim 
 # }}}
 # audio / sound {{{
-enqueue pulseaudio paman pavumeter paprefs pavucontrol pulsemixer spotify 
+enqueue pulseaudio paman pavumeter paprefs pavucontrol spotify 
 # }}}
 # theming {{{
 enqueue fontconfig qt5ct lxappearance arc-gtk-theme arc-icon-theme
@@ -32,11 +32,13 @@ enqueue fontconfig qt5ct lxappearance arc-gtk-theme arc-icon-theme
 enqueue adobe-source-code-pro-fonts ttf-font-awesome powerline-fonts awesome-terminal-fonts noto-fonts
 # }}}
 # system applications {{{
-enqueue i3-gaps i3lock xautolock compton light polybar rofi feh 
+enqueue i3-gaps lightdm lightdm-mini-greeter i3lock-color-git xautolock compton light polybar rofi feh 
+sudo cp .config/lightdm/lightdm.conf /etc/lightdm.conf
+sudo ln -sf ~/.config/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
 # }}}
 # basic applications {{{
-enqueue konsole
-enqueue i3lock chromium nextcloud-client youtube-dl youtube-viewer gimp inkscape mumble vlc skypeforlinux-bin 
+enqueue termite 
+enqueue chromium nextcloud-client gimp inkscape mumble vlc skypeforlinux-bin 
 # work {{{
 enqueue hamster-time-tracker thunderbird thunderbird-i18n-de slack-desktop 
  }}}
@@ -92,6 +94,4 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # }}}
-
-
 echo bootstrapping done
