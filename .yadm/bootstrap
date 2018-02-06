@@ -29,10 +29,11 @@ enqueue pulseaudio paman pavumeter paprefs pavucontrol spotify
 enqueue fontconfig qt5ct lxappearance arc-gtk-theme arc-icon-theme
 # }}}
 # fonts {{{
-enqueue adobe-source-code-pro-fonts ttf-font-awesome powerline-fonts awesome-terminal-fonts noto-fonts
+enqueue adobe-source-code-pro-fonts ttf-font-awesome powerline-fonts awesome-terminal-fonts noto-fonts 
+enqueue la-capitaine-icon-theme 
 # }}}
 # system applications {{{
-enqueue i3-gaps lightdm lightdm-mini-greeter i3lock-color-git xautolock compton light polybar rofi feh 
+enqueue i3-gaps lightdm lightdm-mini-greeter i3lock-color-git xautolock compton light polybar rofi feh mygtkmenu
 sudo cp .config/lightdm/lightdm.conf /etc/lightdm.conf
 sudo ln -sf ~/.config/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
 # }}}

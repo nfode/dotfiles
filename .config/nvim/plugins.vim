@@ -10,6 +10,8 @@ function! BuildComposer(info)
 endfunction
 "Plug 'rhysd/github-complete.vim'
 "Plug 'jaxbot/github-issues.vim'
+Plug 'lilydjwg/colorizer'
+Plug 'ap/vim-css-color'
 Plug 'matze/vim-move'
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 Plug 'rhysd/vim-gfm-syntax'
