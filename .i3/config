@@ -24,7 +24,7 @@ set_from_resource	  $foreground_i3wmthemer	foreground
 set_from_resource	  $background_i3wmthemer	background
 # }}}
 # workspaces and applications {{{
-
+popup_during_fullscreen smart
 # workspace definition {{{
 set $ws1 "1"
 set $ws2 "2"
@@ -52,6 +52,7 @@ for_window [class="Mumble"] move workspace $ws_comm
 for_window [class="TelegramDesktop"] move workspace $ws_comm
 for_window [class="Thunderbird"] move workspace $ws_mail; border pixel 0
 for_window [class="jetbrains-idea"] move workspace $ws_idea
+for_window [class="jetbrains-webstorm"] move workspace $ws_idea
 for_window [class="GitKraken"] move workspace $ws_git
 for_window [class="Firefox"] move workspace $ws_browse
 for_window [class="Nightly"] move workspace $ws_browse
@@ -114,6 +115,8 @@ bindsym $mod+a focus parent
 
 # focus the child container
 bindsym $mod+t focus child
+
+bindsym $mod+n [class="termite"] focus
 # }}}
 
 # layout control {{{
@@ -134,7 +137,8 @@ bindsym $mod+space focus mode_toggle
 # container manipulation {{{
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+shift+f fullscreen toggle
+bindsym $mod+f exec --no-startup-id focus.py 
 bindsym $mod+c kill
 
 # move focused container to workspace

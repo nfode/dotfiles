@@ -15,7 +15,7 @@ jetbrains-toolbox --minimize &
 octopi-notifier &
 xautolock -time 5 -locker lock &
 redshift-gtk &
-
+nextcloud &
 [[ -f ~/.extend.xprofile ]] && . ~/.extend.xprofile
 compton -c &
 feh --bg-scale ~/.wallpaper.png &
