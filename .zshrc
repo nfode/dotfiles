@@ -12,15 +12,21 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="powerlevel9k/powerlevel9k"
+TERM=xterm-256color
 # }}}
 # plugin setup {{{
 plugins=(vi-mode zsh-syntax-highlighting kubectl git yarn docker mvn history-substring-search)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_SHORTEN_DELIMITER=".."
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vi_mode virtualenv pyenv)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status ssh dir) 
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs virtualenv pyenv)
+#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{200}%{\x1b[1m%}\uf101%{\x1b[m%}%f "
 # }}}
 # source all the settings {{{
+source /usr/share/sodalite/shell-integration.sh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 hostname=$(hostname)

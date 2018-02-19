@@ -1,5 +1,5 @@
 * {
-    selected-normal-foreground:  rgba ( 177, 180, 179, 100 % );
+    selected-normal-foreground: #fff; 
     foreground:                  rgba ( 177, 180, 179, 100 % );
     normal-foreground:           @foreground;
     alternate-normal-background: rgba ( 34, 34, 34, 100 % );
@@ -16,7 +16,7 @@
     alternate-normal-foreground: @foreground;
     normal-background:           rgba ( 34, 34, 34, 100 % );
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  rgba ( 0, 85, 119, 100 % );
+    selected-normal-background: rgba(222, 144, 40, 95%); 
     border-color:                rgba ( 34, 34, 34, 100 % );
     spacing:                     2;
     separatorcolor:              rgba ( 177, 180, 179, 100 % );
@@ -38,6 +38,10 @@
     border:  0;
     padding: 0;
 }
+#prompt {
+font: "Hack 20";
+padding: 0px 6px 0px 0px;
+}
 #message {
     border:       2px dash 0px 0px ;
     border-color: @separatorcolor;
@@ -55,6 +59,7 @@
     padding:      2px 0px 0px ;
 }
 #element {
+    font: "Hack 15";
     border:  0;
     padding: 4px ;
 }

@@ -42,6 +42,7 @@ set $ws_mail "mail"
 set $ws_browse "browse"
 set $ws_comm "comm"
 set $ws_media "media"
+set $ws_time "time"
 
 
 # }}}
@@ -50,13 +51,14 @@ set $ws_media "media"
 for_window [class="Slack"] move workspace $ws_comm
 for_window [class="Mumble"] move workspace $ws_comm
 for_window [class="TelegramDesktop"] move workspace $ws_comm
-for_window [class="Thunderbird"] move workspace $ws_mail; border pixel 0
+for_window [class="Mail"] move workspace $ws_mail; border pixel 0
 for_window [class="jetbrains-idea"] move workspace $ws_idea
 for_window [class="jetbrains-webstorm"] move workspace $ws_idea
 for_window [class="GitKraken"] move workspace $ws_git
 for_window [class="Firefox"] move workspace $ws_browse
 for_window [class="Nightly"] move workspace $ws_browse
 for_window [class="Spotify"] move workspace $ws_media
+for_window [class="Hamster"] move workspace $ws_time
 # }}}
 
 # autostart {{{
@@ -99,7 +101,7 @@ bindsym $mod+m workspace $ws_mail
 bindsym $mod+numbersign workspace $ws_comm
 bindsym $mod+plus workspace $ws_browse
 bindsym $mod+minus workspace $ws_media
-
+bindsym $mod+comma workspace $ws_time 
 # move workspace to other monitor
 bindsym $mod+period move workspace to output down; move workspace to output left
 # }}}
@@ -137,8 +139,8 @@ bindsym $mod+space focus mode_toggle
 # container manipulation {{{
 
 # enter fullscreen mode for the focused container
-bindsym $mod+shift+f fullscreen toggle
-bindsym $mod+f exec --no-startup-id focus.py 
+bindsym $mod+f fullscreen toggle
+bindsym $mod+ctrl+f exec --no-startup-id focus.py 
 bindsym $mod+c kill
 
 # move focused container to workspace

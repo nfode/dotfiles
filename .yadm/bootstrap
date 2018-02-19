@@ -33,7 +33,7 @@ enqueue adobe-source-code-pro-fonts ttf-font-awesome powerline-fonts awesome-ter
 enqueue la-capitaine-icon-theme 
 # }}}
 # system applications {{{
-enqueue i3-gaps lightdm lightdm-mini-greeter i3lock-color-git xautolock compton light polybar rofi feh mygtkmenu
+enqueue i3-gaps lightdm lightdm-mini-greeter i3lock-color-git xautolock compton light polybar rofi feh mygtkmenu python-i3-py xfce4-notifyd
 sudo cp .config/lightdm/lightdm.conf /etc/lightdm.conf
 sudo ln -sf ~/.config/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
 # }}}

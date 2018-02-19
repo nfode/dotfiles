@@ -3,11 +3,10 @@ if [ -n "$DESKTOP_SESSION" ];then
     export SSH_AUTH_SOCK
 fi
 export XDG_CONFIG_HOME=$HOME/.config
-export NICK="test"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export PATH="$HOME/.local/bin:$PATH"
-export TERM=termite
-export TERMINAL=$TERM
+export TERM=xterm-256color
+export TERMINAL=termite
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
     exec startx &> /dev/null
     clear
