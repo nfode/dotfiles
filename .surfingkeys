@@ -1,0 +1,32 @@
+// set theme
+settings.theme = `
+.sk_theme {
+    background: #000;
+    color: #fff;
+}
+.sk_theme tbody {
+    color: #fff;
+}
+.sk_theme input {
+    color: #d9dce0;
+}
+.sk_theme .url {
+    color: #2173c5;
+}
+.sk_theme .annotation {
+    color: #38f;
+}
+.sk_theme .omnibar_highlight {
+font-weight:bold;
+    color: #aa010c;
+}
+.sk_theme ul>li:nth-child(odd) {
+    background: #1e211d;
+}
+.sk_theme ul>li {
+font-size:18px;
+}
+.sk_theme ul>li.focused {
+    background: #dd8a30;
+}`;
+// click `Save` button to make above settings to take effect.
