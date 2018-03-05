@@ -9,6 +9,7 @@
 
 # Environment variables
 #
+xautolock -time 5 -locker $HOME/.local/bin/lock &
 sh $HOME/.config/polybar/launch.sh
 nm-applet &
 octopi-notifier &
@@ -18,4 +19,3 @@ nextcloud &
 compton -c &
 feh --bg-scale ~/.wallpaper.png &
 xset -b
-xautolock -time 5 -locker lock &
