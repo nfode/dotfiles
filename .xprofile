@@ -1,3 +1,4 @@
+export LANG="en_US.UTF-8"
 #
 # ~/.xprofile
 #
@@ -9,6 +10,7 @@
 
 # Environment variables
 #
+setxkbmap de
 xautolock -time 5 -locker $HOME/.local/bin/lock &
 sh $HOME/.config/polybar/launch.sh
 nm-applet &

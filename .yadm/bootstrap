@@ -16,30 +16,34 @@ function install_key {
 # }}}
 # shell: zsh {{{
 # zsh as shell
-enqueue zsh oh-my-zsh-git fzf
+enqueue zsh oh-my-zsh-git fzf zsh-autosuggestions
 [ $SHELL = "/usr/bin/zsh" ] || su -c "usermod -s /usr/bin/zsh $USER"
 # }}}
 # vim {{{
+enqueue python2 python2-pip python python-pip
+sudo pip2.7 install neovim
+sudo pip install neovim
 enqueue neovim 
 # }}}
 # audio / sound {{{
 enqueue pulseaudio paman pavumeter paprefs pavucontrol spotify 
 # }}}
 # theming {{{
-enqueue fontconfig qt5ct lxappearance arc-gtk-theme arc-icon-theme
+enqueue fontconfig qt5ct lxappearance arc-gtk-theme arc-icon-theme breeze breeze-icons
 # }}}
 # fonts {{{
-enqueue adobe-source-code-pro-fonts ttf-font-awesome powerline-fonts awesome-terminal-fonts noto-fonts 
+enqueue adobe-source-code-pro-fonts ttf-font-awesome powerline-fonts awesome-terminal-fonts noto-fonts ttf-hack ttf-material-design-icons ttf-dejavu gucharmap-gtk2
 enqueue la-capitaine-icon-theme 
 # }}}
 # system applications {{{
-enqueue i3-gaps lightdm lightdm-mini-greeter i3lock-color-git xautolock compton light polybar rofi feh mygtkmenu python-i3-py xfce4-notifyd
+enqueue i3-gaps xorg-xrandr lightdm lightdm-mini-greeter i3lock-color-git xautolock compton light polybar rofi feh mygtkmenu python-i3-py xfce4-notifyd openssh network-manager-applet networkmanager htop
 sudo cp .config/lightdm/lightdm.conf /etc/lightdm.conf
 sudo ln -sf ~/.config/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
 # }}}
 # basic applications {{{
-enqueue termite 
-enqueue chromium nextcloud-client gimp inkscape mumble vlc skypeforlinux-bin 
+enqueue termite sodalite
+enqueue chromium nextcloud-client gimp inkscape mumble vlc skypeforlinux-bin keepassxc evince
+enqueue texlive-most texlive-bin
 # work {{{
 enqueue hamster-time-tracker thunderbird thunderbird-i18n-de slack-desktop 
  }}}
@@ -55,7 +59,7 @@ cat /etc/pam.d/login | grep pam_gnome_keyring.so > /dev/null ||
     echo "For automated keyring unlocking upon login, follow instructions (regarding PAM) at https://wiki.archlinux.org/index.php/GNOME/Keyring#Using_the_keyring_outside_GNOME"
 # }}}
 # dev applications {{{
-enqueue gitkraken jetbrains-toolbox atom visual-studio-code filezilla docker 
+enqueue gitkraken jetbrains-toolbox atom visual-studio-code-bin filezilla docker 
 enqueue nodejs npm
 # }}}
 # install packages {{{
@@ -89,10 +93,12 @@ mkdir .node
 echo "prefix = ~/.node" > .npmrc
 npm install ionic cordova
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim<Paste>
 # }}}
+
 echo bootstrapping done

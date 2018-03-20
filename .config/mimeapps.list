@@ -1,0 +1,7 @@
+[Default Applications]
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+application/pdf=evince.desktop
+x-scheme-handler/http firefox-nightly.desktop
+x-scheme-handler/https firefox-nightly.desktop
+[Added Associations]
+application/pdf=evince.desktop;gimp.desktop;
