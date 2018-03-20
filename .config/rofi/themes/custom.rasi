@@ -39,7 +39,7 @@
     padding: 0;
 }
 #prompt {
-font: "Hack 20";
+font: "Noto Sans 20";
 padding: 0px 6px 0px 0px;
 }
 #message {
@@ -59,7 +59,7 @@ padding: 0px 6px 0px 0px;
     padding:      2px 0px 0px ;
 }
 #element {
-    font: "Hack 15";
+    font: "Noto Sans 15";
     border:  0;
     padding: 4px ;
 }

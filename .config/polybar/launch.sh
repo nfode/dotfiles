@@ -9,7 +9,6 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 # Launch bar1 and bar2
 DISPLAY1="$(xrandr -q | grep 'eDP1\|VGA-1' | cut -d ' ' -f1)"
 [[ ! -z $DISPLAY1 ]] && MONITOR=$DISPLAY1 polybar big &
-[[ ! -z $DISPLAY1 ]] && MONITOR=$DISPLAY1 polybar bottom &
 
 DISPLAY2="$(xrandr -q | grep 'HDMI1\|DVI-I-1' | cut -d ' ' -f1)"
 [[ ! -z $DISPLAY2 ]] && MONITOR=$DISPLAY2 polybar big &

@@ -36,20 +36,20 @@ enqueue adobe-source-code-pro-fonts ttf-font-awesome powerline-fonts awesome-ter
 enqueue la-capitaine-icon-theme 
 # }}}
 # system applications {{{
-enqueue i3-gaps xorg-xrandr lightdm lightdm-mini-greeter i3lock-color-git xautolock compton light polybar rofi feh mygtkmenu python-i3-py xfce4-notifyd openssh network-manager-applet networkmanager htop
+enqueue i3-gaps xorg-xrandr lightdm lightdm-mini-greeter i3lock-color xautolock compton light polybar rofi feh mygtkmenu python-i3-py xfce4-notifyd openssh network-manager-applet networkmanager htop
 sudo cp .config/lightdm/lightdm.conf /etc/lightdm.conf
 sudo ln -sf ~/.config/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
 # }}}
 # basic applications {{{
 enqueue termite sodalite
-enqueue chromium nextcloud-client gimp inkscape mumble vlc skypeforlinux-bin keepassxc evince
+enqueue chromium nextcloud-client gimp inkscape mumble vlc skypeforlinux-bin keepassxc evince telegram-desktop
 enqueue texlive-most texlive-bin
 # work {{{
-enqueue hamster-time-tracker thunderbird thunderbird-i18n-de slack-desktop 
+enqueue hamster-time-tracker thunderbird-nightly thunderbird-i18n-de slack-desktop vagrant virtualbox docker maven
  }}}
 # }}}
 # utility tools {{{
-enqueue pdfgrep xclip highlight exa-git speedcrunch-git xorg-xev xorg-xprop arandr
+enqueue pdfgrep xclip highlight exa-git speedcrunch-git xorg-xev xorg-xprop arandr redshift-git
 #}}}
 # password managing {{{
 install_key 011FDC52DA839335

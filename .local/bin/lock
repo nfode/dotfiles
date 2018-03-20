@@ -3,11 +3,13 @@
 background=00000000
 foreground=ffffffff
 
-i3lock -nu -c 343a40 -t --screen=1\
+i3lock -nu -c 343a40 -t --screen=1 \
+    --timefont="Noto Mono" \
+    --datefont="Noto Mono" \
     --timepos="(x+(w/2))-(cw/2):(h-(h/2))-ch/2" \
     --timesize=80 \
     --datepos="tx:ty+45" \
     --datesize=40 \
     --clock  \
     --timecolor="$foreground" --datecolor="$foreground" \
-    --force-clock
+--force-clock
