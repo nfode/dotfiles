@@ -1,7 +1,7 @@
 [Default Applications]
-x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
-application/pdf=evince.desktop
-x-scheme-handler/http firefox-nightly.desktop
-x-scheme-handler/https firefox-nightly.desktop
+x-scheme-handler/mailto=userapp-Daily-7KHLGZ.desktop
+message/rfc822=userapp-Daily-7KHLGZ.desktop
+
 [Added Associations]
-application/pdf=evince.desktop;gimp.desktop;
+x-scheme-handler/mailto=userapp-Daily-7KHLGZ.desktop;
+message/rfc822=userapp-Daily-7KHLGZ.desktop;

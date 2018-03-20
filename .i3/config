@@ -51,7 +51,7 @@ set $ws_time "time"
 for_window [class="Slack"] move workspace $ws_comm
 for_window [class="Mumble"] move workspace $ws_comm
 for_window [class="TelegramDesktop"] move workspace $ws_comm
-for_window [class="Mail"] move workspace $ws_mail; border pixel 0
+for_window [class="Daily"] move workspace $ws_mail; border pixel 0
 for_window [class="jetbrains-idea"] move workspace $ws_idea
 for_window [class="jetbrains-webstorm"] move workspace $ws_idea
 for_window [class="GitKraken"] move workspace $ws_git
