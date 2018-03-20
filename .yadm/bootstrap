@@ -29,7 +29,7 @@ enqueue neovim
 enqueue pulseaudio paman pavumeter paprefs pavucontrol spotify 
 # }}}
 # theming {{{
-enqueue fontconfig qt5ct lxappearance arc-gtk-theme arc-icon-theme breeze breeze-icons
+enqueue fontconfig qt5ct lxappearance arc-gtk-theme arc-icon-theme adwaite-qt5 gtk-theme-minwaita breeze-icons
 # }}}
 # fonts {{{
 enqueue adobe-source-code-pro-fonts ttf-font-awesome powerline-fonts awesome-terminal-fonts noto-fonts ttf-hack ttf-material-design-icons ttf-dejavu gucharmap-gtk2
