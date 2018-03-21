@@ -7,6 +7,7 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME
 export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
 # }}}
 # setup environment {{{
+export GPG_TTY=$(tty)
 export ANDROID_HOME=$HOME/Android/Sdk
 export VISUAL=nvim
 export EDITOR="$VISUAL"

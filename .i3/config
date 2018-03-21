@@ -24,7 +24,7 @@ set_from_resource	  $foreground_i3wmthemer	foreground
 set_from_resource	  $background_i3wmthemer	background
 # }}}
 # workspaces and applications {{{
-popup_during_fullscreen smart
+popup_during_fullscreen leave_fullscreen
 # workspace definition {{{
 set $ws1 "1"
 set $ws2 "2"
@@ -60,12 +60,10 @@ for_window [class="Nightly"] move workspace $ws_browse
 for_window [class="Spotify"] move workspace $ws_media
 for_window [class="Hamster"] move workspace $ws_time
 # }}}
-
+# }}}
 # autostart {{{
 exec session autostart
 # }}}
-
-
 # keybindings {{{
 
 # general {{{
@@ -73,6 +71,10 @@ exec session autostart
 set $mod mod4
 set $alt mod1
 set $control control
+
+bindsym $mod+Shift+p move scratchpad
+bindsym $mod+p scratchpad show
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -185,11 +187,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 # }}}
 # }}}
-
 # launchers {{{
 bindsym $mod+Return exec i3-sensible-terminal # start a terminal
 # }}}
-
 # multimedia control {{{
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/polybar/pavolume.sh --up
@@ -205,12 +205,11 @@ bindsym XF86Tools exec --no-startup-id spotify
 bindsym XF86HomePage exec --no-startup-id firefox-nighty
 bindsym XF86Explorer exec --no-startup-id dolphin
 
-bindsym Print exec --no-startup-id GTK_THEME=Arc-Breath-Dark xfce4-screenshooter
+bindsym Print exec --no-startup-id GTK_THEME=Arc-Dark xfce4-screenshooter
 # brightness control
 bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
-# }}}
 # }}}
 # style {{{
 #for_window [class=".*"] title_format "<b>%title</b>"

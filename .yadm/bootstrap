@@ -36,7 +36,7 @@ enqueue adobe-source-code-pro-fonts ttf-font-awesome powerline-fonts awesome-ter
 enqueue la-capitaine-icon-theme 
 # }}}
 # system applications {{{
-enqueue i3-gaps xorg-xrandr lightdm lightdm-mini-greeter i3lock-color xautolock compton light polybar rofi feh mygtkmenu python-i3-py xfce4-notifyd openssh network-manager-applet networkmanager htop
+enqueue i3-gaps xorg-xrandr lightdm lightdm-mini-greeter i3lock-color xautolock compton light polybar rofi feh mygtkmenu python-i3-py xfce4-notifyd openssh network-manager-applet networkmanager htop xfce4-screenshooter
 sudo cp .config/lightdm/lightdm.conf /etc/lightdm.conf
 sudo ln -sf ~/.config/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
 # }}}
@@ -60,7 +60,7 @@ cat /etc/pam.d/login | grep pam_gnome_keyring.so > /dev/null ||
 # }}}
 # dev applications {{{
 enqueue gitkraken jetbrains-toolbox atom visual-studio-code-bin filezilla docker 
-enqueue nodejs npm
+enqueue nodejs npm yarn
 # }}}
 # install packages {{{
 demanded=$(echo $packages | wc -w)

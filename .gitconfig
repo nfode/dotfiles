@@ -1,6 +1,7 @@
 [user]
 	email = nick@die-fodes.de
     name = Nick Fode
+	signingkey = 814B2DD077ED4155
 [commit]
     gpgsign = true
 [cola]
@@ -56,3 +57,5 @@
 
 [merge]
 	tool = meld
+[gpg]
+	program = /usr/bin/gpg2

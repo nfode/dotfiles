@@ -12,6 +12,6 @@ DISPLAY1="$(xrandr -q | grep 'eDP1\|VGA-1' | cut -d ' ' -f1)"
 
 DISPLAY2="$(xrandr -q | grep 'HDMI1\|DVI-I-1' | cut -d ' ' -f1)"
 [[ ! -z $DISPLAY2 ]] && MONITOR=$DISPLAY2 polybar big &
-[[ ! -z $DISPLAY2 ]] && MONITOR=$DISPLAY2 polybar bottom &
+#[[ ! -z $DISPLAY2 ]] && MONITOR=$DISPLAY2 polybar bottom &
 
 echo "Bars launched..."
