@@ -1,0 +1,6 @@
+#!/bin/bash
+
+todo=$1
+path=$HOME/nextcloud/todo
+[ -z "$todo" ] && nvim "$path/todo.md" && exit 0
+[ -f "$path/$todo.md" ] && nvim "$path/$todo.md" 
