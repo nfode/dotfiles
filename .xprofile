@@ -1,15 +1,5 @@
 export LANG="en_US.UTF-8"
-#
-# ~/.xprofile
-#
-#
 
-# if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
-#     eval "$(dbus-launch --sh-syntax --exit-with-session)"
-# fi
-
-# Environment variables
-#
 setxkbmap de
 xautolock -time 5 -locker $HOME/.local/bin/lock &
 sh $HOME/.config/polybar/launch.sh

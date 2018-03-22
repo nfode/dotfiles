@@ -37,7 +37,8 @@ enqueue la-capitaine-icon-theme
 # }}}
 # system applications {{{
 enqueue i3-gaps xorg-xrandr lightdm lightdm-mini-greeter i3lock-color xautolock compton light polybar rofi feh mygtkmenu python-i3-py xfce4-notifyd  
-
+# power management
+enqueue tlp tp_smapi acpi_call
 # network
 enqueue openssh network-manager-applet networkmanager
 

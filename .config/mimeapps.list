@@ -13,6 +13,7 @@ application/xhtml+xml=firefox-nightly.desktop
 application/x-extension-xhtml=firefox-nightly.desktop
 application/x-extension-xht=firefox-nightly.desktop
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+application/pdf=evince.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=userapp-Daily-7KHLGZ.desktop;
@@ -28,3 +29,4 @@ application/x-extension-shtml=firefox-nightly.desktop;
 application/xhtml+xml=firefox-nightly.desktop;
 application/x-extension-xhtml=firefox-nightly.desktop;
 application/x-extension-xht=firefox-nightly.desktop;
+application/pdf=evince.desktop;gimp.desktop;

@@ -1,4 +1,5 @@
 # aliases
+alias todo="vim $HOME/nextcloud/todo/todo.md"
 alias boot="vim $HOME/.yadm/bootstrap"
 alias swagger-codegen="java -jar $HOME/.local/bin/swagger-codegen-cli.jar "
 alias evince="GTK_THEME=Breath-Dark evince"
