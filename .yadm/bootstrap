@@ -36,29 +36,35 @@ enqueue adobe-source-code-pro-fonts ttf-font-awesome powerline-fonts awesome-ter
 enqueue la-capitaine-icon-theme 
 # }}}
 # system applications {{{
-enqueue i3-gaps xorg-xrandr lightdm lightdm-mini-greeter i3lock-color xautolock compton light polybar rofi feh mygtkmenu python-i3-py xfce4-notifyd openssh network-manager-applet networkmanager htop xfce4-screenshooter
+enqueue i3-gaps xorg-xrandr lightdm lightdm-mini-greeter i3lock-color xautolock compton light polybar rofi feh mygtkmenu python-i3-py xfce4-notifyd  
+
+# network
+enqueue openssh network-manager-applet networkmanager
+
+# TODO fix this
 sudo cp .config/lightdm/lightdm.conf /etc/lightdm.conf
 sudo ln -sf ~/.config/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
 # }}}
 # basic applications {{{
 enqueue termite sodalite
-enqueue chromium nextcloud-client gimp inkscape mumble vlc skypeforlinux-bin keepassxc evince telegram-desktop
+enqueue chromium nextcloud-client gimp inkscape mumble vlc skypeforlinux-bin evince telegram-desktop
 enqueue texlive-most texlive-bin
 # work {{{
-enqueue hamster-time-tracker thunderbird-nightly thunderbird-i18n-de slack-desktop vagrant virtualbox docker maven
- }}}
+enqueue hamster-time-tracker thunderbird-nightly thunderbird-i18n-de slack-desktop 
+}}}
 # }}}
 # utility tools {{{
-enqueue pdfgrep xclip highlight exa-git speedcrunch-git xorg-xev xorg-xprop arandr redshift-git
+enqueue pdfgrep xclip highlight exa-git speedcrunch-git xorg-xev xorg-xprop arandr redshift-git htop xfce4-screenshooter unzip
 #}}}
 # password managing {{{
 install_key 011FDC52DA839335
-enqueue libgnome-keyring gnome-keyring libsecret qtkeychain seahorse pass browserpass rofi-pass qtpass
+enqueue libgnome-keyring gnome-keyring libsecret qtkeychain seahorse pass browserpass rofi-pass qtpass keepassxc 
 # automatic keyring unlock
 cat /etc/pam.d/login | grep pam_gnome_keyring.so > /dev/null || 
     echo "For automated keyring unlocking upon login, follow instructions (regarding PAM) at https://wiki.archlinux.org/index.php/GNOME/Keyring#Using_the_keyring_outside_GNOME"
 # }}}
 # dev applications {{{
+enqueue vagrant virtualbox docker maven
 enqueue gitkraken jetbrains-toolbox atom visual-studio-code-bin filezilla docker 
 enqueue nodejs npm yarn
 # }}}
