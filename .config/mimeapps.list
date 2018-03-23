@@ -1,6 +1,6 @@
 [Default Applications]
-x-scheme-handler/mailto=userapp-Daily-7KHLGZ.desktop
-message/rfc822=userapp-Daily-7KHLGZ.desktop
+x-scheme-handler/mailto=userapp-Daily-A6OMGZ.desktop
+message/rfc822=userapp-Daily-A6OMGZ.desktop
 x-scheme-handler/http=firefox-nightly.desktop
 x-scheme-handler/https=firefox-nightly.desktop
 x-scheme-handler/ftp=firefox-nightly.desktop
@@ -16,8 +16,8 @@ x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 application/pdf=evince.desktop
 
 [Added Associations]
-x-scheme-handler/mailto=userapp-Daily-7KHLGZ.desktop;
-message/rfc822=userapp-Daily-7KHLGZ.desktop;
+x-scheme-handler/mailto=userapp-Daily-7KHLGZ.desktop;userapp-Daily-A6OMGZ.desktop;
+message/rfc822=userapp-Daily-7KHLGZ.desktop;userapp-Daily-A6OMGZ.desktop;
 x-scheme-handler/http=firefox-nightly.desktop;
 x-scheme-handler/https=firefox-nightly.desktop;
 x-scheme-handler/ftp=firefox-nightly.desktop;
@@ -30,3 +30,5 @@ application/xhtml+xml=firefox-nightly.desktop;
 application/x-extension-xhtml=firefox-nightly.desktop;
 application/x-extension-xht=firefox-nightly.desktop;
 application/pdf=evince.desktop;gimp.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+application/vnd.ms-powerpoint=libreoffice-impress.desktop;

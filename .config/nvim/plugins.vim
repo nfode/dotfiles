@@ -27,4 +27,5 @@ Plug 'ervandew/supertab'
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 call plug#end()

@@ -1,6 +1,8 @@
 #!/bin/bash
-
-todo=$1
-path=$HOME/nextcloud/todo
-[ -z "$todo" ] && nvim "$path/todo.md" && exit 0
-[ -f "$path/$todo.md" ] && nvim "$path/$todo.md" 
+title=vimwiki_todo
+if i3-msg -t get_tree | grep $title; 
+then
+    i3-msg -t command "[title="$title"] move window to workspace current"
+else
+    termite --title="$title" -e "zsh -c \"nvim +3 -c VimwikiIndex\""
+fi

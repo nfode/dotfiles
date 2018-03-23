@@ -75,6 +75,7 @@ set $control control
 bindsym $mod+Shift+p move scratchpad
 bindsym $mod+p scratchpad show
 
+bindsym $mod+t exec todo
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

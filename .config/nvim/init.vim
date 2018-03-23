@@ -136,3 +136,13 @@ augroup config-github-complete
         autocmd FileType gitcommit setl omnifunc=github_complete#complete
     augroup END
 let g:github_complete_enable_neocomplete = 1
+
+" Editing config files {{{
+nnoremap <leader>rc :vsplit $HOME/.vim/vimrc<cr>
+nnoremap <leader>boot :vsplit $HOME/.yadm/bootstrap<cr>
+" source config in all windows
+nnoremap <leader>src :windo source $HOME/.config/nvim/init.vim<cr><esc>:echo "sourced vimrc"<cr>
+nnoremap <leader>todo :vsplit $HOME/todo<cr>
+" }}}
+let g:vimwiki_list = [{'path': '~/nextcloud/todo/', 'syntax': 'markdown', 'ext': '.md'}]"
+let g:vimwiki_folding = 'list'
