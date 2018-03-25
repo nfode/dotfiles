@@ -10,4 +10,6 @@ redshift-gtk &
 nextcloud &
 compton -c &
 feh --bg-scale ~/.wallpaper.png &
+udiskie -2 &
 xset -b
+

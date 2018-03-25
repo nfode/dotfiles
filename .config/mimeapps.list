@@ -33,3 +33,4 @@ application/pdf=evince.desktop;gimp.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
 application/vnd.ms-powerpoint=libreoffice-impress.desktop;
 text/plain=GitKraken.desktop;
+video/mp4=vlc.desktop;

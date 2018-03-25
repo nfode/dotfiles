@@ -37,6 +37,13 @@ enqueue la-capitaine-icon-theme
 # }}}
 # system applications {{{
 enqueue i3-gaps xorg-xrandr lightdm lightdm-mini-greeter i3lock-color xautolock compton light polybar rofi feh mygtkmenu python-i3-py xfce4-notifyd  
+# printer
+enqueue cups cups-pdf guteprint
+sudo systemctl enable org.cups.cupsd.service
+sudo systemctl enable cups-browsed.service
+sudo systemctl enable avahi-daemon.service
+# storage
+enqueue gvfs udisks2 udiskie
 # power management
 enqueue tlp tp_smapi acpi_call
 # network
@@ -44,11 +51,11 @@ enqueue openssh network-manager-applet networkmanager bluez bluez-git
 sudo sytemctl enable bluetooth.service
 
 # TODO fix this
-sudo cp .config/lightdm/lightdm.conf /etc/lightdm.conf
-sudo ln -sf ~/.config/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
+#sudo cp .config/lightdm/lightdm.conf /etc/lightdm.conf
+#sudo ln -sf ~/.config/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
 # }}}
 # basic applications {{{
-enqueue termite sodalite
+enqueue termite sodalite thunar thunar-volman
 enqueue chromium nextcloud-client gimp inkscape mumble vlc skypeforlinux-bin evince telegram-desktop
 enqueue texlive-most texlive-bin
 # work {{{
