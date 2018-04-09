@@ -26,7 +26,7 @@ sudo pip install neovim
 enqueue neovim 
 # }}}
 # audio / sound {{{
-enqueue pulseaudio paman pavumeter paprefs pavucontrol spotify 
+enqueue pulseaudio paman pavumeter paprefs pavucontrol spotify playerctl
 # }}}
 # theming {{{
 enqueue fontconfig qt5ct lxappearance arc-gtk-theme arc-icon-theme adwaite-qt5 gtk-theme-minwaita breeze-icons
@@ -55,7 +55,7 @@ sudo sytemctl enable bluetooth.service
 #sudo ln -sf ~/.config/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
 # }}}
 # basic applications {{{
-enqueue termite sodalite thunar thunar-volman
+enqueue termite sodalite thunar thunar-volman gvfs-mtp
 enqueue chromium nextcloud-client gimp inkscape mumble vlc skypeforlinux-bin evince telegram-desktop
 enqueue texlive-most texlive-bin
 # work {{{

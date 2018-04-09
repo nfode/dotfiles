@@ -1,11 +1,32 @@
-command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+filetype plugin on
+filetype indent on
+command! -nargs=0  WriteWithSudo :w !sudo tee % >/dev/null
+" Use :ww instead of :WriteWithSudo
+" cnoreabbrev ww WriteWithSudo
+cnoreabbrev ww WriteWithSudo
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/airline.vim
 let mapleader=" "
+nnoremap <leader>src :windo source $HOME/.config/nvim/init.vim<cr><esc>:echo "sourced vimrc"<cr>
 nnoremap <leader><leader> :noh<cr>
+" Disable navigation with arrow keys {{{
+noremap <up> <Nop>
+noremap <down> <Nop>
+noremap <right> <Nop>
+noremap <left> <Nop>
+noremap <space> <Nop>
+inoremap <up> <Nop>
+inoremap <down> <Nop>
+inoremap <right> <Nop>
+inoremap <left> <Nop>
+vnoremap <up> <Nop>
+vnoremap <down> <Nop>
+vnoremap <right> <Nop>
+vnoremap <left> <Nop>
+" }}}
 " Toggle folds (<Space>) {{{
 nnoremap <silent> <C-space> :exe 'silent! normal! za'<CR>
-  " }}}
+" }}}
 " Formating text {{{
 " auto indent file
 nnoremap <leader>f <Esc>gg<s-V>G=''<Esc>zz
@@ -28,42 +49,25 @@ if has("nvim")
     tnoremap <C-l> <C-\><C-n><C-w>l
 endif
 " }}}
-" Disable navigation with arrow keys {{{
-noremap <up> <Nop>
-noremap <down> <Nop>
-noremap <right> <Nop>
-noremap <left> <Nop>
-noremap <space> <Nop>
-inoremap <up> <Nop>
-inoremap <down> <Nop>
-inoremap <right> <Nop>
-inoremap <left> <Nop>
-vnoremap <up> <Nop>
-vnoremap <down> <Nop>
-vnoremap <right> <Nop>
-vnoremap <left> <Nop>
-" }}}
+nmap ö [
+nmap ä ]
+
 "Autocompletion
 let g:deoplete#enable_at_startup = 1
 let g:SuperTabDefaultCompletionType = "<c-n>"
-
-filetype plugin on
-filetype indent on
 
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
 
-""""""""""""
-"Searching"
-""""""""""""
+" Searching {{{
 " Ignore case when searching set ignorecase
 " When searching try to be smart about cases
 set smartcase
 " Highlight search results set hlsearch
 " Makes search act like search in modern browsers
 set incsearch
-
+" }}}
 " Show matching brackets when text indicator is over them set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
@@ -75,11 +79,10 @@ set t_vb=
 set tm=500
 
 " enable folding
-set foldmethod=syntax
-set foldlevelstart=1
+"set foldmethod=syntax
+"set foldlevelstart=1
 let javaScript_fold=1         " JavaScript
 let sh_fold_enabled=1         " sh
-let vimsyn_folding='af'       " Vim script
 let xml_syntax_folding=1      " XML
 
 " Editor stuff
@@ -132,9 +135,9 @@ nmap <F8> :TagbarToggle<CR>
 "let g:markdown_composer_external_renderer='pandoc -f markdown -t html'
 " vim:foldmethod=marker
 augroup config-github-complete
-        autocmd!
-        autocmd FileType gitcommit setl omnifunc=github_complete#complete
-    augroup END
+    autocmd!
+    autocmd FileType gitcommit setl omnifunc=github_complete#complete
+augroup END
 let g:github_complete_enable_neocomplete = 1
 
 " Editing config files {{{
@@ -146,3 +149,28 @@ nnoremap <leader>todo :vsplit $HOME/todo<cr>
 " }}}
 let g:vimwiki_list = [{'path': '~/nextcloud/todo/', 'syntax': 'markdown', 'ext': '.md'}]"
 let g:vimwiki_folding = 'list'
+nmap <Leader>wb <Plug>VimwikiGoBackLink
+nmap <Leader>wn <Plug>VimwikiNextLink
+nmap <Leader>wp <Plug>VimwikiPrevLink
+
+" Terminal {{{
+" Enter command mode
+if has("nvim")
+    tnoremap <a-;> <c-\><c-n>:
+    " Exit terminal mode easily
+    tnoremap <esc><space> <c-\><c-n>
+endif 
+" Map important concepts (control key) to terminal
+" }}}
+" fzf {{{ 
+" Mapping selecting mappings
+if executable('fzf')
+    nmap <leader>map <plug>(fzf-maps-n)
+    nnoremap <silent> <c-f> :FZF -m<cr>
+else
+    let g:ctrlp_map = '<c-f>'
+end
+
+" }}}
+" }}}
+

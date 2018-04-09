@@ -15,7 +15,6 @@ Plug 'ap/vim-css-color'
 Plug 'matze/vim-move'
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 Plug 'rhysd/vim-gfm-syntax'
-Plug 'vimwiki/vimwiki'
 Plug 'stephpy/vim-yaml'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
@@ -27,5 +26,7 @@ Plug 'ervandew/supertab'
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf'
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 call plug#end()
