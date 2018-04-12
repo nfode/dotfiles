@@ -1,11 +1,13 @@
-filetype plugin on
-filetype indent on
 command! -nargs=0  WriteWithSudo :w !sudo tee % >/dev/null
 " Use :ww instead of :WriteWithSudo
 " cnoreabbrev ww WriteWithSudo
 cnoreabbrev ww WriteWithSudo
+
+
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/airline.vim
+filetype plugin on
+filetype indent on
 let mapleader=" "
 nnoremap <leader>src :windo source $HOME/.config/nvim/init.vim<cr><esc>:echo "sourced vimrc"<cr>
 nnoremap <leader><leader> :noh<cr>
@@ -101,9 +103,7 @@ set autoindent
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, tab and indent related
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{ Text, tab and indent related
 " Use spaces instead of tabs
 set expandtab
 
@@ -127,19 +127,20 @@ set cursorline!
 set lazyredraw
 set synmaxcol=256
 syntax sync minlines=256
+" markdown {{{
+" pandoc {{{
+let g:pandoc#modules#disabled=["bibliographies"]
+let g:pandoc#command#autoexec_on_writes = 1
+let g:pandoc#filetypes#handled = ["pandoc"]
+let g:pandoc#filetypes#pandoc_markdown = 0
+" }}}
 " vim-markdown-composer {{{
 let g:markdown_composer_browser = 'chromium'
 let g:markdown_composer_open_browser = 0
+let g:markdown_composer_external_renderer='pandoc -f markdown -t html'
+au BufRead,BufNewFile *.md		setlocal filetype=markdown.pandoc
 " }}}
-nmap <F8> :TagbarToggle<CR>
-"let g:markdown_composer_external_renderer='pandoc -f markdown -t html'
-" vim:foldmethod=marker
-augroup config-github-complete
-    autocmd!
-    autocmd FileType gitcommit setl omnifunc=github_complete#complete
-augroup END
-let g:github_complete_enable_neocomplete = 1
-
+" }}}
 " Editing config files {{{
 nnoremap <leader>rc :vsplit $HOME/.vim/vimrc<cr>
 nnoremap <leader>boot :vsplit $HOME/.yadm/bootstrap<cr>
@@ -147,20 +148,12 @@ nnoremap <leader>boot :vsplit $HOME/.yadm/bootstrap<cr>
 nnoremap <leader>src :windo source $HOME/.config/nvim/init.vim<cr><esc>:echo "sourced vimrc"<cr>
 nnoremap <leader>todo :vsplit $HOME/todo<cr>
 " }}}
+" vimwiki {{{
 let g:vimwiki_list = [{'path': '~/nextcloud/todo/', 'syntax': 'markdown', 'ext': '.md'}]"
 let g:vimwiki_folding = 'list'
 nmap <Leader>wb <Plug>VimwikiGoBackLink
 nmap <Leader>wn <Plug>VimwikiNextLink
 nmap <Leader>wp <Plug>VimwikiPrevLink
-
-" Terminal {{{
-" Enter command mode
-if has("nvim")
-    tnoremap <a-;> <c-\><c-n>:
-    " Exit terminal mode easily
-    tnoremap <esc><space> <c-\><c-n>
-endif 
-" Map important concepts (control key) to terminal
 " }}}
 " fzf {{{ 
 " Mapping selecting mappings

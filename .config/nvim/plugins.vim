@@ -29,4 +29,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf'
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
+Plug 'vim-pandoc/vim-pandoc',{ 'for': 'pandoc' }
+Plug 'vim-pandoc/vim-pandoc-syntax'
 call plug#end()
