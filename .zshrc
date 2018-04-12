@@ -16,12 +16,14 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 TERM=xterm-256color
 # }}}
 # plugin setup {{{
-plugins=(vi-mode zsh-syntax-highlighting kubectl git yarn docker mvn history-substring-search)
+plugins=(archlinux copydir copyfile rsync vi-mode zsh-syntax-highlighting kubectl git yarn docker mvn history-substring-search)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_SHORTEN_DELIMITER=".."
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status ssh dir) 
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs virtualenv pyenv)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode vcs virtualenv pyenv)
+POWERLEVEL9K_VI_INSERT_MODE_STRING="[INSERT]"
+POWERLEVEL9K_VI_COMMAND_MODE_STRING="[NORMAL]"
 #POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{200}%{\x1b[1m%}\uf101%{\x1b[m%}%f "

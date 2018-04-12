@@ -80,14 +80,14 @@ enqueue nodejs npm yarn
 # install packages {{{
 demanded=$(echo $packages | wc -w)
 installed=$(yaourt -Q $packages | wc -l)
-# this is mutch faster than asking pacman to install a package x times
+# this is much faster than asking pacman to install a package x times
 # and no root pwd must be supplied if no package install is required
 toInstall=$(( demanded - installed ))
 if [ $installed -lt $demanded ]; then
     echo "Installing $toInstall new package(s)"
     IFS=' ' read -a packageArray <<< "$packages"
     for package in "${packageArray[@]}"; do
-        if yaourt -Q $package > /dev/null; then
+        if yaourt -Qi $package > /dev/null; then
             state=x
         else
             state=missing
@@ -104,6 +104,7 @@ else
 fi
 # }}}
 # set up {{{
+systemctl --user enable --now redshift-gtk
 mkdir .node
 echo "prefix = ~/.node" > .npmrc
 npm install ionic cordova
