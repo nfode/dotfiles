@@ -39,3 +39,4 @@ application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;userapp-Mail 
 image/jpeg=gimp.desktop;
 application/msword=libreoffice-writer.desktop;userapp-Mail Recipient-3OKGGZ.desktop;
 application/vnd.oasis.opendocument.graphics=libreoffice-draw.desktop;
+application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice-impress.desktop;
