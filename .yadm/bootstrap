@@ -15,7 +15,6 @@ function install_key {
 }
 # }}}
 # shell: zsh {{{
-# zsh as shell
 enqueue zsh oh-my-zsh-git fzf zsh-autosuggestions
 [ $SHELL = "/usr/bin/zsh" ] || su -c "usermod -s /usr/bin/zsh $USER"
 # }}}
@@ -74,7 +73,7 @@ cat /etc/pam.d/login | grep pam_gnome_keyring.so > /dev/null ||
 # }}}
 # dev applications {{{
 enqueue vagrant virtualbox docker maven
-enqueue gitkraken jetbrains-toolbox atom visual-studio-code-bin filezilla docker 
+enqueue gitkraken jetbrains-toolbox atom visual-studio-code-bin filezilla docker postman
 enqueue nodejs npm yarn
 # }}}
 # install packages {{{

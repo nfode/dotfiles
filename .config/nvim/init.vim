@@ -2,10 +2,13 @@ command! -nargs=0  WriteWithSudo :w !sudo tee % >/dev/null
 " Use :ww instead of :WriteWithSudo
 " cnoreabbrev ww WriteWithSudo
 cnoreabbrev ww WriteWithSudo
+set visualbell
+set noerrorbells
 
 
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/airline.vim
+nnoremap <F3> :NumbersToggle<CR>
 filetype plugin on
 filetype indent on
 let mapleader=" "

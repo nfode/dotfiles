@@ -24,7 +24,6 @@ set_from_resource	  $foreground_i3wmthemer	foreground
 set_from_resource	  $background_i3wmthemer	background
 # }}}
 # workspaces and applications {{{
-popup_during_fullscreen leave_fullscreen
 # workspace definition {{{
 set $ws1 "1"
 set $ws2 "2"

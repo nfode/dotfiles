@@ -5,6 +5,7 @@ export PATH=$PATH:$HOME/.node/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/ndk-bundle
 export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
+export PATH=$PATH:/home/nfode/.gem/ruby/2.5.0/bin 
 # }}}
 # setup environment {{{
 export GPG_TTY=$(tty)

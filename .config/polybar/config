@@ -4,7 +4,7 @@ foreground 	= ${xrdb:foreground}
 color1	= ${xrdb:color2}
 color2	= ${xrdb:color4}
 color3 = #de9028
-alpha = #59de9028
+alpha = #59de9028 
 
 [bar/big]
 monitor = ${env:MONITOR:fallback-value}

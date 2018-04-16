@@ -31,4 +31,5 @@ Plug 'junegunn/fzf'
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 Plug 'vim-pandoc/vim-pandoc',{ 'for': 'pandoc' }
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'myusuf3/numbers.vim'
 call plug#end()
