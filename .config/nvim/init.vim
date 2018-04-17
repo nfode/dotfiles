@@ -1,19 +1,28 @@
-command! -nargs=0  WriteWithSudo :w !sudo tee % >/dev/null
-" Use :ww instead of :WriteWithSudo
-" cnoreabbrev ww WriteWithSudo
-cnoreabbrev ww WriteWithSudo
-set visualbell
-set noerrorbells
-
-
+" {{{ source config files
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/airline.vim
+" }}}
+" {{{ sudo with :ww
+command! -nargs=0  WriteWithSudo :w !sudo tee % >/dev/null
+" Use :ww instead of :WriteWithSudo
+cnoreabbrev ww WriteWithSudo
+" }}}
+" {{{ toogle relative numbers
 nnoremap <F3> :NumbersToggle<CR>
-filetype plugin on
-filetype indent on
+" }}}
+" {{{ set leader
 let mapleader=" "
+" }}}
+" {{{ source init vim
 nnoremap <leader>src :windo source $HOME/.config/nvim/init.vim<cr><esc>:echo "sourced vimrc"<cr>
+" }}}
+" {{{ disable highlighting after search
 nnoremap <leader><leader> :noh<cr>
+" }}}
+" {{{ remap umlaute
+nmap ö [
+nmap ä ]
+" }}}
 " Disable navigation with arrow keys {{{
 noremap <up> <Nop>
 noremap <down> <Nop>
@@ -54,17 +63,10 @@ if has("nvim")
     tnoremap <C-l> <C-\><C-n><C-w>l
 endif
 " }}}
-nmap ö [
-nmap ä ]
-
-"Autocompletion
+" {{{ Autocompletion
 let g:deoplete#enable_at_startup = 1
 let g:SuperTabDefaultCompletionType = "<c-n>"
-
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
-
-
+" }}}
 " Searching {{{
 " Ignore case when searching set ignorecase
 " When searching try to be smart about cases
@@ -73,24 +75,27 @@ set smartcase
 " Makes search act like search in modern browsers
 set incsearch
 " }}}
-" Show matching brackets when text indicator is over them set showmatch
-" How many tenths of a second to blink when matching brackets
-set mat=2
-
-" No annoying sound on errors
+" {{{ No annoying sound on errors
 set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
-
-" enable folding
-"set foldmethod=syntax
-"set foldlevelstart=1
+" }}}
+" {{{ default folding
 let javaScript_fold=1         " JavaScript
 let sh_fold_enabled=1         " sh
 let xml_syntax_folding=1      " XML
+" }}}
+" {{{ Editor stuff
+filetype plugin on
+filetype indent on
 
-" Editor stuff
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+" How many tenths of a second to blink when matching brackets
+set mat=2
+
 set number
 set ruler
 
@@ -105,7 +110,7 @@ set encoding=utf8
 set autoindent
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
-
+" }}}
 " {{{ Text, tab and indent related
 " Use spaces instead of tabs
 set expandtab
@@ -130,6 +135,7 @@ set cursorline!
 set lazyredraw
 set synmaxcol=256
 syntax sync minlines=256
+" }}}
 " markdown {{{
 " pandoc {{{
 let g:pandoc#modules#disabled=["bibliographies"]
@@ -167,6 +173,5 @@ else
     let g:ctrlp_map = '<c-f>'
 end
 
-" }}}
 " }}}
 
