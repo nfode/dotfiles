@@ -8,8 +8,7 @@ function! BuildComposer(info)
     endif
   endif
 endfunction
-"Plug 'rhysd/github-complete.vim'
-"Plug 'jaxbot/github-issues.vim'
+Plug 'tpope/vim-surround'
 Plug 'lilydjwg/colorizer'
 Plug 'ap/vim-css-color'
 Plug 'matze/vim-move'
