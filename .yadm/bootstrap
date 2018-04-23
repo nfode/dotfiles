@@ -75,6 +75,7 @@ cat /etc/pam.d/login | grep pam_gnome_keyring.so > /dev/null ||
 enqueue vagrant virtualbox docker maven
 enqueue gitkraken jetbrains-toolbox atom visual-studio-code-bin filezilla docker postman
 enqueue nodejs npm yarn
+enqueue android-platform android-sdk android-sdk-platform-tools android-sdk-build-tools android-studio
 # }}}
 # install packages {{{
 demanded=$(echo $packages | wc -w)
