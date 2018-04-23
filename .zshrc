@@ -34,15 +34,13 @@ source /usr/share/sodalite/shell-integration.sh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 hostname=$(hostname)
-if [ "$hostname" = "nick-laptop" ]; then
-    source ~/.config/.private/vpn.zsh
-fi
 for file in ~/.zshconfig/*; do
     source "$file"
 done
 # }}}
 # fzf {{{
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 _fzf_compgen_path() {
     command  fd --follow --exclude ".git" . "$1"
 }

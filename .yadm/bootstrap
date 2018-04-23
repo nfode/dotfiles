@@ -62,7 +62,7 @@ enqueue hamster-time-tracker thunderbird-nightly thunderbird-i18n-de slack-deskt
 }}}
 # }}}
 # utility tools {{{
-enqueue pdfgrep xclip highlight exa-git speedcrunch-git xorg-xev xorg-xprop arandr redshift-git htop xfce4-screenshooter unzip
+enqueue pdfgrep xclip highlight exa-git speedcrunch-git xorg-xev xorg-xprop arandr redshift-git htop xfce4-screenshooter unzip fd
 #}}}
 # password managing {{{
 install_key 011FDC52DA839335
