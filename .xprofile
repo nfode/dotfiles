@@ -1,15 +1,19 @@
 export LANG="en_US.UTF-8"
 
 setxkbmap de
-xautolock -time 5 -locker $HOME/.local/bin/lock &
-sh $HOME/.config/polybar/launch.sh
+
+host = $(hostname)
+if [ "$host" = "cranky panini" ]; then
+    xautolock -time 5 -locker $HOME/.local/bin/lock &
+    nextcloud &
+fi
+launchbar &
 nm-applet &
 octopi-notifier &
 jetbrains-toolbox --minimize &
 redshift-gtk &
-nextcloud &
 compton -c &
-feh --bg-scale ~/.wallpaper.png &
+setwallpaper &
 udiskie -2 &
 xset -b
 

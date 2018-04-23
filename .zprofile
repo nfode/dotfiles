@@ -3,6 +3,7 @@ if [ -n "$DESKTOP_SESSION" ];then
     export SSH_AUTH_SOCK
 fi
 export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DOWNLOAD_DIR="$HOME/downloads"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export PATH="$HOME/.local/bin:$PATH"
 export TERM=xterm-256color

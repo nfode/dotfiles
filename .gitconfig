@@ -59,3 +59,5 @@
 	tool = meld
 [gpg]
 	program = /usr/bin/gpg2
+[url "git@github.com:"]
+	insteadOf = https://github.com/

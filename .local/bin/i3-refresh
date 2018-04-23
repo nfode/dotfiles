@@ -1,5 +1,4 @@
 #!/bin/sh
 
-feh --bg-scale ~/.wallpaper.png &
-sh $HOME/.config/polybar/launch.sh &
-
+setwallpaper &
+launchbar &
