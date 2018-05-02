@@ -9,7 +9,7 @@ export PATH=$PATH:/home/nfode/.gem/ruby/2.5.0/bin
 # }}}
 # setup environment {{{
 export GPG_TTY=$(tty)
-export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_HOME=/opt/android-sdk
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export ZSH=$HOME/.oh-my-zsh

@@ -1,0 +1,3 @@
+#!/bin/bash  
+# resize tmp temporarily
+sudo mount -o remount,size=8G,noatime /tmp

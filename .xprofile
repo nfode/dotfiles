@@ -1,19 +1,18 @@
 export LANG="en_US.UTF-8"
 
 setxkbmap de
-
-host = $(hostname)
-if [ "$host" = "cranky panini" ]; then
+bin=$HOME/.local/bin
+host=$(hostname)
+if [ "$host" = "cranky-panini" ]; then
     xautolock -time 5 -locker $HOME/.local/bin/lock &
     nextcloud &
 fi
-launchbar &
+$bin/launchbar &
+$bin/setwallpaper &
 nm-applet &
-octopi-notifier &
 jetbrains-toolbox --minimize &
 redshift-gtk &
 compton -c &
-setwallpaper &
 udiskie -2 &
 xset -b
 

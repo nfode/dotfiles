@@ -58,7 +58,7 @@ enqueue termite sodalite thunar thunar-volman gvfs-mtp
 enqueue chromium nextcloud-client gimp inkscape mumble vlc skypeforlinux-bin evince telegram-desktop
 enqueue texlive-most texlive-bin
 # work {{{
-enqueue hamster-time-tracker thunderbird-nightly thunderbird-i18n-de slack-desktop libreoffice-fresh hunspell-de pandoc
+enqueue hamster-time-tracker thunderbird-beta-bin thunderbird-i18n-de slack-desktop libreoffice-fresh hunspell-de pandoc
 }}}
 # }}}
 # utility tools {{{

@@ -1,6 +1,6 @@
 [Default Applications]
-x-scheme-handler/mailto=userapp-Daily-A6OMGZ.desktop
-message/rfc822=userapp-Daily-A6OMGZ.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-71HFIZ.desktop
+message/rfc822=userapp-Thunderbird-71HFIZ.desktop
 x-scheme-handler/http=firefox-nightly.desktop
 x-scheme-handler/https=firefox-nightly.desktop
 x-scheme-handler/ftp=firefox-nightly.desktop
@@ -16,8 +16,8 @@ x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 application/pdf=evince.desktop
 
 [Added Associations]
-x-scheme-handler/mailto=userapp-Daily-7KHLGZ.desktop;userapp-Daily-A6OMGZ.desktop;
-message/rfc822=userapp-Daily-7KHLGZ.desktop;userapp-Daily-A6OMGZ.desktop;
+x-scheme-handler/mailto=userapp-Daily-7KHLGZ.desktop;userapp-Daily-A6OMGZ.desktop;userapp-Thunderbird-71HFIZ.desktop;
+message/rfc822=userapp-Daily-7KHLGZ.desktop;userapp-Daily-A6OMGZ.desktop;userapp-Thunderbird-71HFIZ.desktop;
 x-scheme-handler/http=firefox-nightly.desktop;
 x-scheme-handler/https=firefox-nightly.desktop;
 x-scheme-handler/ftp=firefox-nightly.desktop;

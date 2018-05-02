@@ -1,3 +1,3 @@
 #!/bin/bash  
 
-feh --bg-center --image-bg "#343a47" ~/.wallpaper.png &
+feh --bg-center --image-bg "#343a47" ~/.wallpaper.png
