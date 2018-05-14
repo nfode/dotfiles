@@ -1,0 +1,8 @@
+#!/bin/bash  
+
+rofi -modi 'drun' \
+    -matching fuzzy \
+    -drun-match-fields name \
+    -config $XDG_CONFIG_HOME/rofi/rofi.conf \
+    -theme $XDG_CONFIG_HOME/rofi/themes/custom.rasi \
+    -show drun
