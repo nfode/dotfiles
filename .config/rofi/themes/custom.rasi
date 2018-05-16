@@ -29,9 +29,10 @@
     selected-active-background:  rgba ( 0, 119, 99, 100 % );
 }
 #window {
-    width:            45%;
+    width:            20%;
     background-color: @background;
     border:           1;
+    border-color: @selected-normal-background; 
     padding:          5;
 }
 #mainbox {
@@ -39,7 +40,7 @@
     padding: 0;
 }
 #prompt {
-font: "Noto Sans 22";
+font: "Noto Sans 18";
 padding: 0px 6px 0px 0px;
 }
 #message {
