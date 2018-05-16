@@ -6,13 +6,13 @@ host=$(hostname)
 if [ "$host" = "cranky-panini" ]; then
     xautolock -time 5 -locker $HOME/.local/bin/lock &
     nextcloud &
+    compton -c &
 fi
 $bin/launchbar &
 $bin/setwallpaper &
 nm-applet &
 jetbrains-toolbox --minimize &
 redshift-gtk &
-compton -c &
 udiskie -2 &
 xset -b
 

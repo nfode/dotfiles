@@ -134,7 +134,7 @@ let g:pandoc#filetypes#pandoc_markdown = 0
 " vim-markdown-composer {{{
 let g:markdown_composer_browser = 'chromium'
 let g:markdown_composer_open_browser = 0
-let g:markdown_composer_external_renderer='pandoc -f markdown -t html'
+"let g:markdown_composer_external_renderer='pandoc -f markdown -t html'
 "au BufRead,BufNewFile *.md		setlocal filetype=markdown.pandoc
 " }}}
 " }}}
