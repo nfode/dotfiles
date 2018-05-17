@@ -1,6 +1,6 @@
 #!/bin/bash  
 
-rofi -modi 'drun' \
+rofi -modi 'drun,window' \
     -matching fuzzy \
     -drun-match-fields name \
     -config $XDG_CONFIG_HOME/rofi/rofi.conf \
