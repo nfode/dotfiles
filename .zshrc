@@ -1,5 +1,6 @@
 # vim: fdm=marker:fdl=0
 # setup environment {{{
+export NVIM_TUI_ENABLE_TRUE_COLOR=1
 export GOPATH=$HOME/go
 export GPG_TTY=$(tty)
 export ANDROID_HOME=/opt/android-sdk
