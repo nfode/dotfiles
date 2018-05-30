@@ -6,8 +6,8 @@ host=$(hostname)
 if [ "$host" = "cranky-panini" ]; then
     xautolock -time 5 -locker $HOME/.local/bin/lock &
     nextcloud &
-    compton -c &
 fi
+compton -c &
 $bin/launchbar &
 $bin/setwallpaper &
 nm-applet &
