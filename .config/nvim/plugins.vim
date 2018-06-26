@@ -8,6 +8,10 @@ function! BuildComposer(info)
     endif
   endif
 endfunction
+Plug 'Yggdroot/indentLine'
+Plug 'morhetz/gruvbox'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-surround'
 Plug 'lilydjwg/colorizer'
 Plug 'ap/vim-css-color'

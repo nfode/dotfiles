@@ -5,9 +5,9 @@ font = Hack 16
 # Base16 Monokai
 # Author: Wimer Hazenberg (http://www.monokai.nl)
 
-foreground      = #f8f8f2
+foreground      = #d6d4cf
 foreground_bold = #f5f4f1
-cursor          = #f5f4f1
+cursor          = #e5e3dc
 background      = #272822
 
 # 16 color space

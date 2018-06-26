@@ -1,13 +1,7 @@
 # vim: fdm=marker:fdl=0
-# setup path {{{
-export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/.node/bin
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/ndk-bundle
-export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
-export PATH=$PATH:/home/nfode/.gem/ruby/2.5.0/bin 
-# }}}
 # setup environment {{{
+export NVIM_TUI_ENABLE_TRUE_COLOR=1
+export GOPATH=$HOME/go
 export GPG_TTY=$(tty)
 export ANDROID_HOME=/opt/android-sdk
 export VISUAL=nvim
@@ -15,6 +9,15 @@ export EDITOR="$VISUAL"
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="powerlevel9k/powerlevel9k"
 TERM=xterm-256color
+# }}}
+# setup path {{{
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.node/bin
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/ndk-bundle
+export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
+export PATH=$PATH:/home/nfode/.gem/ruby/2.5.0/bin 
 # }}}
 # plugin setup {{{
 plugins=(archlinux copydir copyfile rsync vi-mode zsh-syntax-highlighting kubectl git yarn docker mvn history-substring-search)

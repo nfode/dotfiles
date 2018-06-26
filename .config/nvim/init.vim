@@ -77,7 +77,9 @@ let xml_syntax_folding=1      " XML
 " {{{ Editor stuff
 filetype plugin on
 filetype indent on
-
+set splitright
+set splitbelow
+set listchars=tab:>·,trail:~,extends:>,precedes:<,space:⋅
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
@@ -88,10 +90,30 @@ set number
 set ruler
 
 syntax enable
-colorscheme onedark
-set background=dark
+set termguicolors
+" {{{ toggle light
+function! Light()
+    echom "set bg=light"
+    set background=light
+    colorscheme gruvbox
+    AirlineTheme gruvbox
+endfunction
 
-set guifont=Monospace\ Regular\ 13
+function! Dark()
+    echom "set bg=dark"
+    set background=dark
+    colorscheme onedark
+   "    set nolist
+endfunction
+function! ToggleLightDark()
+    if &bg ==# "light"
+        call Dark()
+    else
+        call Light()
+    endif
+endfunction
+nnoremap <leader>c :call ToggleLightDark()<CR>
+" }}}
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -134,7 +156,7 @@ let g:pandoc#filetypes#pandoc_markdown = 0
 " vim-markdown-composer {{{
 let g:markdown_composer_browser = 'chromium'
 let g:markdown_composer_open_browser = 0
-let g:markdown_composer_external_renderer='pandoc -f markdown -t html'
+"let g:markdown_composer_external_renderer='pandoc -f markdown -t html'
 "au BufRead,BufNewFile *.md		setlocal filetype=markdown.pandoc
 " }}}
 " }}}
@@ -206,8 +228,8 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Specify the behavior when switching between buffers 
 try
-  set switchbuf=useopen,usetab,newtab
-  set stal=2
+    set switchbuf=useopen,usetab,newtab
+    set stal=2
 catch
 endtry
 
@@ -218,3 +240,19 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 " }}}
+" {{{ NERDTree
+map <leader>n :NERDTreeToggle<cr>
+" Auto start NERD tree when opening a directory
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | wincmd p | endif
+
+" Auto start NERD tree if no files are specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | exe 'NERDTree' | endif
+
+" Let quit work as expected if after entering :q the only window left open is NERD Tree itself
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif 
+" }}}
+" {{{ init 
+silent call Dark()
+autocmd VimEnter * wincmd p
+" }}} 

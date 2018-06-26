@@ -7,12 +7,12 @@ if [ "$host" = "cranky-panini" ]; then
     xautolock -time 5 -locker $HOME/.local/bin/lock &
     nextcloud &
 fi
+compton -c &
 $bin/launchbar &
 $bin/setwallpaper &
 nm-applet &
 jetbrains-toolbox --minimize &
 redshift-gtk &
-compton -c &
 udiskie -2 &
 xset -b
 
