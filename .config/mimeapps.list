@@ -14,6 +14,7 @@ application/x-extension-xhtml=firefox-nightly.desktop
 application/x-extension-xht=firefox-nightly.desktop
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 application/pdf=evince.desktop
+text/plain=nvim.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=userapp-Daily-7KHLGZ.desktop;userapp-Daily-A6OMGZ.desktop;userapp-Thunderbird-71HFIZ.desktop;
@@ -32,14 +33,16 @@ application/x-extension-xht=firefox-nightly.desktop;
 application/pdf=evince.desktop;gimp.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;userapp-Mail Recipient-3OKGGZ.desktop;
 application/vnd.ms-powerpoint=libreoffice-impress.desktop;
-text/plain=visual-studio-code.desktop;oni.desktop;GitKraken.desktop;
+text/plain=sodalite.desktop;nvim.desktop;visual-studio-code.desktop;oni.desktop;GitKraken.desktop;
 video/mp4=vlc.desktop;
-image/png=gimp.desktop;libreoffice-draw.desktop;
+image/png=gimp.desktop;feh.desktop;libreoffice-draw.desktop;
 application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;userapp-Mail Recipient-IFI6FZ.desktop;
-image/jpeg=gimp.desktop;
+image/jpeg=feh.desktop;gimp.desktop;
 application/msword=libreoffice-writer.desktop;userapp-Mail Recipient-3OKGGZ.desktop;
 application/vnd.oasis.opendocument.graphics=libreoffice-draw.desktop;
 application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice-impress.desktop;
 application/x-php=visual-studio-code.desktop;
 application/x-yaml=visual-studio-code.desktop;
 application/x-compressed-tar=org.gnome.FileRoller.desktop;
+application/zip=org.gnome.FileRoller.desktop;
+application/json=nvim.desktop;
