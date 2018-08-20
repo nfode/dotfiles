@@ -13,8 +13,8 @@ if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
     clear
    exit
 fi
-if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 2 ]; then
-  XKB_DEFAULT_LAYOUT=de exec sway &> log.txt
-fi
+#if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 2 ]; then
+#  XKB_DEFAULT_LAYOUT=de exec sway &> log.txt
+#fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
