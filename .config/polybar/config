@@ -115,7 +115,7 @@ format-foreground = #1ed760
 
 [module/date]
 type = internal/date
-interval = 2
+interval = 1
 
 date =
 date-alt = "%d/%m/%Y"

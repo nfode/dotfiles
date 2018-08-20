@@ -11,6 +11,8 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 TERM=xterm-256color
 # }}}
 # setup path {{{
+export PATH=$PATH:$HOME/.cargo/env
+export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.node/bin
@@ -60,3 +62,9 @@ setopt NO_CHECK_JOBS
 bindkey -v
 export KEYTIMEOUT=1
 # }}}
+
+PATH="/home/nfode/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/nfode/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/nfode/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/nfode/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/nfode/perl5"; export PERL_MM_OPT;
