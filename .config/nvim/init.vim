@@ -80,6 +80,7 @@ filetype indent on
 set splitright
 set splitbelow
 set listchars=tab:>·,trail:~,extends:>,precedes:<,space:⋅
+set list
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
@@ -157,7 +158,7 @@ let g:pandoc#filetypes#pandoc_markdown = 0
 let g:markdown_composer_browser = 'chromium'
 let g:markdown_composer_open_browser = 0
 "let g:markdown_composer_external_renderer='pandoc -f markdown -t html'
-"au BufRead,BufNewFile *.md		setlocal filetype=markdown.pandoc
+autocmd BufRead,BufNewFile *.md	setlocal filetype=markdown
 " }}}
 " }}}
 " Editing config files {{{

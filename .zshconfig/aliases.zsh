@@ -1,7 +1,7 @@
 # aliases
 alias boot="vim $HOME/.yadm/bootstrap"
 alias swagger-codegen="java -jar $HOME/.local/bin/swagger-codegen-cli.jar "
-alias evince="GTK_THEME=Breath-Dark evince"
+alias evince="GTK_THEME=Arc-Dark evince"
 alias spec="evince /home/nfode/nextcloud/uni/5.Semester/stupro/TOSCA-Simple-Profile-YAML-v1.1-cos01.pdf &> /dev/null &"
 alias t="cd ~/dev/stupro/TOSCAna"
 alias :q=exit
