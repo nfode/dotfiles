@@ -4,104 +4,34 @@
 yadm submodule update --recursive --init
 # }}} 
 # install function definitions {{{
-function enqueue {
-    for package in "$@"; do
-        packages+="$package "
-    done
-}
-
 function install_key {
     gpg -k $key 2>&1 > /dev/null || gpg --recv-key $key
 }
 # }}}
+# restore packages from list {{{
+restorepkgs $HOME/.yadm/packages.txt
+# }}}
 # shell: zsh {{{
-enqueue zsh oh-my-zsh-git fzf zsh-autosuggestions
 [ $SHELL = "/usr/bin/zsh" ] || su -c "usermod -s /usr/bin/zsh $USER"
 # }}}
 # vim {{{
-enqueue python2 python2-pip python python-pip
 sudo pip2.7 install neovim
 sudo pip install neovim
-enqueue neovim 
 # }}}
-# audio / sound {{{
-enqueue pulseaudio paman pavumeter paprefs pavucontrol spotify playerctl
-# }}}
-# theming {{{
-enqueue fontconfig qt5ct lxappearance arc-gtk-theme arc-icon-theme adwaite-qt5 gtk-theme-minwaita breeze-icons
-# }}}
-# fonts {{{
-enqueue adobe-source-code-pro-fonts ttf-font-awesome powerline-fonts awesome-terminal-fonts noto-fonts ttf-hack ttf-material-design-icons ttf-dejavu gucharmap-gtk2
-enqueue la-capitaine-icon-theme 
-# }}}
-# system applications {{{
-enqueue i3-gaps xorg-xrandr lightdm lightdm-mini-greeter i3lock-color xautolock compton light polybar rofi feh mygtkmenu python-i3-py xfce4-notifyd  
-# printer
-enqueue cups cups-pdf guteprint
+# system {{{
 sudo systemctl enable org.cups.cupsd.service
 sudo systemctl enable cups-browsed.service
 sudo systemctl enable avahi-daemon.service
-# storage
-enqueue gvfs udisks2 udiskie
-# power management
-enqueue tlp tp_smapi acpi_call
 # network
-enqueue openssh network-manager-applet networkmanager bluez bluez-git
 sudo sytemctl enable bluetooth.service
 
 # TODO fix this
 #sudo cp .config/lightdm/lightdm.conf /etc/lightdm.conf
 #sudo ln -sf ~/.config/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
 # }}}
-# basic applications {{{
-enqueue termite sodalite thunar thunar-volman gvfs-mtp exfat-utils
-enqueue chromium nextcloud-client gimp inkscape mumble vlc skypeforlinux-bin evince telegram-desktop
-enqueue texlive-most texlive-bin
-# work {{{
-enqueue hamster-time-tracker thunderbird-beta-bin thunderbird-i18n-de slack-desktop libreoffice-fresh hunspell-de pandoc
-}}}
-# }}}
-# utility tools {{{
-enqueue pdfgrep xclip highlight exa-git speedcrunch-git xorg-xev xorg-xprop arandr redshift-git htop xfce4-screenshooter unzip fd
-#}}}
-# password managing {{{
-install_key 011FDC52DA839335
-enqueue libgnome-keyring gnome-keyring libsecret qtkeychain seahorse pass browserpass rofi-pass qtpass keepassxc 
-# automatic keyring unlock
+# automatic keyring unlock {{{
 cat /etc/pam.d/login | grep pam_gnome_keyring.so > /dev/null || 
     echo "For automated keyring unlocking upon login, follow instructions (regarding PAM) at https://wiki.archlinux.org/index.php/GNOME/Keyring#Using_the_keyring_outside_GNOME"
-# }}}
-# dev applications {{{
-enqueue vagrant virtualbox docker maven
-enqueue gitkraken jetbrains-toolbox atom visual-studio-code-bin filezilla docker postman
-enqueue nodejs npm yarn
-enqueue android-platform android-sdk android-sdk-platform-tools android-sdk-build-tools android-studio
-# }}}
-# install packages {{{
-demanded=$(echo $packages | wc -w)
-installed=$(yaourt -Q $packages | wc -l)
-# this is much faster than asking pacman to install a package x times
-# and no root pwd must be supplied if no package install is required
-toInstall=$(( demanded - installed ))
-if [ $installed -lt $demanded ]; then
-    echo "Installing $toInstall new package(s)"
-    IFS=' ' read -a packageArray <<< "$packages"
-    for package in "${packageArray[@]}"; do
-        if yaourt -Qi $package > /dev/null; then
-            state=x
-        else
-            state=missing
-        fi
-        printf "%-40s %s\n" $package $state
-        if [ $state = missing ]; then
-            echo "Install $package now [y/N]?"
-            read confirm
-            [ "$confirm" = y ] && yaourt -S $package
-        fi
-    done
-else
-    echo all packages already installed
-fi
 # }}}
 # set up {{{
 systemctl --user enable --now redshift-gtk
@@ -116,5 +46,4 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim<Paste>
 # }}}
-
 echo bootstrapping done

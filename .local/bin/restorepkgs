@@ -1,0 +1,3 @@
+#!/bin/bash  
+
+yaourt -S --needed $(tr '\n' ' ' < $(pwd)/$1)
