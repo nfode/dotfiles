@@ -54,7 +54,7 @@ sudo sytemctl enable bluetooth.service
 #sudo ln -sf ~/.config/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
 # }}}
 # basic applications {{{
-enqueue termite sodalite thunar thunar-volman gvfs-mtp
+enqueue termite sodalite thunar thunar-volman gvfs-mtp exfat-utils
 enqueue chromium nextcloud-client gimp inkscape mumble vlc skypeforlinux-bin evince telegram-desktop
 enqueue texlive-most texlive-bin
 # work {{{
