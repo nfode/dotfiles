@@ -47,17 +47,17 @@ set $ws_time "time"
 # }}}
 
 # app rules {{{
-for_window [class="Slack"] move workspace $ws_comm
-for_window [class="Mumble"] move workspace $ws_comm
-for_window [class="TelegramDesktop"] move workspace $ws_comm
-for_window [class="Thunderbird"] move workspace $ws_mail; border pixel 0
-for_window [class="jetbrains-idea"] move workspace $ws_idea
-for_window [class="jetbrains-webstorm"] move workspace $ws_idea
-for_window [class="GitKraken"] move workspace $ws_git
-for_window [class="Firefox"] move workspace $ws_browse
-for_window [class="Nightly"] move workspace $ws_browse
-for_window [class="Spotify"] move workspace $ws_media
-for_window [class="Hamster"] move workspace $ws_time
+assign [class="Slack"] $ws_comm
+assign [class="Mumble"] $ws_comm
+assign [class="TelegramDesktop"] $ws_comm
+assign [class="Thunderbird"] $ws_mail
+assign [class="jetbrains-idea"] $ws_idea
+assign [class="jetbrains-webstorm"] $ws_idea
+assign [class="jetbrains-goland"] $ws_idea
+assign [class="GitKraken"] $ws_git
+assign [class="Firefox"] $ws_browse
+assign [class="Nightly"] $ws_browse
+assign [class="Spotify"] $ws_media
 # }}}
 # }}}
 # autostart {{{
@@ -211,7 +211,7 @@ bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 # }}}
 # style {{{
-#for_window [class=".*"] title_format "<b>%title</b>"
+#assign [class=".*"] title_format "<b>%title</b>"
 font pango:DejaVu Sans Mono 12
 # disable titlebars -- a bit of a hack
 new_window pixel 2
@@ -230,7 +230,7 @@ bindsym $mod+F11 "exec $HOME/.screenlayout/home.sh"
 bindsym $mod+F12 "exec $HOME/.screenlayout/dblab_left.sh"
 # }}}
 ## gaps {{{
-#for_window [class="^.*"] border pixel 1 
+#assign [class="^.*"] border pixel 1 
 #set $default_gaps_inner 8
 #set $default_gaps_outer -2
 #gaps inner $default_gaps_inner
