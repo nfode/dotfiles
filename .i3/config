@@ -74,7 +74,7 @@ bindsym $mod+p scratchpad show
 
 bindsym $mod+n exec todo
 
-bindsym mod4+Prior exec kb-light.py
+bindsym $mod+Prior exec kb-light.py
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
