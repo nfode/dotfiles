@@ -1,0 +1,9 @@
+#entry {
+   font: "Noto Sans 20"; 
+}
+#prompt {
+    font: "Noto Sans 24";
+}
+#element {
+    font: "Noto Sans 22";
+}

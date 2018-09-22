@@ -1,0 +1,18 @@
+#!/bin/bash
+
+rofi_themes_dir=$XDG_CONFIG_HOME/rofi/themes
+
+default_path=$rofi_themes_dir/default.rasi
+custom_folder_path=$rofi_themes_dir/custom
+
+cp -f $default_path $rofi_themes_dir/merged.rasi
+
+for entry in "$custom_folder_path"/*
+do
+    if [[ $entry == *.rasi ]]; then 
+        cat $entry >> $rofi_themes_dir/merged.rasi
+        echo "merged $entry into rofi theme"
+    fi
+done
+
+

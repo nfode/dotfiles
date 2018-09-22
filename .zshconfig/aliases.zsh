@@ -22,7 +22,6 @@ alias mv='nocorrect mv -i'
 alias touch='nocorrect touch'
 alias mkdir='nocorrect mkdir'
 
-
 # nice colours for grep
 alias grep='grep --color=auto --exclude-dir=.git'
 

@@ -34,16 +34,24 @@ cat /etc/pam.d/login | grep pam_gnome_keyring.so > /dev/null ||
     echo "For automated keyring unlocking upon login, follow instructions (regarding PAM) at https://wiki.archlinux.org/index.php/GNOME/Keyring#Using_the_keyring_outside_GNOME"
 # }}}
 # set up {{{
-systemctl --user enable --now redshift-gtk
+# {{{ misc
+merge-rofi
+sudo cp $HOME/.config/lightdm-slick-greeter/slick-greeter.conf /etc/lightdm/slick-greeter.conf
+# }}}
+# node without sudo {{{
 mkdir .node
 echo "prefix = ~/.node" > .npmrc
 npm install ionic cordova
-
+# }}}
+# {{{ oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+# }}}
+# {{{ vim-plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim<Paste>
+# }}}
 # }}}
 echo bootstrapping done

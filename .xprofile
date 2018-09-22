@@ -1,6 +1,7 @@
 export LANG="en_US.UTF-8"
 
 setxkbmap de
+
 bin=$HOME/.local/bin
 host=$(hostname)
 if [ "$host" = "cranky-panini" ]; then
@@ -8,11 +9,14 @@ if [ "$host" = "cranky-panini" ]; then
     nextcloud &
     redshift-gtk &
 fi
-compton -c &
+light-locker &
+#compton -c &
 $bin/launchbar &
 $bin/setwallpaper &
 nm-applet &
 jetbrains-toolbox --minimize &
 udiskie -2 &
 xset -b
+[[ -f ~/.custom-Xresources ]] && xrdb -merge ~/.custom-Xresources 
+
 

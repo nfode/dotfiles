@@ -1,5 +1,10 @@
 #!/bin/sh
 
+bar="default"
+if [ "$(hostname)" == "cranky-panini" ]; then
+  bar="hires"  
+fi
+
 # Terminate already running bar instances
 killall -q polybar
 
@@ -8,5 +13,5 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 # Launch bar on all display
 displays=$(xrandr | grep "[^ ]* connected" | cut -d" " -f1)
 for display in $displays; do
-    MONITOR=$display polybar big &
+        MONITOR=$display polybar $bar &
 done

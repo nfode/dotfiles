@@ -55,9 +55,7 @@ assign [class="jetbrains-idea"] $ws_idea
 assign [class="jetbrains-webstorm"] $ws_idea
 assign [class="jetbrains-goland"] $ws_idea
 assign [class="GitKraken"] $ws_git
-assign [class="Firefox"] $ws_browse
-assign [class="Nightly"] $ws_browse
-assign [class="Spotify"] $ws_media
+for_window [class="Spotify"] move to workspace $ws_media
 # }}}
 # }}}
 # autostart {{{
@@ -75,6 +73,8 @@ bindsym $mod+Shift+p move scratchpad
 bindsym $mod+p scratchpad show
 
 bindsym $mod+n exec todo
+
+bindsym mod4+Prior exec kb-light.py
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

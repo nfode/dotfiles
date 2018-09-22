@@ -4,5 +4,5 @@ rofi -modi 'drun,window' \
     -matching fuzzy \
     -drun-match-fields name \
     -config $XDG_CONFIG_HOME/rofi/rofi.conf \
-    -theme $XDG_CONFIG_HOME/rofi/themes/custom.rasi \
+    -theme $XDG_CONFIG_HOME/rofi/themes/merged.rasi \
     -show drun
