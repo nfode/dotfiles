@@ -17,6 +17,3 @@ nm-applet &
 jetbrains-toolbox --minimize &
 udiskie -2 &
 xset -b
-[[ -f ~/.custom-Xresources ]] && xrdb -merge ~/.custom-Xresources 
-
-

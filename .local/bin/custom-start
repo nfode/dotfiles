@@ -1,0 +1,3 @@
+#!/bin/bash  
+[[ -f ~/.custom-Xresources ]] && xrdb -merge ~/.custom-Xresources 
+exec i3

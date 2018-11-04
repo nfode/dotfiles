@@ -8,13 +8,16 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export PATH="$HOME/.local/bin:$PATH"
 export TERM=xterm-256color
 export TERMINAL=termite
+export XDG_CONFIG_DIR=$XDG_CONFIG_HOME
+
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
     exec startx &> /dev/null
     clear
    exit
 fi
-#if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 2 ]; then
-#  XKB_DEFAULT_LAYOUT=de exec sway &> log.txt
-#fi
+if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 2 ]; then
+  XKB_DEFAULT_LAYOUT=de exec sway &> log.txt
+  source ~/.xprofile
+fi
 
 export PATH="$HOME/.cargo/bin:$PATH"

@@ -40,7 +40,7 @@ font-1 = "FontAwesome5Brands:style=Solid:pixelsize=18;3"
 font-0 = Noto Sans:fontformat=truetype:size=14;1
 modules-left = i3
 modules-center = date
-modules-right = pavolume battery power-menu
+modules-right = pavolume battery
 tray-position = right
 tray-padding = 9
 tray-transparent = false

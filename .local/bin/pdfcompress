@@ -1,8 +1,8 @@
 #!/bin/bash
 
-LEVEL="screen"
+quality=${1:-good}
 
-case $1 in
+case $quality in
     low) LEVEL="screen" ;;
     good) LEVEL="ebook" ;;
     high) LEVEL="prepress" ;;

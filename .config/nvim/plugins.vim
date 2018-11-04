@@ -33,4 +33,5 @@ Plug 'junegunn/fzf'
 Plug 'vim-pandoc/vim-pandoc',{ 'for': 'pandoc' }
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'myusuf3/numbers.vim'
+Plug 'chrisbra/SudoEdit.vim'
 call plug#end()
