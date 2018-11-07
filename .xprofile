@@ -1,7 +1,6 @@
 export LANG="en_US.UTF-8"
-
-setxkbmap de
-
+setxkbmap -layout us -option caps:escape -option compose:ralt
+localectl set-keymap custom
 bin=$HOME/.local/bin
 host=$(hostname)
 if [ "$host" = "cranky-panini" ]; then

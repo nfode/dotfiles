@@ -1,0 +1,25 @@
+keycode 58 = Escape
+
+keycode 100 = Compose
+
+
+AltGr keycode 30 = U+00e4            # ä
+Shift AltGr keycode 30 = U+00c4      # Ä
+AltGr keycode 22 = U+00fc            # 
+Shift AltGr keycode 22 = U+00dc      # 
+AltGr keycode 24 = U+00f6            # 
+Shift AltGr keycode 24 = U+00d6      # 
+
+compose 'a' 'a' to adiaeresis
+compose 'A' 'A' to Adiaeresis
+compose 'a' 'A' to Adiaeresis
+compose 'o' 'o' to odiaeresis
+compose 'O' 'O' to Odiaeresis
+compose 'o' 'O' to Odiaeresis
+compose 'u' 'u' to udiaeresis
+compose 'U' 'U' to Udiaeresis
+compose 'u' 'U' to Udiaeresis
+compose 'e' 'e' to U+20AC           # euro
+
+compose 's' 's' to ssharp
+
