@@ -22,7 +22,7 @@ export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
 export PATH=$PATH:/home/nfode/.gem/ruby/2.5.0/bin 
 # }}}
 # plugin setup {{{
-plugins=(archlinux copydir copyfile rsync vi-mode zsh-syntax-highlighting kubectl git yarn docker mvn history-substring-search)
+plugins=(archlinux copydir copyfile rsync vi-mode zsh-syntax-highlighting kubectl git yarn docker mvn history-substring-search colored-man-pages)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_SHORTEN_DELIMITER=".."
@@ -58,6 +58,7 @@ _fzf_compgen_dir() {
 # misc {{{
 setopt NO_HUP
 setopt NO_CHECK_JOBS
+setopt HIST_FIND_NO_DUPS
 
 bindkey -v
 export KEYTIMEOUT=1

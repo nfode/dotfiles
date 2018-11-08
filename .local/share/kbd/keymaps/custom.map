@@ -10,7 +10,7 @@ Shift AltGr keycode 22 = U+00dc      #
 AltGr keycode 24 = U+00f6            # 
 Shift AltGr keycode 24 = U+00d6      # 
 
-compose 'a' 'a' to adiaeresis
+compose 'a' 'a' to U+00E4
 compose 'A' 'A' to Adiaeresis
 compose 'a' 'A' to Adiaeresis
 compose 'o' 'o' to odiaeresis
