@@ -19,10 +19,6 @@ nnoremap <leader>src :windo source $HOME/.config/nvim/init.vim<cr><esc>:echo "so
 " {{{ disable highlighting after search
 nnoremap <leader><leader> :noh<cr>
 " }}}
-" {{{ remap umlaute
-nmap ö [
-nmap ä ]
-" }}}
 " Disable navigation with arrow keys {{{
 noremap <up> <Nop>
 noremap <down> <Nop>
@@ -213,7 +209,8 @@ map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 "map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
-map <leader>t<leader> :tabnext 
+map <leader>tl :tabnext 1 <cr>
+map <leader>th :tabprevious 1 <cr>
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
@@ -243,6 +240,7 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 " }}}
 " {{{ NERDTree
 map <leader>n :NERDTreeToggle<cr>
+map <leader>nf :NERDTreeFocus<cr>
 " Auto start NERD tree when opening a directory
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | wincmd p | endif
 
