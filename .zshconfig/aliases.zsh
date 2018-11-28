@@ -7,7 +7,7 @@ alias t="cd ~/dev/stupro/TOSCAna"
 alias :q=exit
 # if exa is installed, use it instead of ls
 if command -v exa > /dev/null; then
-    alias ll='exa --all --classify --long --git --group-directories-first --time-style=long-iso'
+    alias ll='exa --classify --long --git --group-directories-first --time-style=long-iso'
     alias ls='exa --classify --across'
 else
     alias ll='ls -FAggoT 12 --human-readable --group-directories-first --time-style=long-iso --color=auto'
