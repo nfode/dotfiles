@@ -2,6 +2,7 @@ acpi_call
 adobe-source-code-pro-fonts
 adwaita-qt4
 adwaita-qt5
+amp
 android-studio
 android-udev
 arandr
@@ -45,6 +46,7 @@ exfat-utils
 fakeroot
 fd
 feh
+fff-git
 file
 file-roller
 filesystem
@@ -180,6 +182,7 @@ python-i3-py
 python-neovim-git
 python-pip
 python2-pip
+qt5-wayland
 qt5ct
 redshift
 reiserfsprogs
@@ -197,7 +200,7 @@ spotify
 sshfs
 sublime-text-dev
 sudo
-sway-wlroots-git
+sway-git
 sysfsutils
 system-config-printer
 systemd
@@ -216,19 +219,21 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 texlive-science
+threshy-gui
 thunar
 thunar-archive-plugin
 thunar-volman
 thunderbird-beta-bin
 thunderbird-i18n-de
 tlp
+tlpui-git
 tmux
+tp_smapi
 tpacpi-bat
 ttf-dejavu
 ttf-font-awesome
 ttf-hack
 ttf-material-design-icons
-tuxboot
 udiskie
 unzip
 usbutils
@@ -263,3 +268,4 @@ yaourt
 yarn
 zsh
 zsh-autosuggestions
+zsh-syntax-highlighting

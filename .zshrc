@@ -22,17 +22,14 @@ export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
 export PATH=$PATH:/home/nfode/.gem/ruby/2.5.0/bin 
 # }}}
 # plugin setup {{{
-plugins=(archlinux copydir copyfile rsync vi-mode zsh-syntax-highlighting kubectl git yarn docker mvn history-substring-search colored-man-pages)
+plugins=(archlinux copydir copyfile rsync vi-mode zsh-syntax-highlighting kubectl git yarn docker mvn history-substring-search colored-man-pages pip)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_SHORTEN_DELIMITER=".."
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status ssh dir) 
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode vcs virtualenv pyenv)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status ssh dir vcs) 
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode virtualenv)
 POWERLEVEL9K_VI_INSERT_MODE_STRING="[INSERT]"
 POWERLEVEL9K_VI_COMMAND_MODE_STRING="[NORMAL]"
-#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{200}%{\x1b[1m%}\uf101%{\x1b[m%}%f "
 # }}}
 # source all the settings {{{
 source /usr/share/sodalite/shell-integration.sh
@@ -77,3 +74,5 @@ bindkey -M vicmd 'j' history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 # }}}
+#
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
