@@ -264,7 +264,7 @@ xorg-xprop
 xorg-xrandr
 xscreensaver-arch-logo
 yadm-git
-yaourt
+yay
 yarn
 zsh
 zsh-autosuggestions
