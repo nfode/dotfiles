@@ -51,3 +51,4 @@ image/x-xcf=gimp.desktop;
 application/vnd.android.package-archive=org.gnome.FileRoller.desktop;
 text/markdown=visual-studio-code.desktop;
 text/x-tex=nvim.desktop;
+text/csv=libreoffice-calc.desktop;
