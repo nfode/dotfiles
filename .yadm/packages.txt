@@ -136,6 +136,7 @@ mpv
 mumble
 mygtkmenu
 nano
+ncdu
 neofetch
 neovim
 netctl
@@ -206,6 +207,7 @@ system-config-printer
 systemd
 systemd-sysvcompat
 tar
+tealdeer
 telegram-desktop
 termite
 texinfo
@@ -223,7 +225,6 @@ threshy-gui
 thunar
 thunar-archive-plugin
 thunar-volman
-thunderbird-beta-bin
 thunderbird-i18n-de
 tlp
 tlpui-git
@@ -264,8 +265,8 @@ xorg-xprop
 xorg-xrandr
 xscreensaver-arch-logo
 yadm-git
-yay
 yarn
+yay
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
