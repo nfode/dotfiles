@@ -35,7 +35,6 @@ POWERLEVEL9K_VI_COMMAND_MODE_STRING="[NORMAL]"
 source /usr/share/sodalite/shell-integration.sh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
-hostname=$(hostname)
 for file in ~/.zshconfig/*; do
     source "$file"
 done
