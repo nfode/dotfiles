@@ -7,7 +7,7 @@
 [cola]
     spellcheck = false
 [core]
-    pager = diff-so-fancy | less
+	pager = diff-so-fancy | less --tabs=4 -RFX
 	editor = nvim
 
     # convert CRLF line endings to LF on commit
