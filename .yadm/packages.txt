@@ -183,6 +183,7 @@ python-i3-py
 python-neovim-git
 python-pip
 python2-pip
+qt5-styleplugins
 qt5-wayland
 qt5ct
 redshift
