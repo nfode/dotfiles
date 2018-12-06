@@ -136,6 +136,7 @@ mpv
 mumble
 mygtkmenu
 nano
+ncdu
 neofetch
 neovim
 netctl
@@ -182,6 +183,7 @@ python-i3-py
 python-neovim-git
 python-pip
 python2-pip
+qt5-styleplugins
 qt5-wayland
 qt5ct
 redshift
@@ -206,6 +208,7 @@ system-config-printer
 systemd
 systemd-sysvcompat
 tar
+tealdeer
 telegram-desktop
 termite
 texinfo
@@ -223,7 +226,6 @@ threshy-gui
 thunar
 thunar-archive-plugin
 thunar-volman
-thunderbird-beta-bin
 thunderbird-i18n-de
 tlp
 tlpui-git
@@ -264,8 +266,8 @@ xorg-xprop
 xorg-xrandr
 xscreensaver-arch-logo
 yadm-git
-yay
 yarn
+yay
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting

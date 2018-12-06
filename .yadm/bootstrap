@@ -24,10 +24,6 @@ sudo systemctl enable cups-browsed.service
 sudo systemctl enable avahi-daemon.service
 # network
 sudo sytemctl enable bluetooth.service
-
-# TODO fix this
-#sudo cp .config/lightdm/lightdm.conf /etc/lightdm.conf
-#sudo ln -sf ~/.config/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
 # }}}
 # automatic keyring unlock {{{
 cat /etc/pam.d/login | grep pam_gnome_keyring.so > /dev/null || 
@@ -51,7 +47,10 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim<Paste>
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # }}}
+# symlinks {{{ 
+sh $HOME/.yadm/create-symlinks
+#}}}
 # }}}
 echo bootstrapping done

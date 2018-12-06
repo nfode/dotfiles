@@ -3,7 +3,7 @@ Version=1.0
 Name=Firefox
 GenericName=Web Browser
 Comment=Browse the Web
-Exec=env GTK_THEME=Arc /usr/lib/firefox/firefox %u
+Exec=env GTK_THEME=Arc-Dark /usr/lib/firefox/firefox %u
 Icon=firefox
 Terminal=false
 Type=Application
@@ -16,8 +16,8 @@ Actions=new-window;new-private-window;
 
 [Desktop Action new-window]
 Name=New Window
-Exec=env GTK_THEME=Arc /usr/lib/firefox/firefox --new-window %u
+Exec=env GTK_THEME=Arc-Dark /usr/lib/firefox/firefox --new-window %u
 
 [Desktop Action new-private-window]
 Name=New Private Window
-Exec=env GTK_THEME=Arc /usr/lib/firefox/firefox --private-window %u
+Exec=env GTK_THEME=Arc-Dark /usr/lib/firefox/firefox --private-window %u
