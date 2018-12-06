@@ -1,0 +1,5 @@
+#!/bin/bash  
+
+# script to force add file/folder to yadm
+
+yadm add -f $1
