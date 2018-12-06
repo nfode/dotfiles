@@ -1,4 +1,5 @@
 # aliases
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias boot="vim $HOME/.yadm/bootstrap"
 alias swagger-codegen="java -jar $HOME/.local/bin/swagger-codegen-cli.jar "
 alias evince="GTK_THEME=Arc-Dark evince"
@@ -17,7 +18,7 @@ fi
 # don't accidentally delete/overwrite files
 # don't correct spelling mistakes
 alias rm='rm -i'
-alias cp='nocorrect cp -i'
+alias cp='nocorrect cp'
 alias mv='nocorrect mv -i'
 alias touch='nocorrect touch'
 alias mkdir='nocorrect mkdir'
@@ -38,3 +39,4 @@ unset lesssh
 # miscellaneous
 alias zshconfig='nvim ~/.zshrc'
 alias tetris='autoload -U tetriscurses; tetriscurses'
+
