@@ -1,4 +1,16 @@
+# sourced by lightdm on the start
+
 export LANG="en_US.UTF-8"
+
+# overwrite ssh-askpass
+export SSH_ASKPASS=/usr/lib/seahorse/seahorse-ssh-askpass
+
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
+
+
 setxkbmap -layout us -option caps:escape -option compose:ralt
 localectl set-keymap custom
 bin=$HOME/.local/bin
