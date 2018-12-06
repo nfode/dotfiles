@@ -12,19 +12,23 @@ fi
 
 
 setxkbmap -layout us -option caps:escape -option compose:ralt
-localectl set-keymap custom
+
 bin=$HOME/.local/bin
+
 host=$(hostname)
 if [ "$host" = "cranky-panini" ]; then
     xautolock -time 5 -locker $HOME/.local/bin/lock &
     nextcloud &
     redshift-gtk &
 fi
+
 light-locker &
-#compton -c &
-$bin/launchbar &
-$bin/setwallpaper &
+compton -c &
 nm-applet &
 jetbrains-toolbox --minimize &
 udiskie -2 &
 xset -b
+
+$bin/launchbar &
+$bin/setwallpaper &
+
