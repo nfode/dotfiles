@@ -232,6 +232,7 @@ tlpui-git
 tmux
 tp_smapi
 tpacpi-bat
+tridactyl-native-git
 ttf-dejavu
 ttf-font-awesome
 ttf-hack
