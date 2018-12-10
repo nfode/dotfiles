@@ -87,6 +87,7 @@ gvfs-smb
 gwenview
 gzip
 highlight
+hplip-plugin
 htop
 hunspell-de
 i3-wm
