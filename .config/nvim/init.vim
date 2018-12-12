@@ -66,7 +66,6 @@ set t_vb=
 set tm=500
 " }}}
 " {{{ default folding
-let javaScript_fold=1         " JavaScript
 let sh_fold_enabled=1         " sh
 let xml_syntax_folding=1      " XML
 " }}}

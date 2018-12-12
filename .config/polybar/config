@@ -3,8 +3,9 @@ background 	= ${xrdb:background}
 foreground 	= ${xrdb:foreground}
 color1	= ${xrdb:color2}
 color2	= ${xrdb:color4}
+color7	= ${xrdb:color7}
 color3 = #de9028
-alpha = #59de9028 
+alpha = #4C4C51
 
 [bar/hires]
 inherit = bar/default
@@ -91,7 +92,7 @@ label-mode-padding = 2
 label-mode-background = ${colors.background}
 
 label-focused = %icon%
-label-focused-foreground = ${colors.color2}
+label-focused-foreground = ${colors.color7}
 label-focused-background = ${colors.alpha}
 label-focused-underline = ${colors.color3}
 label-focused-padding = 2
