@@ -1,4 +1,5 @@
 # aliases
+alias enw="emacs -nw"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias boot="vim $HOME/.yadm/bootstrap"
 alias swagger-codegen="java -jar $HOME/.local/bin/swagger-codegen-cli.jar "

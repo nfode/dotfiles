@@ -25,6 +25,8 @@ breeze
 breeze-icons
 bzip2
 chromium
+clamav
+clamtk
 compton
 coreutils
 cryptsetup
@@ -40,6 +42,8 @@ docker
 docker-compose
 e2fsprogs
 efibootmgr
+emacs
+etcher-cli-bin
 evince
 exa-git
 exfat-utils
@@ -127,6 +131,7 @@ lvm2
 lxappearance
 m4
 make
+maldet
 man-db
 man-pages
 maven

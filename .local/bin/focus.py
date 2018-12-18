@@ -13,6 +13,7 @@ def create_tmp(current_id):
     i3.split('vertical')
     i3.open()
 
+
 def destroy_tmp(tmp_id):
     i3.kill(con_id=tmp_id)
 
@@ -41,6 +42,4 @@ def main():
         if find_tmp() == None:
             create_tmp(current_id)
             make_float(current_id)
-
-
 main()
