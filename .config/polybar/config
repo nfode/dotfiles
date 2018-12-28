@@ -57,11 +57,11 @@ type = custom/script
 tail = true
 format-padding=2
 label = "%output%"
-exec = ~/.config/polybar/pavolume.sh --listen
+exec = pavolume.sh --listen
 click-right = exec pavucontrol
-click-left = ~/.config/polybar/pavolume.sh --togmute
-scroll-up = ~/.config/polybar/pavolume.sh --up
-scroll-down = ~/.config/polybar/pavolume.sh --down
+click-left = pavolume.sh --togmute
+scroll-up = pavolume.sh --up
+scroll-down = pavolume.sh --down
 
 [module/hamster]
 type = custom/script

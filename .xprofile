@@ -28,6 +28,7 @@ nm-applet &
 jetbrains-toolbox --minimize &
 udiskie -2 &
 xset -b
+xbindkeys
 
 $bin/launchbar &
 $bin/setwallpaper &
