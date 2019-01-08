@@ -1,8 +1,0 @@
-#!/bin/bash
-title=vimwiki_todo
-if i3-msg -t get_tree | grep $title; 
-then
-    i3-msg -t command "[title="$title"] move window to workspace current"
-else
-    termite --title="$title" -e "zsh -c \"nvim +3 -c VimwikiIndex\""
-fi
