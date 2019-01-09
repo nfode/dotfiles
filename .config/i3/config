@@ -215,6 +215,7 @@ bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 font pango:DejaVu Sans Mono 12
 # disable titlebars -- a bit of a hack
 new_window pixel 2
+hide_edge_borders smart
 
 client.focused          #4c7899 #285577 #ffffff #de9028   #285577
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
