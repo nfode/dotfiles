@@ -1,7 +1,7 @@
 # sourced by lightdm on the start
 
 export LANG="en_US.UTF-8"
-
+[[ -f ~/.zshenv ]] && source ~/.zshenv
 # overwrite ssh-askpass
 export SSH_ASKPASS=/usr/lib/seahorse/seahorse-ssh-askpass
 
@@ -22,6 +22,7 @@ if [ "$host" = "cranky-panini" ]; then
     redshift-gtk &
 fi
 
+
 light-locker &
 compton -c &
 nm-applet &
@@ -29,7 +30,6 @@ jetbrains-toolbox --minimize &
 udiskie -2 &
 xset -b
 xbindkeys
-
 $bin/launchbar &
 $bin/setwallpaper &
 
