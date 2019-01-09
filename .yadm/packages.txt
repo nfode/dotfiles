@@ -69,6 +69,8 @@ gettext
 gimp
 git-cola
 gitkraken
+glew-wayland
+glfw-wayland
 glibc
 glide
 gnome-keyring
@@ -136,6 +138,7 @@ man-db
 man-pages
 maven
 mdadm
+meld
 mendeleydesktop-bundled
 mkdocs
 mpv
@@ -149,6 +152,7 @@ netctl
 network-manager-applet
 networkmanager-openconnect
 nextcloud-client
+nmap
 nodejs
 noto-fonts
 npm
@@ -201,8 +205,10 @@ seahorse
 sed
 shadow
 shotwell
+skypeforlinux-stable-bin
 sl
 sodalite
+solaar
 speedcrunch-git
 spotify
 sshfs
@@ -233,9 +239,12 @@ thunar
 thunar-archive-plugin
 thunar-volman
 thunderbird-i18n-de
+tk
 tlp
 tlpui-git
 tmux
+todotxt
+todotxt-machine-git
 tp_smapi
 tpacpi-bat
 tridactyl-native-git
@@ -256,6 +265,7 @@ vlc
 wget
 which
 xautolock
+xbindkeys
 xclip
 xf86-input-synaptics
 xf86-video-intel

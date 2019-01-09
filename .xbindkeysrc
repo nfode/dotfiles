@@ -1,0 +1,25 @@
+# b:1 = left click
+# b:2 = wheel click
+# b:3 = right click
+# b:4 = scroll wheel forward
+# b:5 = scroll wheel backward
+# b:6 = thumb wheel up
+# b:7 = thumb wheel down
+# b:8 = backward button
+# b:9 = forward button
+
+# thumb wheel up => increase volume
+"pavolume.sh --up"
+   b:6
+
+# thumb wheel down => lower volume
+"pavolume.sh --down"
+   b:7
+
+# previous song
+"playerctl previous"
+b:8
+
+# next song
+"playerctl next"
+b:9
