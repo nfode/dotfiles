@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     yaml
      go
      python
      ;; ----------------------------------------------------------------
@@ -40,15 +41,16 @@ values."
      ;; ----------------------------------------------------------------
      helm
      auto-completion
+     ;; better-defaults
      emacs-lisp
      git
-     markdown
+     (markdown :variables markdown-live-preview-engine 'vmd)
      org
      (latex  :variables latex-enable-folding nil)
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom)
-     spell-checking
+     (spell-checking :variables spell-checking-enable-auto-dictionary t)
      syntax-checking
      version-control
      )
@@ -56,7 +58,9 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(evil-terminal-cursor-changer)
+   dotspacemacs-additional-packages '(
+                                      evil-terminal-cursor-changer
+                                      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -139,7 +143,7 @@ values."
                                :size 22
                                :weight normal
                                :width normal
-                               :powerline-scale 1.8)
+                               :powerline-scale 1.5)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
@@ -303,12 +307,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  (unless (display-graphic-p)
-    (require 'evil-terminal-cursor-changer)
-    (evil-terminal-cursor-changer-activate) ; or (etcc-on)
     )
-  (setq evil-insert-state-cursor 'bar)  ; ⎸ 
-  )
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -317,7 +316,12 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (unless (display-graphic-p)
+    (require 'evil-terminal-cursor-changer)
+    (evil-terminal-cursor-changer-activate) ; or (etcc-on)
     )
+  (setq evil-insert-state-cursor 'bar)  ; ⎸ 
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

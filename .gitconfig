@@ -11,8 +11,9 @@
 	editor = nvim
 
     # convert CRLF line endings to LF on commit
-    autocrlf = input
+	autocrlf = input
     safecrlf = warn
+	eol = lf
 [diff]
     renameLimit=8000
 
