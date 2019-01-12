@@ -1,6 +1,5 @@
 # aliases
 alias t='todo.sh'
-alias todo='todotxt-machine -c $HOME/.config/todo-machine/config'
 
 alias enw="emacs -nw"
 

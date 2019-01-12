@@ -72,7 +72,7 @@ set $control control
 bindsym $mod+Shift+p move scratchpad
 bindsym $mod+p scratchpad show
 
-bindsym $mod+n exec todo
+bindsym $mod+n exec toggle-todo
 
 bindsym $mod+Prior exec kb-light.py
 
