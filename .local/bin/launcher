@@ -1,7 +1,5 @@
-#!/bin/bash  
-
-rofi -modi 'drun,window' \
-    -matching fuzzy \
-    -drun-match-fields name \
+#!/bin/bash
+echo $1
+rofi \
     -theme $XDG_CONFIG_HOME/rofi/themes/merged.rasi \
-    -show drun
+    -show $1
