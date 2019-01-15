@@ -22,11 +22,11 @@ Plug 'stephpy/vim-yaml'
 Plug 'junegunn/vim-easy-align'
 Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf'
 "Plug 'vimwiki/vimwiki', { 'branch': 'dev' }

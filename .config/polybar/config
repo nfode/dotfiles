@@ -35,13 +35,10 @@ border-size = 0
 border-color = ${colors.color1}
 module-margin-left = 0
 module-margin-right = 0
-font-3 = "MaterialDesignIcons:style=Bold:pixelsize=20;3"
-font-2 = "FontAwesome5Free:style=Solid:pixelsize=15;3"
-font-1 = "FontAwesome5Brands:style=Solid:pixelsize=18;3"
-font-0 = Noto Sans:fontformat=truetype:size=14;1
+font-0 = NotoSans Nerd Font:style=Regular:size=18;3
 modules-left = i3
 modules-center = date
-modules-right = pavolume battery
+modules-right = weather pavolume battery
 tray-position = right
 tray-padding = 9
 tray-transparent = false
@@ -63,12 +60,11 @@ click-left = pavolume.sh --togmute
 scroll-up = pavolume.sh --up
 scroll-down = pavolume.sh --down
 
-[module/hamster]
+[module/weather]
 type = custom/script
-interval = 15
-format-padding = 3
-exec = ~/.config/polybar/hamster.sh
-format-prefix = "%{F#B48EAD} "
+exec = wedder
+exec-if = ping openweathermap.org -c 1
+tail = true
 
 [module/i3]
 type = internal/i3

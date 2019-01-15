@@ -115,6 +115,8 @@ libc++experimental
 libgnome-keyring
 libgnomekbd
 libreoffice-fresh
+libretro-mupen64plus
+libretro-parallel-n64
 libtool
 libva-vdpau-driver
 libvdpau-va-gl
@@ -142,12 +144,15 @@ meld
 mendeleydesktop-bundled
 mkdocs
 mpv
+mtm-git
 mumble
 mygtkmenu
+namcap
 nano
 ncdu
 neofetch
 neovim
+nerd-fonts-noto-sans-regular-complete
 netctl
 network-manager-applet
 networkmanager-openconnect
@@ -199,6 +204,10 @@ qt5ct
 redshift
 reiserfsprogs
 remmina
+retro-gtk
+retroarch
+retroarch-assets-xmb
+ripgrep
 rofi
 s-nail
 seahorse
@@ -262,6 +271,7 @@ vim
 virtualbox
 visual-studio-code-bin
 vlc
+wedder-git
 wget
 which
 xautolock

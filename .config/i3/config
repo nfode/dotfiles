@@ -99,11 +99,10 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 bindsym $mod+i workspace $ws_idea
 bindsym $mod+g workspace $ws_git
-bindsym $mod+m workspace $ws_mail
+bindsym $mod+m workspace $ws_mail; exec [ $(ps h -C thunderbird | wc -l) = 0 ] && exec thunderbird
 bindsym $mod+semicolon workspace $ws_comm
 bindsym $mod+plus workspace $ws_browse
-bindsym $mod+minus workspace $ws_media
-bindsym $mod+comma workspace $ws_time 
+bindsym $mod+minus workspace $ws_media; exec [ $(ps h -C spotify | wc -l) = 0 ] && exec spotify
 # move workspace to other monitor
 bindsym $mod+period move workspace to output down; move workspace to output left
 # }}}
