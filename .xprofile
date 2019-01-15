@@ -17,7 +17,7 @@ bin=$HOME/.local/bin
 
 host=$(hostname)
 if [ "$host" = "cranky-panini" ]; then
-    xautolock -time 5 -locker $HOME/.local/bin/lock &
+    start-locker &
     nextcloud &
     redshift-gtk &
 fi

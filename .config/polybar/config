@@ -1,16 +1,40 @@
 [colors]
 background 	= ${xrdb:background}
-foreground 	= ${xrdb:foreground}
+foreground = #FFF
 color1	= ${xrdb:color2}
 color2	= ${xrdb:color4}
 color7	= ${xrdb:color7}
 color3 = #de9028
 alpha = #4C4C51
+shade0 = #E62100
+shade1 = #E65100
+shade2 = #EF6C00
+shade3 = #F57C00
+shade4 = #FB8C00
+shade5 = #FF9800
+shade6 = #FFA726
+shade7 = #FFB74D
+shade8 = #FFCC80
+ashade8 = #2C2C2C
+;================================================
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+;================================================
+; bars
+;================================================
 
 [bar/hires]
 inherit = bar/default
 height=50
 font-0 = NotoSans Nerd Font:style=Regular:size=22;3
+
+;================================================
 
 [bar/default]
 monitor = ${env:MONITOR:fallback-value}
@@ -35,7 +59,7 @@ module-margin-right = 0
 font-0 = NotoSans Nerd Font:style=Regular:size=18;3
 modules-left = i3
 modules-center = date
-modules-right = weather pavolume battery
+modules-right = musicinfo weather xautolock pavolume battery wireless-network
 tray-position = right
 tray-padding = 9
 tray-transparent = false
@@ -43,25 +67,12 @@ tray-offset-y = 0%
 tray-offset-x = 0%
 tray-maxsize = 20
 tray-detached = false
-tray-background = ${colors.background}
+tray-background = ${colors.shade0}
 wm-restack = i3
 
-[module/pavolume]
-type = custom/script
-tail = true
-format-padding=2
-label = "%output%"
-exec = pavolume.sh --listen
-click-right = exec pavucontrol
-click-left = pavolume.sh --togmute
-scroll-up = pavolume.sh --up
-scroll-down = pavolume.sh --down
-
-[module/weather]
-type = custom/script
-exec = wedder
-exec-if = ping openweathermap.org -c 1
-tail = true
+;================================================
+; left
+;================================================
 
 [module/i3]
 type = internal/i3
@@ -106,15 +117,9 @@ label-urgent-background = ${colors.background}
 label-urgent-underline = ${colors.color3}
 label-urgent-padding = 2
 
-[module/musicinfo]
-type = custom/script
-
-exec = ~/.config/polybar/music.sh
-interval = 10
-format = <label>
-label = %output%
-format-padding = 2
-format-foreground = #1ed760
+;================================================
+; middle
+;================================================
 
 [module/date]
 type = internal/date
@@ -131,28 +136,76 @@ format-undeline =
 
 label = %date% %time%
 
+;================================================
+; right
+;================================================
+
+[module/musicinfo]
+type = custom/script
+exec = ~/.config/polybar/music.sh
+interval = 10
+format-padding = 2
+format-background = ${colors.shade5}
+format-foreground = ${colors.ashade8}
+
+;================================================
+
+[module/weather]
+type = custom/script
+exec = wedder
+exec-if = ping openweathermap.org -c 1
+tail = true
+format-background=${colors.shade4}
+format-padding=2
+
+;================================================
+
+[module/xautolock]
+type = custom/script
+exec = lock-helper --status
+interval=2
+tail=false
+click-left = lock-helper --toogle
+format=": <label>"
+format-background=${colors.shade3}
+format-padding = 2
+
+;================================================
+
+[module/pavolume]
+type = custom/script
+tail = true
+format-padding=2
+format-background=${colors.shade2}
+label = "%output%"
+exec = pavolume.sh --listen
+click-right = exec pavucontrol
+click-left = pavolume.sh --togmute
+scroll-up = pavolume.sh --up
+scroll-down = pavolume.sh --down
+
+;================================================
+
 [module/battery]
 type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 99
 
-format-padding = 2
-
-format-full-background = ${colors.background}
-format-charging-background = ${colors.background}
-format-charging = "  <label-charging> "
-
-format-discharging-background = ${colors.background}
-format-discharging = "⁣  <label-discharging> "
-
-format-full-prefix-foreground = ${colors.my_background}
 format-full = "  <label-full> "
+format-full-background = ${colors.shade1}
+format-full-padding = 2
 
-[settings]
-screenchange-reload = true
+format-full-prefix-foreground = ${colors.shade1}
 
-[global/wm]
-margin-top = 5
-margin-bottom = 5
+format-charging-background = ${colors.shade1}
+format-charging = "  <label-charging> "
+format-charging-padding = 1
+
+format-discharging-background = ${colors.shade1}
+format-discharging = "⁣  <label-discharging> "
+format-discharging-padding = 1
+
+;================================================
+
 
