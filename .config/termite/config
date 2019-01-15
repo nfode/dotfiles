@@ -1,5 +1,5 @@
 [options]
-font = Hack 16
+font = Hack Nerd Font Mono 16
 
 [colors]
 # Base16 Monokai

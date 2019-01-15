@@ -152,6 +152,7 @@ nano
 ncdu
 neofetch
 neovim
+nerd-fonts-hack
 nerd-fonts-noto-sans-regular-complete
 netctl
 network-manager-applet
@@ -170,6 +171,7 @@ openssh-askpass
 os-prober
 p7zip
 pacman
+pacman-contrib
 paman
 pandoc
 pandoc-citeproc
@@ -269,6 +271,7 @@ vagrant
 vi
 vim
 virtualbox
+virtualbox-guest-iso
 visual-studio-code-bin
 vlc
 wedder-git

@@ -9,11 +9,8 @@ alpha = #4C4C51
 
 [bar/hires]
 inherit = bar/default
-height=42
-font-3 = "MaterialDesignIcons:style=Bold:pixelsize=20;2"
-font-2 = "FontAwesome5Free:style=Solid:pixelsize=20;3"
-font-1 = "FontAwesome5Brands:style=Solid:pixelsize=22;3"
-font-0 = Noto Sans:fontformat=truetype:size=22;1
+height=50
+font-0 = NotoSans Nerd Font:style=Regular:size=22;3
 
 [bar/default]
 monitor = ${env:MONITOR:fallback-value}
@@ -76,10 +73,11 @@ ws-icon-2 = git;
 ws-icon-3 = mail;
 ws-icon-4  = comm;
 ws-icon-5 = media;
-ws-icon-6 = 1;1
-ws-icon-7 = 2;2
-ws-icon-8 = 3;3
-ws-icon-9 = time;
+ws-icon-6 = time;
+ws-icon-7 = 1;
+ws-icon-8 = 2;
+ws-icon-9 = 3;
+ws-icon-10 = 4;
 ws-icon-default = 
 
 

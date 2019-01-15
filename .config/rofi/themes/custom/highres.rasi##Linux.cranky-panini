@@ -1,9 +1,9 @@
 #entry {
-   font: "Noto Sans 20"; 
+   font: "NotoSans Nerd Font 20"; 
 }
 #prompt {
-    font: "Noto Sans 24";
+    font: "NotoSans Nerd Font 24";
 }
 #element {
-    font: "Noto Sans 22";
+    font: "NotoSans Nerd Font 22";
 }

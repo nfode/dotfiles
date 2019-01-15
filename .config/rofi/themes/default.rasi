@@ -29,7 +29,7 @@
     selected-active-background:  rgba ( 0, 119, 99, 100 % );
 }
 #window {
-    width:            20%;
+    width:            30%;
     background-color: @background;
     border:           1;
     border-color: @selected-normal-background; 
@@ -40,7 +40,7 @@
     padding: 0;
 }
 #prompt {
-    font: "Noto Sans 18";
+    font: "NotoSans Nerd Font 18";
     padding: 0px 6px 0px 0px;
 }
 #message {
@@ -60,7 +60,7 @@
     padding:      2px 0px 0px ;
 }
 #element {
-    font: "Noto Sans 17";
+    font: "NotoSans Nerd Font 17";
     border:  0;
     padding: 4px ;
 }
