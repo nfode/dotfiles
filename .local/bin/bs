@@ -1,5 +1,5 @@
 [ -z $1 ] && echo "script that creates a script skeleton in ~/bin" && \
     echo "missing param. usage: bs scriptname" && exit 1
 [ -f $1 ] && echo "file already exists. Aborting" && exit 1
-touch $1 && chmod +x $1 && echo "#!/bin/bash  
+touch $1 && chmod +x $1 && echo "#!/bin/bash
 " > $1 && vim $1 +2
