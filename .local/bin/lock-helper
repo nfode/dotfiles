@@ -6,9 +6,9 @@ check-if-running xautolock
 
 function status  {
     if $is_running ; then
-        echo ""
-    else
         echo ""
+    else
+        echo ""
     fi
 }
 
