@@ -25,7 +25,7 @@
     background-color:            rgba( 0, 0, 0, 0 % );
     alternate-active-foreground: @active-foreground;
     active-background:           rgba( 34, 34, 34, 100 % );
-    selected-active-background:  rgba( 0, 119, 99, 100 % );
+    selected-active-background:  @orange;
 }
 #window {
     width:            30%;
@@ -39,7 +39,7 @@
     padding: 0;
 }
 #prompt {
-    font: "NotoSans Nerd Font 18";
+    font: "NotoSans Nerd Font 24";
     padding: 0px 6px 0px 0px;
 }
 #message {
@@ -131,6 +131,7 @@
     font: "NotoSans Nerd Font 18";
     spacing:    0;
     text-color: @normal-foreground;
+    padding: 4px 0px 0px 0px;
 }
 #prompt {
     spacing:    0;

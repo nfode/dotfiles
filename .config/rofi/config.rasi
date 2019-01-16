@@ -8,7 +8,7 @@ configuration {
 	terminal: "rofi-sensible-terminal";
 	drun-match-fields: "name,generic,exec,categories";
 	sidebar-mode: false;
-	display-window: "";
+	display-window: "缾";
 	display-run: "";
 	display-drun: "";
 	kb-remove-char-back: "BackSpace";
