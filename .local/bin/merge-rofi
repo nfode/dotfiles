@@ -11,6 +11,10 @@ for entry in "$custom_folder_path"/*
 do
     if [[ $entry == *.rasi ]]; then 
         cat $entry >> $rofi_themes_dir/merged.rasi
+
+        # remove vim fmt definition
+        sed -i '/vim/d' $rofi_themes_dir/merged.rasi
+
         echo "merged $entry into rofi theme"
     fi
 done
