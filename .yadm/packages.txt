@@ -171,7 +171,6 @@ ntfs-3g
 oni
 openconnect
 openssh
-openssh-askpass
 os-prober
 p7zip
 pacman
@@ -281,6 +280,7 @@ vlc
 wedder-git
 wget
 which
+x11-ssh-askpass
 xautolock
 xbindkeys
 xclip
