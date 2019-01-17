@@ -84,6 +84,7 @@ bindsym $mod+Shift+r "reload; exec i3-refresh"
 bindsym $mod+d exec --no-startup-id launcher "drun"
 bindsym $mod+apostrophe exec --no-startup-id launcher "window"
 bindsym $mod+backslash exec --no-startup-id launcher "run"
+bindsym $mod+comma exec --no-startup-id bwmenu
 
 bindsym control+$mod+l exec lock
 # }}}
