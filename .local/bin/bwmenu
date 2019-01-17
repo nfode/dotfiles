@@ -44,11 +44,11 @@ exit_error() {
 # Show the Rofi menu with options
 # Reads items from stdin
 rofi_menu() {
-  $ROFI -dmenu -p 'Name' \
+  $ROFI -dmenu -p $1 \
     -i -no-custom \
-    -mesg ' <b>Alt+r</b>: sync | <b>Alt+u</b>: urls | <b>Alt+n</b>: names | <b>Alt+c</b>: folders' \
+    -mesg ' <b>Alt+r</b>: sync | <b>Alt+u</b>: urls | <b>Alt+i</b>: items | <b>Alt+c</b>: folders' \
     -kb-custom-1 alt+r \
-    -kb-custom-2 alt+n \
+    -kb-custom-2 alt+i \
     -kb-custom-3 alt+u \
     -kb-custom-4 alt+c
 
@@ -59,7 +59,7 @@ show_items() {
   if item=$(
     echo "$ITEMS" \
     | jq -r ".[] | select( has( \"login\" ) ) | .name" \
-    | rofi_menu
+    | rofi_menu "Items"
   ); then
     item=$(echo "$ITEMS" | jq -r ".[] | select(.name == \"$item\")")
     copy_password "$item"
@@ -74,7 +74,7 @@ show_urls() {
   if url=$(
     echo "$ITEMS" \
     | jq -r '.[] | select(has("login")) | .login | select(has("uris")).uris | .[].uri' \
-    | rofi_menu
+    | rofi_menu "URLs"
   ); then
     ITEMS=$(bw list items --url "$url")
     if [[ $(echo "$ITEMS" | jq -r 'length') -gt 1 ]]; then
@@ -90,7 +90,7 @@ show_urls() {
 
 show_folders() {
   folders=$(bw list folders)
-  if ! folder=$(echo "$folders" | jq -r '.[] | .name' | rofi_menu); then
+  if ! folder=$(echo "$folders" | jq -r '.[] | .name' | rofi_menu "Folders"); then
     on_rofi_exit $?
   fi
 
