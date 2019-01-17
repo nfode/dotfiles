@@ -19,7 +19,7 @@ host=$(hostname)
 if [ "$host" = "cranky-panini" ]; then
     start-locker &
     nextcloud &
-    redshift-gtk &
+    start-redshift &
 fi
 
 
