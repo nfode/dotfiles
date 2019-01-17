@@ -18,12 +18,17 @@ restorepkgs $HOME/.yadm/packages.txt
 sudo pip2.7 install neovim
 sudo pip install neovim
 # }}}
-# system {{{
+# systemd {{{
 sudo systemctl enable org.cups.cupsd.service
 sudo systemctl enable cups-browsed.service
 sudo systemctl enable avahi-daemon.service
 # network
 sudo sytemctl enable bluetooth.service
+
+# bitwarden
+sudo cp $HOME/.yadm/delete-bwhash-on-exit.service /etc/systemd/system/delete-bwhash-on-exit.service
+sudo systemctl daemon-reload
+sudo systemctl enable delete-bwhash-on-exit.service
 # }}}
 # automatic keyring unlock {{{
 cat /etc/pam.d/login | grep pam_gnome_keyring.so > /dev/null || 

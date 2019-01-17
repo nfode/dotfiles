@@ -38,6 +38,8 @@ source $ZSH/oh-my-zsh.sh
 for file in ~/.zshconfig/*; do
     source "$file"
 done
+
+[ -f $BWHASH_FILE ] && source $BWHASH_FILE
 # }}}
 # fzf {{{
 source /usr/share/fzf/key-bindings.zsh
@@ -73,5 +75,5 @@ bindkey -M vicmd 'j' history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 # }}}
-#
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
