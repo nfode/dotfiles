@@ -10,5 +10,5 @@ export TERMINAL=termite
 
 export BWHASH_FILE=$HOME/.bwhash
 
-export SUDO_ASKPASS=/usr/bin/qt4-ssh-askpass
+export SUDO_ASKPASS=/usr/lib/ssh/x11-ssh-askpass
 
