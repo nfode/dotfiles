@@ -19,6 +19,7 @@ bat
 binutils
 bison
 bitwarden-bin
+bitwarden-cli
 blueman
 bluez-utils
 breeze
@@ -30,6 +31,7 @@ clamtk
 compton
 coreutils
 cryptsetup
+ctop
 cups
 cups-pk-helper
 device-mapper
@@ -104,6 +106,8 @@ iproute2
 iputils
 jetbrains-toolbox
 jfsutils
+jq
+jre-openjdk
 kipi-plugins
 less
 lib32-libstdc++5
@@ -167,7 +171,6 @@ ntfs-3g
 oni
 openconnect
 openssh
-openssh-askpass
 os-prober
 p7zip
 pacman
@@ -277,6 +280,7 @@ vlc
 wedder-git
 wget
 which
+x11-ssh-askpass
 xautolock
 xbindkeys
 xclip

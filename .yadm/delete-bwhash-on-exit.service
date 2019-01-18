@@ -1,0 +1,11 @@
+[Unit]
+Description=delete bwhash on exit
+DefaultDependencies=no
+Before=reboot.target shutdown.target sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/delete-bwhash.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -65,10 +65,6 @@ set novisualbell
 set t_vb=
 set tm=500
 " }}}
-" {{{ default folding
-let sh_fold_enabled=1         " sh
-let xml_syntax_folding=1      " XML
-" }}}
 " {{{ Editor stuff
 filetype plugin on
 filetype indent on

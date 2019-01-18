@@ -8,3 +8,7 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export TERM=xterm-256color
 export TERMINAL=termite
 
+export BWHASH_FILE=$HOME/.bwhash
+
+export SUDO_ASKPASS=/usr/bin/qt4-ssh-askpass
+
