@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# checks if hash file exists and is not empty 
+
+[ -f $BWHASH_FILE ] && [ -s $BWHASH_FILE ]
+
