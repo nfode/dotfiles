@@ -7,4 +7,5 @@ while true; do
 done
 echo "export BW_SESSION=\"$res\"" > $BWHASH_FILE
 
+source $BWHASH_FILE
 
