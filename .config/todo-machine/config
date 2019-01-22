@@ -1,7 +1,7 @@
 [settings]
 file = ~/nextcloud/todo/todo.txt
 archive = ~/nextcloud/todo/done.txt
-auto-save = False
+auto-save = True
 show-toolbar = False
 show-filter-panel = False
 enable-borders = True
