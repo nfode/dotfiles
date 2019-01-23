@@ -13,9 +13,6 @@ nnoremap <F3> :NumbersToggle<CR>
 " {{{ set leader
 let mapleader=" "
 " }}}
-" {{{ source init vim
-nnoremap <leader>src :windo source $HOME/.config/nvim/init.vim<cr><esc>:echo "sourced vimrc"<cr>
-" }}}
 " {{{ disable highlighting after search
 nnoremap <leader><leader> :noh<cr>
 " }}}
@@ -153,7 +150,7 @@ autocmd BufRead,BufNewFile *.md	setlocal filetype=markdown
 " }}}
 " }}}
 " Editing config files {{{
-nnoremap <leader>rc :vsplit $HOME/.vim/vimrc<cr>
+nnoremap <leader>rc :vsplit $HOME/.config/nvim/init.vim<cr>
 nnoremap <leader>boot :vsplit $HOME/.yadm/bootstrap<cr>
 " source config in all windows
 nnoremap <leader>src :windo source $HOME/.config/nvim/init.vim<cr><esc>:echo "sourced vimrc"<cr>
@@ -250,3 +247,21 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 silent call Dark()
 autocmd VimEnter * wincmd p
 " }}} 
+
+" Required for operations modifying multiple buffers like rename.
+let g:neopairs#enable = 1
+let g:neosnippet#enable_snipmate_compatibility = 1
+let g:neosnippet#snippets_directory='$HOME/.local/share/nvim/plugged/vim-snippets/snippets'
+set hidden
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ }
+
+" Automatically start language servers.
+let g:LanguageClient_autoStart = 1
+
+
+" Maps K to hover, gd to goto definition, F2 to rename
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>

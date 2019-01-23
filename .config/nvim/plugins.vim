@@ -24,12 +24,21 @@ Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
 Plug 'ervandew/supertab'
 Plug 'joshdick/onedark.vim'
+Plug 'cespare/vim-toml'
+Plug 'rust-lang/rust.vim'
+Plug 'Shougo/denite.nvim'
+Plug 'Shougo/neopairs.vim'
+Plug 'Shougo/neosnippet.vim'
+Plug 'honza/vim-snippets'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf'
-"Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 Plug 'vim-pandoc/vim-pandoc',{ 'for': 'pandoc' }
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'myusuf3/numbers.vim'

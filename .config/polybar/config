@@ -4,16 +4,18 @@ foreground = #FFF
 
 alpha = #4C4C51
 
-shade0 = #E62100
-shade1 = #E65100
-shade2 = #EF6C00
-shade3 = #F57C00
-shade4 = #FB8C00
-shade5 = #FF9800
-shade6 = #FFA726
-shade7 = #FFB74D
-shade8 = #FFCC80
+shade0 = #212121
+shade1 = #424242
+shade2 = #616161
+shade3 = #757575
+shade4 = #9E9E9E
+shade5 = #BDBDBD
+shade6 = #D4D4D4
+shade7 = #EEEEEE
 ashade8 = #2C2C2C
+
+orange=#F57C00
+
 ;================================================
 
 [settings]
@@ -95,7 +97,7 @@ label-mode-background = ${colors.background}
 label-focused = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.alpha}
-label-focused-underline = ${colors.shade5}
+label-focused-underline = ${colors.orange}
 label-focused-padding = 2
 
 label-unfocused = %icon%
@@ -104,13 +106,13 @@ label-unfocused-foreground = ${colors.foreground}
 label-unfocused-padding = 2
 
 label-visible = %icon%
-label-visible-underline = ${colors.shade5}
+label-visible-underline = ${colors.orange}
 label-visible-padding = 2
 
 label-urgent = %icon%
 label-urgent-foreground = ${colors.foreground}
 label-urgent-background = ${colors.background}
-label-urgent-underline = ${colors.shade5}
+label-urgent-underline = ${colors.orange}
 label-urgent-padding = 2
 
 ;================================================

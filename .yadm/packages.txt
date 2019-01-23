@@ -70,6 +70,7 @@ gcc-libs
 gettext
 gimp
 git-cola
+gitbatch-bin
 gitkraken
 glew-wayland
 glfw-wayland
@@ -163,6 +164,7 @@ network-manager-applet
 networkmanager-openconnect
 nextcloud-client
 nmap
+nnn
 nodejs
 noto-fonts
 npm
@@ -296,12 +298,15 @@ xorg-server
 xorg-xdpyinfo
 xorg-xev
 xorg-xinit
+xorg-xmessage
 xorg-xprop
 xorg-xrandr
 xscreensaver-arch-logo
 yadm-git
 yarn
 yay
+z-dir-jump-git
+zotero
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
