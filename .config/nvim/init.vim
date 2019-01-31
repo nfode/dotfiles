@@ -71,6 +71,7 @@ set listchars=tab:>·,trail:~,extends:>,precedes:<,space:⋅
 set list
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
+set concealcursor=
 
 " How many tenths of a second to blink when matching brackets
 set mat=2
@@ -248,8 +249,6 @@ silent call Dark()
 autocmd VimEnter * wincmd p
 " }}} 
 
-" Required for operations modifying multiple buffers like rename.
-let g:neopairs#enable = 1
 let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neosnippet#snippets_directory='$HOME/.local/share/nvim/plugged/vim-snippets/snippets'
 set hidden
@@ -265,3 +264,4 @@ let g:LanguageClient_autoStart = 1
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
