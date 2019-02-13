@@ -28,6 +28,12 @@ margin-bottom = 5
 ;================================================
 ; bars
 ;================================================
+[bar/hdmi]
+inherit = bar/default
+height=30
+font-0 = NotoSans Nerd Font:style=Regular:size=15;3
+
+modules-right = musicinfo weather xautolock pavolume battery wireless-network
 
 [bar/hires]
 inherit = bar/default

@@ -108,7 +108,7 @@ bindsym $mod+semicolon workspace $ws_comm
 bindsym $mod+plus workspace $ws_browse
 bindsym $mod+minus workspace $ws_media; exec check-if-running spotify || exec spotify
 # move workspace to other monitor
-bindsym $mod+period move workspace to output down; move workspace to output left
+bindsym $mod+period move workspace to output left; move workspace to output up
 # }}}
 
 # focus {{{
@@ -231,7 +231,7 @@ client.background       #ffffff
 bindsym $mod+F9 "exec $HOME/.screenlayout/laptop.sh"
 bindsym $mod+F10 "exec $HOME/.screenlayout/home_one.sh"
 bindsym $mod+F11 "exec $HOME/.screenlayout/home.sh"
-bindsym $mod+F12 "exec $HOME/.screenlayout/dblab_left.sh"
+bindsym $mod+F12 "exec $HOME/.screenlayout/work.sh"
 # }}}
 ## gaps {{{
 #assign [class="^.*"] border pixel 1 
