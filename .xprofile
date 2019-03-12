@@ -23,6 +23,7 @@ if [ "$host" = "cranky-panini" ]; then
 fi
 
 
+greenclip daemon &> /dev/null &
 light-locker &
 compton -c &
 nm-applet &

@@ -47,7 +47,10 @@ values."
      git
      (markdown :variables markdown-live-preview-engine 'vmd)
      org
-     (latex  :variables latex-enable-folding nil)
+     (latex  :variables 
+                latex-enable-auto-fill nil
+                latex-enable-folding nil
+                )
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom)
@@ -141,7 +144,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Hack Nerd Font"
-                               :size 23
+                               :size 25
                                :weight normal
                                :width normal
                                :powerline-scale 1.5)
@@ -317,6 +320,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (spacemacs/toggle-auto-fill-mode-off)
   (unless (display-graphic-p)
     (require 'evil-terminal-cursor-changer)
     (evil-terminal-cursor-changer-activate) ; or (etcc-on)

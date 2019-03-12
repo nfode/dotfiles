@@ -8,6 +8,7 @@ function! BuildComposer(info)
     endif
   endif
 endfunction
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'Yggdroot/indentLine'
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }

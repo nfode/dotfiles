@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#removes tex temp files in current directory and subdirectory
+
+find . -iname '*.log' -exec rm {} +
+find . -iname '*.toc' -exec rm {} +
+find . -iname '*.aux' -exec rm {} +
+find . -iname '*.out' -exec rm {} +
+find . -iname '*.bbl' -exec rm {} +
+find . -iname '*.blg' -exec rm {} +
+find . -iname '*.synctex.gz' -exec rm {} +
+find . -iname '*.fls' -exec rm {} +
+find . -iname '*.fdb_latexmk' -exec rm {} +
