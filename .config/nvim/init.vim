@@ -72,6 +72,7 @@ set list
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 set concealcursor=
+let g:vim_json_syntax_conceal = 0
 
 " How many tenths of a second to blink when matching brackets
 set mat=2
