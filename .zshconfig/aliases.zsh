@@ -1,6 +1,8 @@
 # aliases
 alias t='todo.sh'
 
+alias k='kubectl'
+
 alias f='nnn'
 
 alias enw="emacs -nw"
@@ -17,8 +19,8 @@ alias weather="curl wttr.in/Stuttgart"
 
 # if exa is installed, use it instead of ls
 if command -v exa > /dev/null; then
-    alias ll='exa --classify --long --git --group-directories-first --time-style=long-iso'
-    alias ls='exa --classify --across'
+    alias ll='exa --classify -l --git --group-directories-first --time-style=long-iso'
+    alias ls='exa'
 else
     alias ll='ls -FAggoT 12 --human-readable --group-directories-first --time-style=long-iso --color=auto'
     alias ls='ls --almost-all --color=auto --format=across'

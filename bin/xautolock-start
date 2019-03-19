@@ -1,0 +1,4 @@
+#!/bin/bash
+
+xautolock -time 5 -locker $HOME/bin/lock &
+

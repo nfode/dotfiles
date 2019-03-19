@@ -71,8 +71,6 @@ set listchars=tab:>·,trail:~,extends:>,precedes:<,space:⋅
 set list
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
-set concealcursor=
-let g:vim_json_syntax_conceal = 0
 
 " How many tenths of a second to blink when matching brackets
 set mat=2
@@ -267,3 +265,7 @@ nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
 let g:table_mode_corner='|'
+set concealcursor=
+let g:vim_json_syntax_conceal = 0
+set conceallevel=0
+

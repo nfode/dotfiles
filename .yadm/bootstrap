@@ -36,7 +36,7 @@ cat /etc/pam.d/login | grep pam_gnome_keyring.so > /dev/null ||
 # }}}
 # set up {{{
 # {{{ misc
-merge-rofi
+rofi-merge
 sudo cp $HOME/.config/lightdm-slick-greeter/slick-greeter.conf /etc/lightdm/slick-greeter.conf
 # }}}
 # node without sudo {{{
@@ -55,7 +55,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # }}}
 # symlinks {{{ 
-sh $HOME/.yadm/create-symlinks
+sh $HOME/.yadm/symlinks-create
 #}}}
 # }}}
 echo bootstrapping done

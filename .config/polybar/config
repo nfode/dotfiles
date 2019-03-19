@@ -28,19 +28,11 @@ margin-bottom = 5
 ;================================================
 ; bars
 ;================================================
-[bar/hdmi]
-inherit = bar/default
-height=30
-font-0 = NotoSans Nerd Font:style=Regular:size=15;3
-
-modules-right = musicinfo weather xautolock pavolume battery wireless-network
-
 [bar/hires]
 inherit = bar/default
 height=50
 font-0 = NotoSans Nerd Font:style=Regular:size=22;3
 
-modules-right = musicinfo weather xautolock pavolume battery wireless-network
 ;================================================
 
 [bar/default]
@@ -63,7 +55,7 @@ module-margin-right = 0
 font-0 = NotoSans Nerd Font:style=Regular:size=18;3
 modules-left = i3
 modules-center = date
-modules-right = musicinfo pavolume battery wireless-network
+modules-right = musicinfo weather xautolock pavolume battery wireless-network
 tray-position = right
 tray-padding = 9
 tray-transparent = false
@@ -166,7 +158,7 @@ format-padding=2
 
 [module/xautolock]
 type = custom/script
-exec = lock-helper --status
+exec = ~/.config/polybar/xautolock-lock-helper.sh --status
 interval=2
 tail=false
 click-left = lock-helper --toogle

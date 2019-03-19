@@ -17,7 +17,7 @@ function toogle {
         pkill xautolock
         is_running=false
     else
-        start-locker
+        xautolock-start
         is_running=true
     fi
 }

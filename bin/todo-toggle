@@ -1,0 +1,8 @@
+#!/bin/bash
+title="todo-machine"
+if i3-msg -t get_tree | grep $title; 
+then
+    i3-msg -t command "[title="$title"] move window to workspace current"
+else
+    termite --title="$title" -e "zsh -c \"todo\""
+fi

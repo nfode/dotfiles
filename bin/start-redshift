@@ -9,6 +9,6 @@ if [ -n "$json" ]; then
 else
     location=$(cat ~/.location)
 fi
-pkill redshift-gtk
+killall redshift
 sleep 5
 redshift-gtk -l "$location"

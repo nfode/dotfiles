@@ -10,10 +10,7 @@ if [ -n "$DESKTOP_SESSION" ];then
     export SSH_AUTH_SOCK
 fi
 
-
-setxkbmap -layout us -option caps:escape -option compose:ralt
-
-bin=$HOME/.local/bin
+$BIN/keymap-setup
 
 host=$(hostname)
 if [ "$host" = "cranky-panini" ]; then
@@ -31,6 +28,6 @@ jetbrains-toolbox --minimize &
 udiskie -2 &
 xset -b
 xbindkeys
-$bin/launchbar &
-$bin/setwallpaper &
+$BIN/launchbar &
+$BIN/setwallpaper &
 

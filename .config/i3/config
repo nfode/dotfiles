@@ -72,7 +72,7 @@ set $control control
 bindsym $mod+Shift+p move scratchpad
 bindsym $mod+p scratchpad show
 
-bindsym $mod+n exec toggle-todo
+bindsym $mod+n exec todo-toggle
 
 bindsym $mod+Prior exec kb-light.py
 
@@ -81,9 +81,9 @@ floating_modifier $mod
 bindsym $mod+Shift+q exit
 bindsym $mod+Shift+r "reload; exec i3-refresh"
 
-bindsym $mod+d exec --no-startup-id launcher "drun"
+bindsym $mod+d exec --no-startup-id rofi-launch "drun"
 bindsym $mod+apostrophe exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme $XDG_CONFIG_HOME/rofi/themes/merged.rasi
-bindsym $mod+backslash exec --no-startup-id launcher "run"
+bindsym $mod+backslash exec --no-startup-id rofi-launch "run"
 bindsym $mod+comma exec --no-startup-id bwmenu
 
 bindsym control+$mod+l exec lock

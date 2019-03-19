@@ -1,1 +1,4 @@
 unbind <C-f>
+blacklistadd /gitlab\.co.*\/
+colors custom
+

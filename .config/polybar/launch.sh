@@ -12,9 +12,11 @@ killall -q polybar
 while pgrep -x polybar >/dev/null; do sleep 1; done
 # Launch bar on all display
 displays=$(xrandr | grep "[^ ]* connected" | cut -d" " -f1)
+echo $displays
 for display in $displays; do
         if [[ $bar == "hires" && $display == "DP2" || $display == "HDMI1" ]]; then
             bar="default"
         fi
         MONITOR=$display polybar $bar &
+        echo $bar
 done
