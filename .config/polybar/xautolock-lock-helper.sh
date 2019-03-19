@@ -12,7 +12,7 @@ function status  {
     fi
 }
 
-function toogle {
+function toggle {
     if $is_running ; then
         pkill xautolock
         is_running=false
@@ -26,8 +26,8 @@ case "$1" in
     --status)
         status
         ;;
-    --toogle)
-        toogle
+    --toggle)
+        toggle
         status
         ;;
 esac

@@ -1,5 +1,5 @@
 #!/bin/sh
 
 setwallpaper &
-launchbar &
-setup-keymap
+polybar-launch &
+keymap-setup
