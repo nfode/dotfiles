@@ -80,7 +80,7 @@ bindkey '^ ' autosuggest-accept
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/z/z.sh
 
-if [[ $TERM == xterm-256color ]]; then
+if [[ $TERM == xterm-256color && ( -z "$TERMINAL_EMULATOR" && $TERMINAL_EMULATOR != "JetBrains-JediTerm" ) ]]; then
   . /etc/profile.d/vte.sh
   __vte_osc7
 fi

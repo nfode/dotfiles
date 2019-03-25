@@ -28,6 +28,6 @@ jetbrains-toolbox --minimize &
 udiskie -2 &
 xset -b
 xbindkeys
-$BIN/launchbar &
+$BIN/polybar-launch &
 $BIN/setwallpaper &
 

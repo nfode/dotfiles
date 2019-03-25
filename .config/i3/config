@@ -86,7 +86,7 @@ bindsym $mod+apostrophe exec rofi -modi "clipboard:greenclip print" -show clipbo
 bindsym $mod+backslash exec --no-startup-id rofi-launch "run"
 bindsym $mod+comma exec --no-startup-id bwmenu
 
-bindsym control+$mod+l exec lock
+bindsym control+$mod+l exec screen-lock
 # }}}
 
 # {{{ workspaces
