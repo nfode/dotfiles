@@ -19,6 +19,8 @@ if [ "$host" = "cranky-panini" ]; then
     start-redshift &
 fi
 
+# enable horizontal scrolling with 2 fingers
+xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Horizontal Scroll Enabled" 1
 
 greenclip daemon &> /dev/null &
 light-locker &

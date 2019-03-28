@@ -1,8 +1,6 @@
 # aliases
 alias t='todo.sh'
 
-alias k='kubectl'
-
 alias f='nnn'
 
 alias enw="emacs -nw"

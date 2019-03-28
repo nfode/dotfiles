@@ -8,14 +8,6 @@
 # b:8 = backward button
 # b:9 = forward button
 
-# thumb wheel up => increase volume
-"pavolume.sh --up"
-   b:6
-
-# thumb wheel down => lower volume
-"pavolume.sh --down"
-   b:7
-
 # previous song
 "playerctl previous"
 b:8

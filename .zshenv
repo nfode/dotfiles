@@ -15,3 +15,5 @@ export BWHASH_FILE=$HOME/.bwhash
 export SUDO_ASKPASS=/usr/lib/ssh/x11-ssh-askpass
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
+export FLIP=$HOME/dev/work/flip
+
