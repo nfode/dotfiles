@@ -16,7 +16,7 @@ host=$(hostname)
 if [ "$host" = "cranky-panini" ]; then
     xautolock-start &
     nextcloud &
-    start-redshift &
+    redshift-gtk &
 fi
 
 # enable horizontal scrolling with 2 fingers

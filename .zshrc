@@ -7,7 +7,6 @@ export ANDROID_HOME=/opt/android-sdk
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="powerlevel9k/powerlevel9k"
 TERM=xterm-256color
 # }}}
 # setup path {{{
@@ -28,8 +27,8 @@ POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_SHORTEN_DELIMITER=".."
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status ssh dir vcs) 
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode virtualenv)
-POWERLEVEL9K_VI_INSERT_MODE_STRING="[INSERT]"
-POWERLEVEL9K_VI_COMMAND_MODE_STRING="[NORMAL]"
+POWERLEVEL9K_VI_INSERT_MODE_STRING="[I]"
+POWERLEVEL9K_VI_COMMAND_MODE_STRING="[N]"
 # }}}
 # source all the settings {{{
 source /usr/share/sodalite/shell-integration.sh
@@ -79,6 +78,7 @@ bindkey '^[[B' history-substring-search-down
 bindkey '^ ' autosuggest-accept
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/z/z.sh
 
 if [[ $TERM == xterm-256color && ( -z "$TERMINAL_EMULATOR" && $TERMINAL_EMULATOR != "JetBrains-JediTerm" ) ]]; then
