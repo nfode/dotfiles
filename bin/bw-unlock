@@ -1,11 +1,10 @@
 #!/bin/bash
 
 while true; do
-    res=`bw unlock --raw`
+    res=`/usr/bin/bw unlock --raw`
     [ $? -eq 0 ] && break
     echo $res 
 done
 echo "export BW_SESSION=\"$res\"" > $BWHASH_FILE
 
 . $BWHASH_FILE
-

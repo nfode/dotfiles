@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -rf $HOME/.bwhash
+rm -rf $BWHASH_FILE

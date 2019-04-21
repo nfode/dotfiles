@@ -1,7 +1,7 @@
 #!/bin/bash
 
 bw-status
-[ $? -eq 0 ] || ( echo "bw is locked"; exit 1 )
+[ $? -eq 0 ] || { echo "bitwarden is locked"; exit 1; }
 user=$(bw get username uni-vpn)
 password=$(bw get password uni-vpn)
  echo $password | sudo openconnect -u $user --passwd-on-stdin vpn.rus.uni-stuttgart.de
