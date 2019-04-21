@@ -21,7 +21,7 @@ export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
 export PATH=$PATH:/home/nfode/.gem/ruby/2.5.0/bin 
 # }}}
 # plugin setup {{{
-plugins=(archlinux copydir copyfile rsync vi-mode kubectl git yarn docker mvn history-substring-search colored-man-pages pip helm)
+plugins=(archlinux copydir copyfile rsync vi-mode kubectl git docker mvn history-substring-search colored-man-pages pip helm)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_SHORTEN_DELIMITER=".."

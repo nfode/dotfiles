@@ -49,3 +49,13 @@ unset lesssh
 alias zshconfig='nvim ~/.zshrc'
 alias tetris='autoload -U tetriscurses; tetriscurses'
 
+alias ya="yadm add"
+alias yau="yadm add -u"
+alias yc="yadm commit -v"
+alias yd="yadm diff"
+alias yf="yadm fetch"
+alias yyl="yadm pull origin $(current_branch)"
+alias yl="yadm pull"
+alias yp="yadm push"
+alias yss="yadm status -s"
+alias ys="yadm status"
