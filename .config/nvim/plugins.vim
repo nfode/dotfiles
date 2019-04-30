@@ -8,6 +8,7 @@ function! BuildComposer(info)
     endif
   endif
 endfunction
+Plug 'mboughaba/i3config.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'Yggdroot/indentLine'

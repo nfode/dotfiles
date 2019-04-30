@@ -2,11 +2,6 @@
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/airline.vim
 " }}}
-" {{{ sudo with :ww
-command! -nargs=0  WriteWithSudo :w !sudo tee % >/dev/null
-" Use :ww instead of :WriteWithSudo
-cnoreabbrev ww WriteWithSudo
-" }}}
 " {{{ toogle relative numbers
 nnoremap <F3> :NumbersToggle<CR>
 " }}}
@@ -265,7 +260,12 @@ nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
 let g:table_mode_corner='|'
-set concealcursor=
 let g:vim_json_syntax_conceal = 0
-set conceallevel=0
 
+set concealcursor=
+set conceallevel=0
+let g:vim_markdown_conceal = 0
+let g:tex_conceal = ""
+let g:vim_markdown_math = 1
+
+let g:polyglot_disabled = ['markdown']

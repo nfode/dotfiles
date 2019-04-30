@@ -1,4 +1,5 @@
 # aliases
+alias k="kubectl"
 alias t='todo.sh'
 
 alias f='nnn'
