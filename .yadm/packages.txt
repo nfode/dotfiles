@@ -30,6 +30,7 @@ caddy
 chromium
 clamav
 clamtk
+cloc
 code
 compton
 coreutils
@@ -42,10 +43,8 @@ device-mapper
 dhcpcd
 diffutils
 discord
-discord-canary
 displaylink
 dive
-dmenu
 docker
 docker-compose
 e2fsprogs
@@ -107,7 +106,6 @@ gutenprint
 gvfs
 gvfs-mtp
 gvfs-smb
-gwenview
 gzip
 highlight
 hplip-plugin
@@ -116,16 +114,17 @@ hunspell-de
 i3-wm
 i3status
 inetutils
-insomnia
 intel-ucode
 iproute2
 iputils
+jdk-openjdk
 jetbrains-toolbox
 jfsutils
 jmeter
 joplin
 jq
 jre-openjdk
+kdenlive-release-git
 kipi-plugins
 kubectl-bin
 kubefwd-bin
@@ -168,11 +167,11 @@ man-pages
 maven
 mdadm
 meld
+mesa-demos
 mkdocs
 mongodb34-bin
 mpv
 mtm-git
-mumble
 mutt
 mygtkmenu
 mysql-workbench
@@ -339,3 +338,4 @@ zotero
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
+zsh-theme-powerlevel10k-git
