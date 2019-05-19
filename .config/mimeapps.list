@@ -14,6 +14,7 @@ application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 text/plain=nvim.desktop
+x-scheme-handler/postman=Postman.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=userapp-Daily-7KHLGZ.desktop;userapp-Daily-A6OMGZ.desktop;userapp-Thunderbird-71HFIZ.desktop;userapp-Thunderbird-G3BGTZ.desktop;
@@ -33,9 +34,9 @@ application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoff
 application/vnd.ms-powerpoint=libreoffice-impress.desktop;
 text/plain=nvim.desktop;sodalite.desktop;visual-studio-code.desktop;oni.desktop;GitKraken.desktop;
 video/mp4=vlc.desktop;
-image/png=gimp.desktop;feh.desktop;shotwell-viewer.desktop;org.kde.gwenview.desktop;libreoffice-draw.desktop;
+image/png=feh.desktop;gimp.desktop;shotwell-viewer.desktop;org.kde.gwenview.desktop;libreoffice-draw.desktop;
 application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;userapp-Mail Recipient-IFI6FZ.desktop;
-image/jpeg=org.kde.gwenview.desktop;gimp.desktop;feh.desktop;
+image/jpeg=gimp.desktop;org.kde.gwenview.desktop;feh.desktop;
 application/msword=libreoffice-writer.desktop;userapp-Mail Recipient-3OKGGZ.desktop;
 application/vnd.oasis.opendocument.graphics=libreoffice-draw.desktop;
 application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice-impress.desktop;
@@ -56,3 +57,4 @@ application/pdf=org.gnome.Evince.desktop;
 application/gzip=org.gnome.FileRoller.desktop;
 application/x-shellscript=nvim.desktop;
 application/mbox=nvim.desktop;
+image/gif=gimp.desktop;

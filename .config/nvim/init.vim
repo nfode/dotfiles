@@ -42,6 +42,12 @@ vnoremap <leader>" di""<esc>P
 " {{{ Autocompletion
 let g:deoplete#enable_at_startup = 1
 let g:SuperTabDefaultCompletionType = "<c-n>"
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+imap <expr><CR> (pumvisible() && neosnippet#expandable()) ? "\<Plug>(neosnippet_expand)" : "\<CR>"
+
 " }}}
 " Searching {{{
 " Ignore case when searching set ignorecase
@@ -269,3 +275,5 @@ let g:tex_conceal = ""
 let g:vim_markdown_math = 1
 
 let g:polyglot_disabled = ['markdown']
+
+

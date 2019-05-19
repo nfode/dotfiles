@@ -21,7 +21,7 @@ fi
 
 # enable horizontal scrolling with 2 fingers
 xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Horizontal Scroll Enabled" 1
-
+xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 greenclip daemon &> /dev/null &
 light-locker &
 compton -c &

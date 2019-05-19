@@ -51,6 +51,7 @@ alias zshconfig='nvim ~/.zshrc'
 alias tetris='autoload -U tetriscurses; tetriscurses'
 
 alias ya="yadm add"
+alias yaa="yadm add --all"
 alias yau="yadm add -u"
 alias yc="yadm commit -v"
 alias yd="yadm diff"
