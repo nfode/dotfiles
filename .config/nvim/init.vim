@@ -1,5 +1,7 @@
 " {{{ source config files
 source ~/.config/nvim/plugins.vim
+let g:polyglot_disabled = ['markdown']
+
 source ~/.config/nvim/airline.vim
 " }}}
 " {{{ toogle relative numbers
@@ -39,7 +41,7 @@ nnoremap <leader>" viw<esc>a"<esc>bi"<esc>
 vnoremap <leader>' di''<esc>P
 vnoremap <leader>" di""<esc>P
 " }}}
-" {{{ Autocompletion
+" {{{ Autocompletion and snippets
 let g:deoplete#enable_at_startup = 1
 let g:SuperTabDefaultCompletionType = "<c-n>"
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -47,6 +49,9 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 imap <expr><CR> (pumvisible() && neosnippet#expandable()) ? "\<Plug>(neosnippet_expand)" : "\<CR>"
+
+let g:neosnippet#enable_snipmate_compatibility = 1
+let g:neosnippet#snippets_directory='$HOME/.local/share/nvim/plugged/vim-snippets/snippets'
 
 " }}}
 " Searching {{{
@@ -110,6 +115,16 @@ set encoding=utf8
 set autoindent
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
+
+"let g:table_mode_corner='|'
+let g:vim_json_syntax_conceal = 0
+
+set concealcursor=
+set conceallevel=0
+let g:vim_markdown_conceal = 0
+let g:tex_conceal = ""
+let g:vim_markdown_math = 1
+
 " }}}
 " {{{ Text, tab and indent related
 " Use spaces instead of tabs
@@ -248,10 +263,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 silent call Dark()
 autocmd VimEnter * wincmd p
 " }}} 
-
-let g:neosnippet#enable_snipmate_compatibility = 1
-let g:neosnippet#snippets_directory='$HOME/.local/share/nvim/plugged/vim-snippets/snippets'
-set hidden
+"{{{ LanguageClient
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
     \ }
@@ -259,21 +271,9 @@ let g:LanguageClient_serverCommands = {
 " Automatically start language servers.
 let g:LanguageClient_autoStart = 1
 
-
 " Maps K to hover, gd to goto definition, F2 to rename
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-
-let g:table_mode_corner='|'
-let g:vim_json_syntax_conceal = 0
-
-set concealcursor=
-set conceallevel=0
-let g:vim_markdown_conceal = 0
-let g:tex_conceal = ""
-let g:vim_markdown_math = 1
-
-let g:polyglot_disabled = ['markdown']
-
+"}}}
 
