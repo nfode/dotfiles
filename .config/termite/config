@@ -1,6 +1,18 @@
 [options]
 font = Hack Nerd Font 16
 
+allow_bold = true
+browser = xdg-open
+clickable_url = true
+cursor_blink = off
+filter_unmatched_urls = true
+scroll_on_output = false
+scroll_on_keystroke = true
+scrollback_lines = 15000
+search_wrap = true
+urgent_on_bell = true
+highlight = #30343e
+
 [colors]
 # Base16 Monokai
 # Author: Wimer Hazenberg (http://www.monokai.nl)
