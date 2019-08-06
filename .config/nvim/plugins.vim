@@ -18,6 +18,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-surround'
 Plug 'lilydjwg/colorizer'
 Plug 'ap/vim-css-color'
+Plug 'RRethy/vim-illuminate'
 Plug 'matze/vim-move'
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 Plug 'junegunn/vim-easy-align'

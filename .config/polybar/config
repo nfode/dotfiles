@@ -85,6 +85,9 @@ ws-icon-7 = 1;
 ws-icon-8 = 2;
 ws-icon-9 = 3;
 ws-icon-10 = 4;
+ws-icon-11 = fwd;
+ws-icon-12 = watch;
+ws-icon-13 = term;
 ws-icon-default = 
 
 

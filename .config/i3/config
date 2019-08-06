@@ -42,6 +42,9 @@ set $ws_browse "browse"
 set $ws_comm "comm"
 set $ws_media "media"
 set $ws_time "time"
+set $ws_fwd "fwd"
+set $ws_watch "watch"
+set $ws_term "term"
 
 
 # }}}
@@ -101,6 +104,9 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
+bindsym $mod+backslash workspace $ws_term
+bindsym $mod+bracketright workspace $ws_fwd
+bindsym $mod+bracketleft workspace $ws_watch
 bindsym $mod+i workspace $ws_idea
 bindsym $mod+g workspace $ws_git
 bindsym $mod+m workspace $ws_mail; exec check-if-running thunderbird || exec thunderbird
@@ -158,6 +164,9 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+bracketright move container to workspace $ws_fwd
+bindsym $mod+Shift+backslash move container to workspace $ws_term
+bindsym $mod+Shift+bracketleft move container to workspace $ws_watch
 bindsym $mod+Shift+i move container to workspace $ws_idea
 bindsym $mod+Shift+g move container to workspace $ws_git
 bindsym $mod+Shift+m move container to workspace $ws_mail

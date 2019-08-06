@@ -19,6 +19,7 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/ndk-bundle
 export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
 export PATH=$PATH:/home/nfode/.gem/ruby/2.6.0/bin 
+export PATH=$FLIP/bin:$PATH
 # }}}
 # plugin setup {{{
 plugins=(archlinux copydir copyfile rsync vi-mode kubectl git docker mvn history-substring-search colored-man-pages pip helm)
@@ -81,6 +82,8 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/z/z.sh
 
+#source /usr/share/nvm/init-nvm.sh
+
 if [[ $TERM == xterm-256color && ( -z "$TERMINAL_EMULATOR" && $TERMINAL_EMULATOR != "JetBrains-JediTerm" ) ]]; then
   . /etc/profile.d/vte.sh
   __vte_osc7
@@ -89,3 +92,7 @@ fi
 setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
 setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+
+flipCompletion=$FLIP/devops/cli/completion.zsh
+[ -f $flipCompletion ] && source $flipCompletion
+

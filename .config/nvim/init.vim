@@ -4,11 +4,11 @@ let g:polyglot_disabled = ['markdown']
 
 source ~/.config/nvim/airline.vim
 " }}}
-" {{{ toogle relative numbers
-nnoremap <F3> :NumbersToggle<CR>
-" }}}
 " {{{ set leader
 let mapleader=" "
+" }}}
+" {{{ toogle relative numbers
+nnoremap <leader>rl :set relativenumber!<cr>
 " }}}
 " {{{ disable highlighting after search
 nnoremap <leader><leader> :noh<cr>
@@ -34,12 +34,6 @@ nnoremap <silent> <C-space> :exe 'silent! normal! za'<CR>
 " Formating text {{{
 " auto indent file
 nnoremap <leader>f <Esc>gg<s-V>G=''<Esc>zz
-" }}}
-" Easy quoting {{{
-nnoremap <leader>' viw<esc>a'<esc>bi'<esc>
-nnoremap <leader>" viw<esc>a"<esc>bi"<esc>
-vnoremap <leader>' di''<esc>P
-vnoremap <leader>" di""<esc>P
 " }}}
 " {{{ Autocompletion and snippets
 let g:deoplete#enable_at_startup = 1
@@ -275,4 +269,13 @@ let g:LanguageClient_autoStart = 1
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-"}}}
+""}}}
+
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+

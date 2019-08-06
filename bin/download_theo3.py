@@ -16,7 +16,7 @@ def download_file(link, file_name):
 
 
 base_link = 'http://www.fmi.uni-stuttgart.de'
-site = 'http://www.fmi.uni-stuttgart.de/ti/teaching/w18/ti3/'
+site = 'http://www.fmi.uni-stuttgart.de/ti/teaching/s19/ti2/'
 page = request.urlopen(site)
 soup = BeautifulSoup(page, 'html.parser')
 table = soup.findAll('table', attrs={'class': 'lehre'})[1]
