@@ -7,10 +7,9 @@ export ANDROID_HOME=/opt/android-sdk
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export ZSH=$HOME/.oh-my-zsh
-TERM=xterm-256color
+export TERM=xterm-256color
 # }}}
 # setup path {{{
-export PATH="$(yarn global bin):$PATH"
 export PATH=$PATH:$HOME/.cargo/env
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$GOPATH/bin
@@ -23,7 +22,7 @@ export PATH=$PATH:/home/nfode/.gem/ruby/2.6.0/bin
 export PATH=$FLIP/bin:$PATH
 # }}}
 # plugin setup {{{
-plugins=(archlinux copydir copyfile rsync vi-mode kubectl git docker mvn history-substring-search colored-man-pages pip helm)
+plugins=(archlinux copydir copyfile rsync vi-mode kubectl git docker history-substring-search colored-man-pages pip helm)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_SHORTEN_DELIMITER=".."
@@ -58,6 +57,9 @@ _fzf_compgen_dir() {
 setopt NO_HUP
 setopt NO_CHECK_JOBS
 setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 
 bindkey -v
 export KEYTIMEOUT=1
@@ -77,33 +79,18 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 # }}}
 
-bindkey '^ ' autosuggest-accept
-
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/z/z.sh
-
-#source /usr/share/nvm/init-nvm.sh
 
 if [[ $TERM == xterm-256color && ( -z "$TERMINAL_EMULATOR" && $TERMINAL_EMULATOR != "JetBrains-JediTerm" ) ]]; then
   . /etc/profile.d/vte.sh
   __vte_osc7
 fi
 
-setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
-setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
-setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 
 flipCompletion=$FLIP/devops/cli/completion.zsh
 [ -f $flipCompletion ] && source $flipCompletion
-# COMPLETION SETTINGS
-# add custom completion scripts
-fpath=(~/.zsh/completion $fpath) 
 
-# compsys initialization
-autoload -U compinit
-compinit
-
-# show completion menu when number of options is at least 2
-zstyle ':completion:*' menu select=2
-
+source /opt/asdf-vm/asdf.sh
+source /opt/asdf-vm/completions/asdf.bash
