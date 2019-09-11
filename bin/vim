@@ -1,1 +1,6 @@
-/usr/bin/nvim
+#!/bin/bash
+
+# source nvm to have the latest node version for coc
+source /usr/share/nvm/init-nvm.sh
+/usr/bin/nvim $@
+

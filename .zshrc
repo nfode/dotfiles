@@ -10,6 +10,7 @@ export ZSH=$HOME/.oh-my-zsh
 TERM=xterm-256color
 # }}}
 # setup path {{{
+export PATH="$(yarn global bin):$PATH"
 export PATH=$PATH:$HOME/.cargo/env
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$GOPATH/bin
@@ -95,4 +96,14 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 
 flipCompletion=$FLIP/devops/cli/completion.zsh
 [ -f $flipCompletion ] && source $flipCompletion
+# COMPLETION SETTINGS
+# add custom completion scripts
+fpath=(~/.zsh/completion $fpath) 
+
+# compsys initialization
+autoload -U compinit
+compinit
+
+# show completion menu when number of options is at least 2
+zstyle ':completion:*' menu select=2
 

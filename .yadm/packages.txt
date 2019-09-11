@@ -1,6 +1,8 @@
+a2jmidid
 acpi_call
 adobe-source-code-pro-fonts
 adwaita-qt5
+alsa-utils
 amp
 android-tools
 android-udev
@@ -8,6 +10,7 @@ apache-tools
 arandr
 arc-gtk-theme
 arc-icon-theme
+ardour
 aspell-de
 aspell-en
 atom
@@ -27,6 +30,7 @@ breeze
 breeze-icons
 bzip2
 caddy
+catimg
 cgroup_event_listener
 chromium
 clamav
@@ -40,6 +44,7 @@ cryptsetup
 ctop
 cups
 cups-pk-helper
+deja-dup
 delve
 device-mapper
 dhcpcd
@@ -71,6 +76,8 @@ findutils
 firefox
 firefox-developer-edition
 flex
+fluidplug-git
+fluidsynth
 foomatic-db-engine
 foomatic-db-nonfree-ppds
 frei0r-plugins
@@ -85,6 +92,7 @@ git-cola
 git-extras-git
 gitbatch-bin
 gitkraken
+glade
 glew-wayland
 glfw-wayland
 glibc
@@ -118,6 +126,7 @@ inetutils
 intel-ucode
 iproute2
 iputils
+jack2
 jdk-openjdk
 jetbrains-toolbox
 jfsutils
@@ -156,6 +165,7 @@ lightdm-slick-greeter
 lightning
 linux
 linux-headers
+lmms
 logrotate
 lsd
 lvm2
@@ -234,6 +244,8 @@ python-neovim-git
 python-pip
 python2-pip
 qemu
+qjackctl
+qsynth
 qt5-styleplugins
 qt5-wayland
 qt5ct
@@ -257,7 +269,6 @@ shadow
 shotwell
 simple-scan
 simplenote-electron-bin
-skypeforlinux-stable-bin
 sl
 sodalite
 solaar
