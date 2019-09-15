@@ -23,16 +23,12 @@ export PATH=$FLIP/bin:$PATH
 # }}}
 # plugin setup {{{
 plugins=(archlinux copydir copyfile rsync vi-mode kubectl git docker history-substring-search colored-man-pages pip helm)
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-POWERLEVEL9K_SHORTEN_DELIMITER=".."
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status ssh dir vcs) 
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode virtualenv)
-POWERLEVEL9K_VI_INSERT_MODE_STRING="[I]"
-POWERLEVEL9K_VI_COMMAND_MODE_STRING="[N]"
+ZSH_THEME="spaceship"
 # }}}
 # source all the settings {{{
 source /usr/share/sodalite/shell-integration.sh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/z/z.sh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 for file in ~/.zshconfig/*; do
@@ -78,10 +74,28 @@ bindkey -M vicmd 'j' history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 # }}}
+# spaceship {{{
+# disable modules
+SPACESHIP_EXIT_CODE_SHOW=true
+SPACESHIP_KUBECONTEXT_SHOW=false
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_PROMPT_SEPARATE_LINE=false
+SPACESHIP_EXEC_TIME_SHOW=false
+SPACESHIP_DOCKER_SHOW=false
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/z/z.sh
+# configuration
+SPACESHIP_EXIT_CODE_SYMBOL=""
+SPACESHIP_GIT_PREFIX=""
+SPACESHIP_DIR_TRUNC_PREFIX="../"
+# }}}
+# asdf {{{
+source /opt/asdf-vm/asdf.sh
+source /opt/asdf-vm/completions/asdf.bash
+# }}}
+# flip {{{
+flipCompletion=$FLIP/devops/cli/completion.zsh
+[ -f $flipCompletion ] && source $flipCompletion
+# }}}
 
 if [[ $TERM == xterm-256color && ( -z "$TERMINAL_EMULATOR" && $TERMINAL_EMULATOR != "JetBrains-JediTerm" ) ]]; then
   . /etc/profile.d/vte.sh
@@ -89,8 +103,4 @@ if [[ $TERM == xterm-256color && ( -z "$TERMINAL_EMULATOR" && $TERMINAL_EMULATOR
 fi
 
 
-flipCompletion=$FLIP/devops/cli/completion.zsh
-[ -f $flipCompletion ] && source $flipCompletion
 
-source /opt/asdf-vm/asdf.sh
-source /opt/asdf-vm/completions/asdf.bash

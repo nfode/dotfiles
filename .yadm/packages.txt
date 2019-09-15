@@ -59,7 +59,6 @@ e2fsprogs
 efibootmgr
 egl-wayland
 elixir
-emacs
 evince
 evtest
 exa-git
@@ -361,4 +360,3 @@ zotero
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
-zsh-theme-powerlevel10k-git
