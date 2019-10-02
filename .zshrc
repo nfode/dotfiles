@@ -23,7 +23,7 @@ export PATH=$FLIP/bin:$PATH
 # }}}
 # plugin setup {{{
 plugins=(archlinux copydir copyfile rsync vi-mode kubectl git docker history-substring-search colored-man-pages pip helm)
-ZSH_THEME="spaceship"
+ZSH_THEME=powerlevel10k/powerlevel10k
 # }}}
 # source all the settings {{{
 source /usr/share/sodalite/shell-integration.sh
@@ -74,19 +74,19 @@ bindkey -M vicmd 'j' history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 # }}}
-# spaceship {{{
-# disable modules
-SPACESHIP_EXIT_CODE_SHOW=true
-SPACESHIP_KUBECONTEXT_SHOW=false
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_PROMPT_SEPARATE_LINE=false
-SPACESHIP_EXEC_TIME_SHOW=false
-SPACESHIP_DOCKER_SHOW=false
-
-# configuration
-SPACESHIP_EXIT_CODE_SYMBOL=""
-SPACESHIP_GIT_PREFIX=""
-SPACESHIP_DIR_TRUNC_PREFIX="../"
+# powerlevel10k {{{
+flip_context(){
+    local prompt=$(which flip-prompt &> /dev/null && flip-prompt)
+    if [[ $PWD =~ $FLIP(/.*)? ]]; then echo $prompt ;fi
+}
+POWERLEVEL9K_CUSTOM_FLIP_CONTEXT="flip_context"
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+POWERLEVEL9K_SHORTEN_DELIMITER=".."
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status custom_flip_context ssh dir vcs )
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode virtualenv)
+POWERLEVEL9K_VI_INSERT_MODE_STRING="[I]"
+POWERLEVEL9K_VI_COMMAND_MODE_STRING="[N]"
 # }}}
 # asdf {{{
 source /opt/asdf-vm/asdf.sh
@@ -102,5 +102,6 @@ if [[ $TERM == xterm-256color && ( -z "$TERMINAL_EMULATOR" && $TERMINAL_EMULATOR
   __vte_osc7
 fi
 
+eval $(thefuck --alias)
 
 

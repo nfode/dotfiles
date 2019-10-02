@@ -1,3 +1,3 @@
 #!/bin/bash
 
-light-locker-command -l
+dm-tool lock
