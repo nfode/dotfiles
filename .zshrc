@@ -19,7 +19,6 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/ndk-bundle
 export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
 export PATH=$PATH:/home/nfode/.gem/ruby/2.6.0/bin 
-export PATH=$FLIP/bin:$PATH
 # }}}
 # plugin setup {{{
 plugins=(archlinux copydir copyfile rsync vi-mode kubectl git docker history-substring-search colored-man-pages pip helm)
@@ -93,15 +92,16 @@ source /opt/asdf-vm/asdf.sh
 source /opt/asdf-vm/completions/asdf.bash
 # }}}
 # flip {{{
-flipCompletion=$FLIP/devops/cli/completion.zsh
-[ -f $flipCompletion ] && source $flipCompletion
+flipInit=$FLIP/devops/shell-init.sh
+[ -f "$flipInit" ] && source "$flipInit"
 # }}}
-
+# {{{ fix intellij
 if [[ $TERM == xterm-256color && ( -z "$TERMINAL_EMULATOR" && $TERMINAL_EMULATOR != "JetBrains-JediTerm" ) ]]; then
   . /etc/profile.d/vte.sh
   __vte_osc7
 fi
-
+# }}}
+# {{{ thefuck
 eval $(thefuck --alias)
-
+# }}}
 

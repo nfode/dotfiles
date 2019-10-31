@@ -10,6 +10,7 @@ function! BuildComposer(info)
 endfunction
 " color themes and more for different languages
 Plug 'mboughaba/i3config.vim'
+Plug 'masukomi/vim-markdown-folding'
 
 " nerdtree
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }

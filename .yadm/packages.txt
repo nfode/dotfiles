@@ -59,7 +59,7 @@ e2fsprogs
 efibootmgr
 egl-wayland
 elixir
-evince
+evince-no-gnome
 evtest
 exa-git
 exfat-utils
@@ -80,6 +80,7 @@ fluidplug-git
 fluidsynth
 foomatic-db-engine
 foomatic-db-nonfree-ppds
+freerdp
 frei0r-plugins
 fzf
 gavl
@@ -99,7 +100,6 @@ glibc
 glide
 gnome-keyring
 gnome-video-effects
-google-chrome
 gparted
 gpick
 gradle
@@ -134,7 +134,6 @@ jmeter
 jq
 jre-openjdk
 kdenlive-release-git
-kindd-git
 kipi-plugins
 ktlint
 kubectl-bin
@@ -147,8 +146,9 @@ lib32-ncurses
 lib32-zlib
 libgnome-keyring
 libgnomekbd
+libgssglue
 libreoffice-fresh
-libretro-mupen64plus
+libretro-mupen64plus-next
 libretro-parallel-n64
 libtool
 libtraceevent
@@ -165,7 +165,6 @@ lightdm-slick-greeter
 lightning
 linux
 linux-headers
-lmms
 logrotate
 lsd
 lvm2
@@ -176,6 +175,7 @@ maldet
 man-db
 man-pages
 maven
+mbedtls
 mdadm
 meld
 mendeleydesktop-bundled
@@ -189,6 +189,7 @@ mysql-workbench
 namcap
 nano
 ncdu
+ncspot-git
 neofetch
 neovim
 nerd-fonts-hack
@@ -230,7 +231,7 @@ php
 pkgconf
 playerctl
 polkit-gnome
-polybar
+polybar-git
 postman-bin
 powerline-fonts
 print-manager
@@ -244,7 +245,6 @@ python-pip
 python2-pip
 qemu
 qjackctl
-qsynth
 qt5-styleplugins
 qt5-wayland
 qt5ct
@@ -252,7 +252,6 @@ ragel
 redis
 redshift
 reiserfsprogs
-remmina
 resty-git
 retro-gtk
 retroarch
@@ -272,10 +271,8 @@ sl
 sodalite
 solaar
 speedcrunch-git
-spotify
 sshfs
 sudo
-sway
 sysfsutils
 system-config-printer
 systemd
@@ -296,6 +293,7 @@ texlive-pstricks
 texlive-publishers
 texlive-science
 textidote-bin
+thefuck
 threshy-gui
 thunar
 thunar-archive-plugin

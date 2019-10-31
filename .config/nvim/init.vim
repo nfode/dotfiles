@@ -125,12 +125,6 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
-
-" mouse scroll smooth
-set cursorline!
-set lazyredraw
-set synmaxcol=256
-syntax sync minlines=256
 " }}}
 " markdown {{{
 " pandoc {{{
@@ -142,7 +136,6 @@ let g:pandoc#filetypes#pandoc_markdown = 0
 " vim-markdown-composer {{{
 let g:markdown_composer_browser = 'chromium'
 let g:markdown_composer_open_browser = 0
-"let g:markdown_composer_external_renderer='pandoc -f markdown -t html'
 autocmd BufRead,BufNewFile *.md	setlocal filetype=markdown
 " }}}
 " }}}
@@ -152,13 +145,6 @@ nnoremap <leader>boot :vsplit $HOME/.yadm/bootstrap<cr>
 " source config in all windows
 nnoremap <leader>src :windo source $HOME/.config/nvim/init.vim<cr><esc>:echo "sourced vimrc"<cr>
 nnoremap <leader>todo :vsplit $HOME/todo<cr>
-" }}}
-" vimwiki {{{
-let g:vimwiki_list = [{'path': '~/nextcloud/todo/', 'syntax': 'markdown', 'ext': '.md'}]"
-let g:vimwiki_folding = 'list'
-nmap <Leader>wb <Plug>VimwikiGoBackLink
-nmap <Leader>wn <Plug>VimwikiNextLink
-nmap <Leader>wp <Plug>VimwikiPrevLink
 " }}}
 " fzf {{{ 
 " Mapping selecting mappings
@@ -171,8 +157,8 @@ end
 
 " }}}
 " {{{ buffers,tabs 
-" Smart way to move between windows
 " Window navigation {{{
+" Smart way to move between windows
 nnoremap <C-J> <c-w><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -184,6 +170,7 @@ if has("nvim")
     tnoremap <C-l> <C-\><C-n><C-w>l
 endif
 " }}}
+
 " Close the current buffer
 map <leader>bd :Bclose!<cr>:tabclose<cr>gT
 
@@ -244,14 +231,19 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 silent call Dark()
 autocmd VimEnter * wincmd p
 " }}} 
-
+" {{{ yaml
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+" }}}
+" {{{ move stuff with A-j and A-k
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
-
+" }}}
+" {{{ coc.nvim
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
@@ -271,3 +263,43 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
+
+" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Remap for do codeAction of current line
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Fix autofix problem of current line
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+" }}}

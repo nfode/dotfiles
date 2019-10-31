@@ -15,8 +15,11 @@ $BIN/keymap-setup
 host=$(hostname)
 if [ "$host" = "cranky-panini" ]; then
 #    xautolock-start &
+    light-locker &
     nextcloud &
     redshift-gtk &
+    # fu mendeley
+    xdg-mime default org.gnome.Evince.desktop application/pdf &
 fi
 
 # enable horizontal scrolling with 2 fingers
