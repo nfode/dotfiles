@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=i3-custom
+Comment=improved dynamic tiling window manager
+Exec=/home/nfode/.local/bin/custom-start
+TryExec=/home/nfode/.local/bin/custom-start
+Type=Application
+X-LightDM-DesktopName=i3
+DesktopNames=i3
+Keywords=tiling;wm;windowmanager;window;manager;

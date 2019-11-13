@@ -246,6 +246,15 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 " {{{ coc.nvim
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+" Better display for messages
+set cmdheight=2
+
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -303,3 +312,5 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " }}}
+
+let g:tex_flavor = "latex"

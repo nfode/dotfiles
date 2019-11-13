@@ -85,7 +85,7 @@ bindsym $mod+Shift+q exit
 bindsym $mod+Shift+r "reload; exec i3-refresh"
 
 bindsym $mod+d exec --no-startup-id rofi-launch "drun"
-bindsym $mod+apostrophe exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme $XDG_CONFIG_HOME/rofi/themes/merged.rasi
+bindsym $mod+apostrophe exec --no-startup-id rofi-launch "window"
 bindsym $mod+slash exec --no-startup-id rofi-launch "run"
 bindsym $mod+comma exec --no-startup-id bwmenu
 

@@ -1,0 +1,13 @@
+#!/bin/bash  
+
+set -ve
+host=$(hostname)
+if [ "$host" = "cranky-panini" ]; then
+    ln -s $HOME/nextcloud/Notes $HOME/todo
+    ln -s $HOME/nextcloud/uni $HOME/uni
+    ln -s $HOME/nextcloud/videos $HOME/videos
+    ln -s $HOME/nextcloud/pictures $HOME/pictures
+fi
+
+sudo ln -s $HOME/.yadm/pacman.conf /etc/pacman.conf
+
