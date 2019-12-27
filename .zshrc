@@ -21,7 +21,7 @@ export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
 export PATH=$PATH:/home/nfode/.gem/ruby/2.6.0/bin 
 # }}}
 # plugin setup {{{
-plugins=(archlinux copydir copyfile rsync vi-mode kubectl git docker history-substring-search colored-man-pages pip helm)
+plugins=(archlinux copydir copyfile rsync vi-mode kubectl git docker history-substring-search colored-man-pages pip helm docker-compose)
 ZSH_THEME=powerlevel10k/powerlevel10k
 # }}}
 # source all the settings {{{
@@ -96,7 +96,7 @@ flipInit=$FLIP/devops/shell-init.sh
 [ -f "$flipInit" ] && source "$flipInit"
 # }}}
 # {{{ fix intellij
-if [[ $TERM == xterm-256color && ( -z "$TERMINAL_EMULATOR" && $TERMINAL_EMULATOR != "JetBrains-JediTerm" ) ]]; then
+if [[ $TERM == xterm-256color && -z "$TERMINAL_EMULATOR" && $TERMINAL_EMULATOR != "JetBrains-JediTerm" ]]; then
   . /etc/profile.d/vte.sh
   __vte_osc7
 fi

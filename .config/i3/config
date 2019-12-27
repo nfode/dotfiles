@@ -38,20 +38,15 @@ set $ws10 "10"
 set $ws_idea "idea"
 set $ws_git "git"
 set $ws_mail "mail"
-set $ws_browse "browse"
 set $ws_comm "comm"
 set $ws_media "media"
-set $ws_time "time"
 set $ws_fwd "fwd"
 set $ws_watch "watch"
-set $ws_term "term"
 
 
 # }}}
 
 # app rules {{{
-assign [class="Slack"] $ws_comm
-assign [class="Mumble"] $ws_comm
 assign [class="TelegramDesktop"] $ws_comm
 assign [class="Thunderbird"] $ws_mail
 assign [class="jetbrains-idea"] $ws_idea
@@ -74,8 +69,6 @@ set $control control
 
 bindsym $mod+Shift+p move scratchpad
 bindsym $mod+p scratchpad show
-
-bindsym $mod+n exec todo-toggle
 
 bindsym $mod+Prior exec kb-light.py
 
@@ -104,7 +97,6 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
-bindsym $mod+backslash workspace $ws_term
 bindsym $mod+bracketright workspace $ws_fwd
 bindsym $mod+bracketleft workspace $ws_watch
 bindsym $mod+i workspace $ws_idea
@@ -151,6 +143,7 @@ bindsym $mod+space focus mode_toggle
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 bindsym $mod+ctrl+f exec --no-startup-id focus.py 
+
 bindsym $mod+c kill
 
 # move focused container to workspace
@@ -165,7 +158,6 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+Shift+bracketright move container to workspace $ws_fwd
-bindsym $mod+Shift+backslash move container to workspace $ws_term
 bindsym $mod+Shift+bracketleft move container to workspace $ws_watch
 bindsym $mod+Shift+i move container to workspace $ws_idea
 bindsym $mod+Shift+g move container to workspace $ws_git
@@ -205,7 +197,7 @@ bindsym $mod+Return exec i3-sensible-terminal # start a terminal
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pavolume.sh --up
 bindsym XF86AudioLowerVolume exec --no-startup-id pavolume.sh --down
-bindsym XF86AudioMute exec --no-startup-id ~/.config/polybar/pavolume.sh --togmute
+bindsym XF86AudioMute exec --no-startup-id pavolume.sh --togmute
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioStop exec --no-startup-id playerctl stop
 bindsym XF86AudioNext exec --no-startup-id playerctl next
@@ -213,18 +205,15 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 bindsym XF86Tools exec --no-startup-id spotify
 
-bindsym XF86HomePage exec --no-startup-id firefox-nighty
-bindsym XF86Explorer exec --no-startup-id dolphin
-
 bindsym Print exec --no-startup-id GTK_THEME=Arc-Dark xfce4-screenshooter
 # brightness control
-bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # }}}
 # style {{{
 #assign [class=".*"] title_format "<b>%title</b>"
-font pango:DejaVu Sans Mono 12
+font pango:NotoSans Nerd Font 12
 # disable titlebars -- a bit of a hack
 new_window pixel 2
 hide_edge_borders smart

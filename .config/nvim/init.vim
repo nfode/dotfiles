@@ -1,7 +1,5 @@
 " {{{ source config files
 source ~/.config/nvim/plugins.vim
-let g:polyglot_disabled = ['markdown']
-
 source ~/.config/nvim/airline.vim
 " }}}
 " {{{ set leader
@@ -100,6 +98,8 @@ set ffs=unix,dos,mac
 "let g:table_mode_corner='|'
 let g:vim_json_syntax_conceal = 0
 
+let g:indentLine_fileTypeExclude = ['markdown', 'json']
+
 set concealcursor=
 set conceallevel=0
 let g:vim_markdown_conceal = 0
@@ -177,8 +177,8 @@ map <leader>bd :Bclose!<cr>:tabclose<cr>gT
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
 
-map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
+map <A-l> :bnext<cr>
+map <A-h> :bprevious<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
