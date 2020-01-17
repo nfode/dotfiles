@@ -55,4 +55,6 @@ Plug 'Raimondi/delimitMate' " complete quotes, parens, brackets, etc.
 "Plug 'ervandew/supertab' " dont use tab for completion
 Plug 'tpope/vim-surround'
 Plug 'chrisbra/SudoEdit.vim'
+
+Plug 'rhysd/vim-crystal'
 call plug#end()

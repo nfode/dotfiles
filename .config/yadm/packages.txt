@@ -10,7 +10,6 @@ apache-tools
 arandr
 arc-gtk-theme
 arc-icon-theme
-ardour
 asdf-vm
 aspell-de
 aspell-en
@@ -20,6 +19,7 @@ automake
 awesome-terminal-fonts
 bash
 bat
+biber
 binutils
 bison
 bitwarden-bin
@@ -38,17 +38,19 @@ clamav
 clamtk
 cloc
 code
-compton
 coreutils
 cpupower
 cryptsetup
+crystal
 ctop
 cups
 cups-pk-helper
+darktable-git
 deja-dup
 delve
 device-mapper
 dhcpcd
+diff-pdf-git
 diffutils
 discord
 displaylink
@@ -60,6 +62,7 @@ efibootmgr
 egl-wayland
 elixir
 evince-no-gnome
+evince-synctex
 evtest
 exa-git
 exfat-utils
@@ -76,8 +79,6 @@ findutils
 firefox
 firefox-developer-edition
 flex
-fluidplug-git
-fluidsynth
 foomatic-db-engine
 foomatic-db-nonfree-ppds
 freerdp
@@ -88,6 +89,7 @@ gawk
 gcc
 gcc-libs
 gettext
+ghex
 gimp
 git-cola
 git-extras-git
@@ -123,22 +125,24 @@ hyperv
 i3-wm
 i3status
 inetutils
+inklingreader-git
+insomnia
 intel-ucode
 iproute2
 iputils
 jack2
 jdk-openjdk
+jetbrains-mono
 jetbrains-toolbox
 jfsutils
 jmeter
 jq
 jre-openjdk
-kdenlive-release-git
 kipi-plugins
 ktlint
 kubectl-bin
 kubefwd-bin
-kubernetes-helm-bin
+kubernetes-helm2
 languagetool
 less
 lib32-libstdc++5
@@ -157,7 +161,6 @@ libvdpau-va-gl
 libvirt
 libvncserver
 licenses
-light
 light-locker
 lightdm
 lightdm-settings
@@ -185,7 +188,6 @@ mpv
 mtm-git
 mutt
 mygtkmenu
-mysql-workbench
 namcap
 nano
 ncdu
@@ -194,6 +196,7 @@ neofetch
 neovim
 nerd-fonts-hack
 nerd-fonts-noto-sans-regular-complete
+net-tools
 netctl
 network-manager-applet
 networkmanager-openconnect
@@ -202,6 +205,8 @@ ngrok
 nmap
 nnn
 nodejs
+nodejs-decktape
+notion-app
 noto-fonts
 npm
 nss-mdns
@@ -225,9 +230,11 @@ pavumeter
 pciutils
 pcmciautils
 pdfgrep
+pdftk
 perf
 perl
 php
+picom
 pkgconf
 playerctl
 polkit-gnome
@@ -242,6 +249,7 @@ pulseaudio-bluetooth
 python-i3-py
 python-neovim-git
 python-pip
+python-virtualenv
 python2-pip
 qemu
 qjackctl
@@ -264,6 +272,7 @@ sane
 seahorse
 sed
 shadow
+shards
 shotwell
 simple-scan
 simplenote-electron-bin
@@ -271,7 +280,9 @@ sl
 sodalite
 solaar
 speedcrunch-git
+spotify
 sshfs
+strace
 sudo
 sysfsutils
 system-config-printer
@@ -288,6 +299,7 @@ texlive-core
 texlive-fontsextra
 texlive-formatsextra
 texlive-latexextra
+texlive-localmanager-git
 texlive-pictures
 texlive-pstricks
 texlive-publishers
@@ -308,6 +320,7 @@ todotxt
 todotxt-machine-git
 tp_smapi
 tpacpi-bat
+traceroute
 transmission-gtk
 tridactyl-native-git
 ttf-dejavu
@@ -329,6 +342,7 @@ visualvm
 vlc
 wedder
 wget
+what-bin
 which
 x11-ssh-askpass
 x86_energy_perf_policy
@@ -343,6 +357,7 @@ xfce4-xkb-plugin
 xfsprogs
 xkeycaps
 xorg-server
+xorg-xbacklight
 xorg-xdpyinfo
 xorg-xev
 xorg-xinit

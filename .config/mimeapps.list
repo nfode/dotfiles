@@ -16,6 +16,7 @@ x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 text/plain=nvim.desktop
 x-scheme-handler/postman=Postman.desktop
 application/pdf=org.gnome.Evince.desktop
+x-scheme-handler/ssh=ktelnetservice5.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=userapp-Daily-7KHLGZ.desktop;userapp-Daily-A6OMGZ.desktop;userapp-Thunderbird-71HFIZ.desktop;userapp-Thunderbird-G3BGTZ.desktop;
@@ -60,3 +61,4 @@ application/x-shellscript=nvim.desktop;
 application/mbox=nvim.desktop;
 image/gif=firefox.desktop;feh.desktop;gimp.desktop;
 inode/directory=shotwell.desktop;feh.desktop;
+application/x-java-archive=org.gnome.FileRoller.desktop;

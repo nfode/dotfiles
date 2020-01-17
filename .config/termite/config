@@ -1,5 +1,5 @@
 [options]
-font = Hack Nerd Font 16
+font = JetBrains Mono 16
 
 allow_bold = true
 browser = xdg-open
