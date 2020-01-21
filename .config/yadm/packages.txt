@@ -1,7 +1,6 @@
 a2jmidid
 acpi_call
 adobe-source-code-pro-fonts
-adwaita-qt5
 alsa-utils
 amp
 android-tools
@@ -111,7 +110,7 @@ groff
 grub
 gtk-engine-murrine
 gtklp
-gucharmap-gtk2
+gucharmap
 gutenprint
 gvfs
 gvfs-mtp
@@ -132,7 +131,6 @@ iproute2
 iputils
 jack2
 jdk-openjdk
-jetbrains-mono
 jetbrains-toolbox
 jfsutils
 jmeter
@@ -205,7 +203,6 @@ ngrok
 nmap
 nnn
 nodejs
-nodejs-decktape
 notion-app
 noto-fonts
 npm
@@ -228,7 +225,6 @@ patch
 pavucontrol
 pavumeter
 pciutils
-pcmciautils
 pdfgrep
 pdftk
 perf
@@ -267,6 +263,7 @@ retroarch-assets-xmb
 ripgrep
 rofi
 rofi-greenclip
+rofimoji
 s-nail
 sane
 seahorse
@@ -289,7 +286,6 @@ system-config-printer
 systemd
 systemd-sysvcompat
 tar
-tealdeer
 telegram-desktop
 termite
 texinfo
@@ -326,6 +322,7 @@ tridactyl-native-git
 ttf-dejavu
 ttf-font-awesome
 ttf-hack
+ttf-jetbrains-mono
 ttf-material-design-icons
 turbostat
 udiskie
@@ -342,7 +339,6 @@ visualvm
 vlc
 wedder
 wget
-what-bin
 which
 x11-ssh-askpass
 x86_energy_perf_policy
@@ -368,7 +364,7 @@ xorg-xrandr
 yadm-git
 yarn
 yay
-z-dir-jump-git
+z-git
 zotero
 zsh
 zsh-autosuggestions
