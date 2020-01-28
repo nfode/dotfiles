@@ -1,0 +1,243 @@
+# header {{{
+# i3 config file (v4)
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# vim:fdm=marker:fdl=0:ft=i3config
+# }}}
+# colors {{{
+# }}}
+# workspaces and applications {{{
+# workspace definition {{{
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+set $ws_idea "idea"
+set $ws_git "git"
+set $ws_mail "mail"
+set $ws_comm "comm"
+set $ws_media "media"
+set $ws_fwd "fwd"
+set $ws_watch "watch"
+
+
+# }}}
+
+# app rules {{{
+assign [class="TelegramDesktop"] $ws_comm
+assign [class="Thunderbird"] $ws_mail
+assign [class="jetbrains-idea"] $ws_idea
+assign [class="jetbrains-webstorm"] $ws_idea
+assign [class="jetbrains-goland"] $ws_idea
+assign [class="GitKraken"] $ws_git
+for_window [class="Spotify"] move to workspace $ws_media
+# }}}
+# }}}
+# autostart {{{
+exec session autostart
+# }}}
+# keybindings {{{
+
+# general {{{
+# call 'xmodmap' to display modifier names
+set $mod mod4
+set $alt mod1
+set $control control
+
+bindsym $mod+Shift+p move scratchpad
+bindsym $mod+p scratchpad show
+
+bindsym $mod+Prior exec kb-light.py
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+bindsym $mod+Shift+q exit
+bindsym $mod+Shift+r reload
+
+bindsym $mod+d exec --no-startup-id rofi-launch "drun"
+bindsym $mod+apostrophe exec --no-startup-id rofi-launch "window"
+bindsym $mod+slash exec --no-startup-id rofi-launch "run"
+bindsym $mod+comma exec --no-startup-id rofimoji -c
+
+bindsym control+$mod+l exec screen-lock
+# }}}
+
+# {{{ workspaces
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+bindsym $mod+bracketright workspace $ws_fwd
+bindsym $mod+bracketleft workspace $ws_watch
+bindsym $mod+i workspace $ws_idea
+bindsym $mod+g workspace $ws_git
+bindsym $mod+m workspace $ws_mail; exec check-if-running thunderbird || exec thunderbird
+bindsym $mod+semicolon workspace $ws_comm
+bindsym $mod+plus workspace $ws_browse
+bindsym $mod+minus workspace $ws_media; exec check-if-running spotify || exec spotify
+# move workspace to other monitor
+bindsym $mod+period move workspace to output left; move workspace to output up
+# }}}
+
+# focus {{{
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+t focus child
+
+# }}}
+
+# layout control {{{
+# split in horizontal orientation
+bindsym $mod+b split h
+# split in vertical orientation
+bindsym $mod+v split v
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+# }}}
+
+# container manipulation {{{
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+bindsym $mod+ctrl+f exec --no-startup-id focus.py 
+
+bindsym $mod+c kill
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+bracketright move container to workspace $ws_fwd
+bindsym $mod+Shift+bracketleft move container to workspace $ws_watch
+bindsym $mod+Shift+i move container to workspace $ws_idea
+bindsym $mod+Shift+g move container to workspace $ws_git
+bindsym $mod+Shift+m move container to workspace $ws_mail
+bindsym $mod+Shift+numbersign move container to workspace $ws_comm
+bindsym $mod+Shift+plus move container to workspace $ws_browse
+bindsym $mod+Shift+minus move container to workspace $ws_media
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+# }}}
+
+# resize mode {{{
+# resize window (you can also use the mouse for that)
+mode "resize" {
+# These bindings trigger as soon as you enter the resize mode
+    bindsym l resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym j resize shrink height 10 px or 10 ppt
+        bindsym h resize grow width 10 px or 10 ppt
+
+# back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+# }}}
+# }}}
+# launchers {{{
+bindsym $mod+Return exec i3-sensible-terminal # start a terminal
+# }}}
+# multimedia control {{{
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pavolume.sh --up
+bindsym XF86AudioLowerVolume exec --no-startup-id pavolume.sh --down
+bindsym XF86AudioMute exec --no-startup-id pavolume.sh --togmute
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioStop exec --no-startup-id playerctl stop
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+
+bindsym XF86Tools exec --no-startup-id spotify
+
+bindsym Print exec --no-startup-id GTK_THEME=Arc-Dark xfce4-screenshooter
+# brightness control
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+
+# }}}
+# style {{{
+#assign [class=".*"] title_format "<b>%title</b>"
+font pango:NotoSans Nerd Font 12
+# disable titlebars -- a bit of a hack
+# TODO new_window pixel 2
+hide_edge_borders smart
+
+popup_during_fullscreen smart
+
+workspace_auto_back_and_forth yes
+
+client.focused          #4c7899 #285577 #ffffff #de9028   #285577
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.background       #ffffff
+# }}}
+# monitor keybindings {{{
+bindsym $mod+F9 "exec $HOME/.screenlayout/laptop.sh"
+bindsym $mod+F10 "exec $HOME/.screenlayout/home_one.sh"
+bindsym $mod+F12 "exec $HOME/.screenlayout/work.sh"
+# }}}
+
+bar {
+    position top
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
+}
+
+output "*" background /home/nfode/.wallpaper.png fill
+#output eDP-1 pos 0 0 res 2560x1440
+output eDP-1 scale 1.5
+output DP-2 scale 1
+
+input 1:1:AT_Translated_Set_2_keyboard {
+        xkb_layout us
+        xkb_options caps:swapescape,compose:ralt
+}
+
+default_border none
+input 12136:130:Hoksi_Technology_DURGOD_Taurus_K320 {
+        xkb_layout us
+        xkb_options caps:swapescape,compose:ralt
+}
