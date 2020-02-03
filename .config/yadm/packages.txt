@@ -193,6 +193,7 @@ ncspot-git
 neofetch
 neovim
 nerd-fonts-hack
+nerd-fonts-jetbrains-mono
 nerd-fonts-noto-sans-regular-complete
 net-tools
 netctl
@@ -281,6 +282,7 @@ spotify
 sshfs
 strace
 sudo
+sway
 sysfsutils
 system-config-printer
 systemd
