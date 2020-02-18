@@ -21,7 +21,7 @@ export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
 export PATH=$PATH:/home/nfode/.gem/ruby/2.6.0/bin 
 # }}}
 # plugin setup {{{
-plugins=(archlinux copydir copyfile rsync kubectl git docker history-substring-search colored-man-pages pip helm docker-compose)
+plugins=(archlinux copydir copyfile rsync kubectl git docker history-substring-search colored-man-pages pip helm docker-compose vi-mode)
 ZSH_THEME=powerlevel10k/powerlevel10k
 # }}}
 # source all the settings {{{
@@ -56,8 +56,6 @@ setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a d
 setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 
-
-bindkey -v
 export KEYTIMEOUT=1
 # }}}
 # perl {{{
