@@ -1,4 +1,0 @@
-#!/bin/bash
-
-todotxt-machine -c $HOME/.config/todo-machine/config
-

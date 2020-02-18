@@ -57,6 +57,8 @@ set list
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+set hidden
+
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -302,8 +304,8 @@ nmap <leader>rn <Plug>(coc-rename)
 
 
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+"xmap <leader>a  <Plug>(coc-codeaction-selected)
+"nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
 nmap <leader>ac  <Plug>(coc-codeaction)
