@@ -52,6 +52,7 @@ assign [class="Thunderbird"] $ws_mail
 assign [class="jetbrains-idea"] $ws_idea
 assign [class="jetbrains-webstorm"] $ws_idea
 assign [class="jetbrains-goland"] $ws_idea
+assign [class="jetbrains-pycharm"] $ws_idea
 assign [class="GitKraken"] $ws_git
 for_window [class="Spotify"] move to workspace $ws_media
 # }}}
@@ -232,5 +233,6 @@ client.background       #ffffff
 # monitor keybindings {{{
 bindsym $mod+F9 "exec $HOME/.screenlayout/laptop.sh"
 bindsym $mod+F10 "exec $HOME/.screenlayout/home_one.sh"
+bindsym $mod+F11 "exec $HOME/.screenlayout/home_big.sh"
 bindsym $mod+F12 "exec $HOME/.screenlayout/work.sh"
 # }}}

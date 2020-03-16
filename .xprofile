@@ -14,7 +14,7 @@ $BIN/keymap-setup
 
 host=$(hostname)
 if [ "$host" = "cranky-panini" ]; then
-#    xautolock-start &
+    xautolock-start &
     light-locker &
     nextcloud &
     redshift-gtk &
@@ -30,6 +30,7 @@ nm-applet &
 jetbrains-toolbox --minimize &
 udiskie -2 &
 xset -b
+xset s off -dpms
 xbindkeys
 $BIN/polybar-launch &
 $BIN/setwallpaper &

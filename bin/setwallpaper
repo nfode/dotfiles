@@ -1,3 +1,3 @@
 #!/bin/bash  
 
-feh --bg-max --image-bg "#343a47" ~/.wallpaper.png
+feh --bg-fill --no-fehbg --image-bg "#343a47" ~/.wallpaper.png

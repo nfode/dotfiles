@@ -1,4 +1,4 @@
 #!/bin/bash
 
-xautolock -time 5 -locker $HOME/bin/screen-lock &
+xautolock -time 5 -locker $HOME/bin/screen-lock -detectsleep &
 
