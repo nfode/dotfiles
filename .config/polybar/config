@@ -88,6 +88,7 @@ ws-icon-10 = 4;
 ws-icon-11 = fwd;
 ws-icon-12 = watch;
 ws-icon-13 = term;
+ws-icon-14 = discord;ﭮ
 ws-icon-default = 
 
 
@@ -176,9 +177,9 @@ type = custom/script
 tail = true
 format-padding=2
 format-background=${colors.shade2}
-label = "%output%"
+label=%output%
 exec = pavolume.sh --listen
-click-right = exec pavucontrol
+click-right = exec pavucontrol &
 click-left = pavolume.sh --togmute
 scroll-up = pavolume.sh --up
 scroll-down = pavolume.sh --down
@@ -191,18 +192,18 @@ battery = BAT0
 adapter = AC
 full-at = 99
 
-format-full = "  <label-full> "
+format-full = "   <label-full> "
 format-full-background = ${colors.shade1}
 format-full-padding = 2
 
 format-full-prefix-foreground = ${colors.shade1}
 
 format-charging-background = ${colors.shade1}
-format-charging = "  <label-charging> "
+format-charging = "   <label-charging> "
 format-charging-padding = 1
 
 format-discharging-background = ${colors.shade1}
-format-discharging = "⁣  <label-discharging> "
+format-discharging = "⁣   <label-discharging> "
 format-discharging-padding = 1
 
 ;================================================

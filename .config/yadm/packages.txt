@@ -50,8 +50,9 @@ device-mapper
 dhcpcd
 diff-pdf-git
 diffutils
-discord
+discord-canary
 dive
+dmidecode
 docker
 docker-compose
 e2fsprogs
@@ -75,6 +76,7 @@ filezilla
 findutils
 firefox
 firefox-developer-edition
+firefox-tridactyl-native
 flex
 foomatic-db-engine
 foomatic-db-nonfree-ppds
@@ -97,7 +99,6 @@ glade
 glew-wayland
 glfw-wayland
 glibc
-glide
 gnome-keyring
 gnome-video-effects
 gparted
@@ -115,6 +116,7 @@ gvfs
 gvfs-mtp
 gvfs-smb
 gzip
+helm
 highlight
 hplip-plugin
 htop
@@ -131,6 +133,7 @@ jack2
 jdk-openjdk
 jetbrains-toolbox
 jfsutils
+jitsi-meet-desktop-bin
 jmeter
 jq
 jre-openjdk
@@ -138,7 +141,6 @@ kipi-plugins
 ktlint
 kubectl-bin
 kubefwd-bin
-kubernetes-helm2
 languagetool
 less
 lib32-libstdc++5
@@ -168,7 +170,6 @@ logrotate
 lvm2
 lxappearance
 m4
-mailpile
 make
 man-db
 man-pages
@@ -176,6 +177,7 @@ maven
 mbedtls
 mdadm
 meld
+minikube
 mkdocs
 mongodb34-bin
 mpv
@@ -199,6 +201,7 @@ nmap
 nnn
 nodejs
 notion-app
+noto-fonts
 npm
 nss-mdns
 ntfs-3g
@@ -226,6 +229,7 @@ pkgconf
 playerctl
 polkit-gnome
 polybar-git
+postgresql
 postman-bin
 powerline-fonts
 print-manager
@@ -260,6 +264,7 @@ shards
 shotwell
 simple-scan
 sl
+slack-desktop
 sodalite
 solaar
 speedcrunch-git
@@ -298,11 +303,10 @@ tlp
 tlpui-git
 tmon
 tmux
-tp_smapi
+tomcat9
 tpacpi-bat
 traceroute
 transmission-gtk
-tridactyl-native-git
 ttf-dejavu
 ttf-font-awesome
 ttf-hack
@@ -327,6 +331,7 @@ which
 x11-ssh-askpass
 x86_energy_perf_policy
 xautolock
+xawtv
 xbindkeys
 xclip
 xf86-video-intel
@@ -350,6 +355,7 @@ yarn
 yay
 youtube-dl
 z-git
+zoom
 zotero
 zsh
 zsh-autosuggestions

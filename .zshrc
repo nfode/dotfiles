@@ -90,7 +90,7 @@ POWERLEVEL9K_VI_MODE_FOREGROUND="000"
 # }}}
 # asdf {{{
 source /opt/asdf-vm/asdf.sh
-source /opt/asdf-vm/completions/asdf.bash
+#source /opt/asdf-vm/completion/asdf.bash
 # }}}
 # flip {{{
 flipInit=$FLIP/devops/shell-init.sh
@@ -105,3 +105,4 @@ fi
 # {{{ thefuck
 eval $(thefuck --alias)
 # }}}
+source <(minikube completion zsh)

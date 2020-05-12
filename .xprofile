@@ -14,7 +14,7 @@ $BIN/keymap-setup
 
 host=$(hostname)
 if [ "$host" = "cranky-panini" ]; then
-    xautolock-start &
+    #xautolock-start &
     light-locker &
     nextcloud &
     redshift-gtk &

@@ -57,4 +57,5 @@ Plug 'tpope/vim-surround'
 Plug 'chrisbra/SudoEdit.vim'
 
 Plug 'rhysd/vim-crystal'
+
 call plug#end()
