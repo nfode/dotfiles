@@ -49,24 +49,29 @@
     #commit = 227 bold
 
 [alias]
-    lg = !"git lg1"
-    lg1 = !"git lg1-specific --all"
-    lg2 = !"git lg2-specific --all"
-    lg3 = !"git lg3-specific --all"
-    clg = !"git lg4 --all"
+    lg = !git lg1
+    lg1 = !git lg1-specific --all
+    lg2 = !git lg2-specific --all
+    lg3 = !git lg3-specific --all
+    clg = !git lg4 --all
 
     lg1-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
     lg2-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
     lg3-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
-    lg4=log --decorate --date=short --pretty='%h %ad %an %s'
+    lg4 = log --decorate --date=short --pretty='%h %ad %an %s'
 [diff]
     tool = meld
 [difftool]
     prompt = false
 [difftool "meld"]
-    cmd = meld "$LOCAL" "$REMOTE"
+    cmd = meld $LOCAL $REMOTE
 [merge]
 	tool = meld
 [mergetool "meld"]
-    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+    cmd = meld $LOCAL $MERGED $REMOTE --output $MERGED
 
+[filesystem "Oracle Corporation|11.0.6|/dev/nvme0n1p6"]
+	timestampResolution = 5000 nanoseconds
+	minRacyThreshold = 4762 microseconds
+[pull]
+	ff = only

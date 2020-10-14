@@ -17,6 +17,8 @@ text/plain=nvim.desktop
 x-scheme-handler/postman=Postman.desktop
 application/pdf=org.gnome.Evince.desktop
 x-scheme-handler/ssh=ktelnetservice5.desktop
+x-scheme-handler/gitkraken=GitKraken.desktop
+x-scheme-handler/msteams=teams.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=userapp-Daily-7KHLGZ.desktop;userapp-Daily-A6OMGZ.desktop;userapp-Thunderbird-71HFIZ.desktop;userapp-Thunderbird-G3BGTZ.desktop;
@@ -38,7 +40,7 @@ text/plain=nvim.desktop;sodalite.desktop;visual-studio-code.desktop;oni.desktop;
 video/mp4=vlc.desktop;
 image/png=shotwell-viewer.desktop;gimp.desktop;feh.desktop;org.kde.gwenview.desktop;libreoffice-draw.desktop;
 application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;userapp-Mail Recipient-IFI6FZ.desktop;
-image/jpeg=gimp.desktop;feh.desktop;shotwell-viewer.desktop;org.kde.gwenview.desktop;
+image/jpeg=gimp.desktop;shotwell-viewer.desktop;feh.desktop;org.kde.gwenview.desktop;
 application/msword=libreoffice-writer.desktop;userapp-Mail Recipient-3OKGGZ.desktop;
 application/vnd.oasis.opendocument.graphics=libreoffice-draw.desktop;
 application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice-impress.desktop;
@@ -62,4 +64,6 @@ application/mbox=nvim.desktop;
 image/gif=firefox.desktop;feh.desktop;gimp.desktop;
 inode/directory=shotwell.desktop;feh.desktop;
 application/x-java-archive=org.gnome.FileRoller.desktop;
-image/x-sony-arw=gimp.desktop;
+image/x-sony-arw=shotwell-viewer.desktop;gimp.desktop;
+application/x-java=code-oss.desktop;
+application/x-desktop=vim.desktop;

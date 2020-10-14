@@ -1,3 +1,5 @@
 #!/bin/bash  
+dpi=${1}
+echo "Xft.dpi: $dpi" > .custom-Xresources
 [[ -f ~/.custom-Xresources ]] && xrdb -merge ~/.custom-Xresources 
 exec i3

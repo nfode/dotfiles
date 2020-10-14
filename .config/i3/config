@@ -54,9 +54,13 @@ assign [class="jetbrains-idea"] $ws_idea
 assign [class="jetbrains-webstorm"] $ws_idea
 assign [class="jetbrains-goland"] $ws_idea
 assign [class="jetbrains-pycharm"] $ws_idea
-assign [class="GitKraken"] $ws_git
+assign [class="sublime_merge"] $ws_git
 assign [class="discord"] $ws_discord
 for_window [class="Spotify"] move to workspace $ws_media
+
+for_window [class="Android Emulator(.*)"] floating enable
+
+
 # }}}
 # }}}
 # autostart {{{
@@ -167,7 +171,7 @@ bindsym $mod+Shift+i move container to workspace $ws_idea
 bindsym $mod+Shift+o move container to workspace $ws_discord
 bindsym $mod+Shift+g move container to workspace $ws_git
 bindsym $mod+Shift+m move container to workspace $ws_mail
-bindsym $mod+Shift+numbersign move container to workspace $ws_comm
+bindsym $mod+Shift+semicolon move container to workspace $ws_comm
 bindsym $mod+Shift+plus move container to workspace $ws_browse
 bindsym $mod+Shift+minus move container to workspace $ws_media
 
@@ -237,6 +241,5 @@ client.background       #ffffff
 # monitor keybindings {{{
 bindsym $mod+F9 "exec $HOME/.screenlayout/laptop.sh"
 bindsym $mod+F10 "exec $HOME/.screenlayout/home_one.sh"
-bindsym $mod+F11 "exec $HOME/.screenlayout/home_big.sh"
-bindsym $mod+F12 "exec $HOME/.screenlayout/work.sh"
+bindsym $mod+F11 "exec $HOME/.screenlayout/work.sh"
 # }}}

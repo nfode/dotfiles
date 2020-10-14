@@ -1,7 +1,7 @@
 configuration {
 	lines: 10;
 	columns: 1;
-	font: "Hack Nerd Font 14";
+	font: "Hack Nerd Font 22";
 	bw: 0;
 	fixed-num-lines: true;
 	show-icons: true;

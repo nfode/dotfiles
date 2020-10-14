@@ -19,13 +19,15 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/ndk-bundle
 export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
 export PATH=$PATH:/home/nfode/.gem/ruby/2.6.0/bin 
+
+export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 # }}}
 # plugin setup {{{
 plugins=(archlinux copydir copyfile rsync kubectl git docker history-substring-search colored-man-pages pip helm docker-compose vi-mode)
 ZSH_THEME=powerlevel10k/powerlevel10k
 # }}}
 # source all the settings {{{
-source /usr/share/sodalite/shell-integration.sh
+#source /usr/share/sodalite/shell-integration.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/z/z.sh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -75,7 +77,7 @@ bindkey '^[[B' history-substring-search-down
 # powerlevel10k {{{
 flip_context(){
     local prompt=$(which flip-prompt &> /dev/null && flip-prompt)
-    if [[ $PWD =~ $FLIP(/.*)? ]]; then echo $prompt ;fi
+    echo $prompt
 }
 POWERLEVEL9K_CUSTOM_FLIP_CONTEXT="flip_context"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
