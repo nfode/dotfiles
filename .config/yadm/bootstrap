@@ -15,7 +15,6 @@ restorepkgs $HOME/.yadm/packages.txt
 [ $SHELL = "/usr/bin/zsh" ] || su -c "usermod -s /usr/bin/zsh $USER"
 # }}}
 # vim {{{
-sudo pip2.7 install neovim
 sudo pip install neovim
 # }}}
 # systemd {{{
@@ -42,7 +41,6 @@ sudo cp $HOME/.config/lightdm-slick-greeter/slick-greeter.conf /etc/lightdm/slic
 # node without sudo {{{
 mkdir .node
 echo "prefix = ~/.node" > .npmrc
-npm install ionic cordova
 # }}}
 # {{{ oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
