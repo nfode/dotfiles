@@ -51,10 +51,11 @@ set $ws_watch "watch"
 assign [class="TelegramDesktop"] $ws_comm
 assign [class="Thunderbird"] $ws_mail
 assign [class="jetbrains-idea"] $ws_idea
+assign [class="jetbrains-datagrip"] $ws_idea
 assign [class="jetbrains-webstorm"] $ws_idea
 assign [class="jetbrains-goland"] $ws_idea
 assign [class="jetbrains-pycharm"] $ws_idea
-assign [class="sublime_merge"] $ws_git
+assign [class="Sublime_merge"] $ws_git
 assign [class="discord"] $ws_discord
 for_window [class="Spotify"] move to workspace $ws_media
 
