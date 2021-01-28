@@ -24,13 +24,13 @@ export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 # }}}
 # plugin setup {{{
 plugins=(archlinux copydir copyfile rsync kubectl git docker history-substring-search colored-man-pages pip helm docker-compose vi-mode)
-ZSH_THEME=powerlevel10k/powerlevel10k
 # }}}
 # source all the settings {{{
 #source /usr/share/sodalite/shell-integration.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/z/z.sh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source $ZSH/oh-my-zsh.sh
 for file in ~/.zshconfig/*; do
     source "$file"

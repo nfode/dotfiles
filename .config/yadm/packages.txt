@@ -51,7 +51,6 @@ device-mapper
 dhcpcd
 diffutils
 discord-canary
-dive
 dmidecode
 docker
 docker-compose
@@ -62,13 +61,11 @@ elixir
 evince-no-gnome
 evince-synctex
 evtest
-exa-git
+exa
 exfat-utils
 fakeroot
-fbrokendesktop
 fd
 feh
-fff-git
 file
 file-roller
 filesystem
@@ -85,19 +82,13 @@ frei0r-plugins
 fzf
 gavl
 gawk
-gcc
-gcc-fortran
-gcc-libs
 gettext
 ghex
 gimp
-git-extras-git
-gitbatch-bin
 glade
 glew-wayland
 glfw-wayland
 glibc
-glow
 gnome-keyring
 gnome-video-effects
 gparted
@@ -108,7 +99,6 @@ grep
 groff
 grub
 gtk-engine-murrine
-gtklp
 gucharmap
 gutenprint
 gvfs
@@ -124,7 +114,6 @@ hunspell-de
 hyperv
 i3-wm
 inetutils
-inklingreader-git
 insomnia-bin
 intel-ucode
 iproute2
@@ -143,9 +132,6 @@ kubectl-bin
 kubefwd-bin
 languagetool
 less
-lib32-libstdc++5
-lib32-ncurses
-lib32-zlib
 libgnome-keyring
 libgnomekbd
 libgssglue
@@ -167,7 +153,6 @@ lightning
 linux
 linux-headers
 logrotate
-lsdesktopf
 lvm2
 lxappearance
 m4
@@ -183,11 +168,9 @@ mitmproxy
 mkdocs
 mongodb34-bin
 mpv
-mtm-git
 namcap
 nano
 ncdu
-ncspot-git
 neofetch
 neovim
 nerd-fonts-hack
@@ -198,7 +181,6 @@ netctl
 network-manager-applet
 networkmanager-openconnect
 nextcloud-client
-ngrok
 nmap
 nnn
 nodejs
@@ -213,7 +195,6 @@ os-prober
 p7zip
 pacman
 pacman-contrib
-pacvim-git
 paman
 paprefs
 pass
@@ -285,8 +266,6 @@ systemd-sysvcompat
 tar
 telegram-desktop
 termite
-texinfo
-textidote-bin
 thefuck
 thunar
 thunar-archive-plugin
@@ -345,7 +324,7 @@ xorg-xinput
 xorg-xmessage
 xorg-xprop
 xorg-xrandr
-yadm-git
+yadm
 yarn
 yay
 youtube-dl
