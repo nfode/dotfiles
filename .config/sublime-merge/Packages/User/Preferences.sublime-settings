@@ -1,0 +1,11 @@
+{
+	"font_face": "NerdFonts Hack Mono",
+	"font_size": 9,
+	"time_format": "24h",
+    "theme": "Merge Dark.sublime-theme",
+	"side_bar_layout": "columns",
+    "ui_scale": 1.4,
+	"image_diff_style": "side-by-side",
+	"hardware_acceleration": "opengl",
+	/*"editor_path": "nvim",*/
+}
