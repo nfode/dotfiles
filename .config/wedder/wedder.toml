@@ -1,0 +1,44 @@
+# available tags:
+#   <icon>
+#   <temperature_celsius>
+#   <temperature_fahrenheit>
+#   <temperature_kelvin>
+# default: '<icon> <temperature_celsius>°C'
+format = '<icon>  <temperature>°C'
+
+# in seconds
+# default: 300
+interval = 300
+
+[weather]
+# available providers:
+#   OpenWeatherMap
+# default: OpenWeatherMap
+provider = 'OpenWeatherMap'
+# enter your API key here
+api_key = '5262f4a0a82032cb7d36ba0fa1f36247'
+
+[location]
+# available providers:
+#   Ip
+#   Manual
+# default: Ip
+provider = 'IpApi'
+# if you choose 'Manual' as provider, you can set your coordinates
+#lat = 51.509865
+#lon = -0.118092
+
+# install one of the patched fonts from Nerd Fonts to display the icons:
+# https://github.com/ryanoasis/nerd-fonts#patched-fonts
+[icons]
+# the icons displayed here are also the defaults
+clear_sky = ''
+few_clouds = ''
+clouds = ''
+many_clouds = ''
+rain_sun = ''
+rain = ''
+heavy_rain = ''
+thunderstorm = ''
+snow = ''
+mist = ''
