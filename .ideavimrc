@@ -1,0 +1,23 @@
+set visualbell
+set noerrorbells
+set surround
+set multiple-cursors
+
+set number relativenumber
+set nu rnu
+
+let mapleader=" "
+
+nnoremap <leader>rl :set relativenumber!<cr>
+
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
