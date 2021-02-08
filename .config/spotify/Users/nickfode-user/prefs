@@ -1,3 +1,2 @@
 gaia.known_zeroconf="{\"3a7314c66a6a99d8325d94a7d35b1c39a611145e\":{\"known\":false,\"popularity\":3,\"prio\":\"connect\",\"shown\":0}}"
 app.browser.zoom-level=250
-app.player.volume=32767

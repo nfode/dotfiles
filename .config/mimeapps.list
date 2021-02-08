@@ -20,7 +20,7 @@ x-scheme-handler/ssh=ktelnetservice5.desktop
 x-scheme-handler/gitkraken=GitKraken.desktop
 x-scheme-handler/msteams=teams.desktop
 application/ppdf=FoxitReader.desktop
-x-scheme-handler/tg=userapp-Telegram Desktop-T686W0.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-KKBEY0.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=userapp-Daily-7KHLGZ.desktop;userapp-Daily-A6OMGZ.desktop;userapp-Thunderbird-71HFIZ.desktop;userapp-Thunderbird-G3BGTZ.desktop;userapp-Thunderbird-NFMDT0.desktop;userapp-Thunderbird-GO3AT0.desktop;
@@ -69,4 +69,4 @@ application/x-java-archive=org.gnome.FileRoller.desktop;
 image/x-sony-arw=shotwell-viewer.desktop;gimp.desktop;
 application/x-java=code-oss.desktop;
 application/x-desktop=vim.desktop;
-x-scheme-handler/tg=userapp-Telegram Desktop-T686W0.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-T686W0.desktop;userapp-Telegram Desktop-KKBEY0.desktop;
