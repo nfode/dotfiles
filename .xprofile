@@ -10,6 +10,7 @@ if [ -n "$DESKTOP_SESSION" ];then
     export SSH_AUTH_SOCK
 fi
 
+ibus-daemon -drx &
 $BIN/keymap-setup
 
 host=$(hostname)

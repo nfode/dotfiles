@@ -1,3 +1,5 @@
+include "%L"
+
 <Multi_key> <a> <a>			: "ä" adiaeresis
 <Multi_key> <A> <A>		: "Ä" Adiaeresis
 <Multi_key> <u> <u>			: "ü" udiaeresis
