@@ -242,5 +242,6 @@ client.background       #ffffff
 # monitor keybindings {{{
 bindsym $mod+F9 "exec $HOME/.screenlayout/laptop.sh"
 bindsym $mod+F10 "exec $HOME/.screenlayout/home_one.sh"
-bindsym $mod+F11 "exec $HOME/.screenlayout/work.sh"
+bindsym $mod+F11 "exec $HOME/.screenlayout/home_big.sh"
+bindsym $mod+F12 "exec $HOME/.screenlayout/work.sh"
 # }}}
