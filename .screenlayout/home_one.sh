@@ -1,1 +1,0 @@
-home_one.sh##h.madpike
