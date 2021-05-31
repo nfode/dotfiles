@@ -1,8 +1,5 @@
-font:
-  normal:
-    family: JetBrainsMono Nerd Font Mono
-  size: 16.0
-
+import:
+  - ~/.config/alacritty/font.yml
 key_bindings:
   - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
 
