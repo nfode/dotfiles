@@ -23,12 +23,11 @@ export PATH=$PATH:/home/nfode/.gem/ruby/2.6.0/bin
 export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 # }}}
 # plugin setup {{{
-plugins=(archlinux copydir copyfile rsync kubectl git docker history-substring-search colored-man-pages pip helm docker-compose vi-mode)
+plugins=(archlinux copydir copyfile rsync kubectl git docker history-substring-search colored-man-pages pip helm docker-compose vi-mode zsh-z)
 # }}}
 # source all the settings {{{
 #source /usr/share/sodalite/shell-integration.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/z/z.sh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source $ZSH/oh-my-zsh.sh
@@ -97,12 +96,6 @@ source /opt/asdf-vm/asdf.sh
 # flip {{{
 flipInit=$FLIP/devops/shell-init.sh
 [ -f "$flipInit" ] && source "$flipInit"
-# }}}
-# {{{ fix intellij
-if [[ $TERM == xterm-256color && -z "$TERMINAL_EMULATOR" && $TERMINAL_EMULATOR != "JetBrains-JediTerm" ]]; then
-  . /etc/profile.d/vte.sh
-  __vte_osc7
-fi
 # }}}
 # {{{ thefuck
 eval $(thefuck --alias)
