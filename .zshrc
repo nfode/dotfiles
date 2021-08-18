@@ -100,4 +100,3 @@ flipInit=$FLIP/devops/shell-init.sh
 # {{{ thefuck
 eval $(thefuck --alias)
 # }}}
-source <(minikube completion zsh)

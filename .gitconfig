@@ -25,19 +25,25 @@
 # see https://github.com/git/git/tree/master/contrib/diff-highlight
 [color "diff-highlight"]
     # the part that has not changed
-    oldNormal = red dim
-    newNormal = green dim
+	oldNormal = red bold
+	newNormal = green bold
 
     # the part that has changed
-    oldHighlight = red
-    newHighlight = green
+	oldHighlight = red bold 52
+	newHighlight = green bold 22
 
 
 
 
 [color "diff"]
     # whitespaces at the end of the line
-    whitespace = red ul
+	whitespace = red reverse
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
 
     # colour of the file header
     #meta = 227
@@ -75,3 +81,5 @@
 	minRacyThreshold = 4762 microseconds
 [pull]
 	ff = only
+[color]
+	ui = true
