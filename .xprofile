@@ -1,4 +1,6 @@
 # sourced by lightdm on the start
+#
+[[ -f ~/.Xresources ]]
 
 export LANG="en_US.UTF-8"
 [[ -f ~/.zshenv ]] && source ~/.zshenv
@@ -18,14 +20,22 @@ if [ "$host" = "cranky-panini" ]; then
     #xautolock-start &
     light-locker &
     nextcloud &
-    redshift-gtk &
     # fu mendeley
     xdg-mime default org.gnome.Evince.desktop application/pdf &
 fi
 
+
+redshift-gtk &
+
 # enable horizontal scrolling with 2 fingers
 xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Horizontal Scroll Enabled" 1
 xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
+
+# enable scrolling with mxergo trackball by pressing the mouse forward button
+xinput --set-prop "Logitech MX Ergo Multi-Device Trackball " "libinput Button Scrolling Button" 9
+xinput --set-prop "Logitech MX Ergo Multi-Device Trackball " "libinput Scroll Method Enabled" 0 0 1
+
+solaar -w hide &
 picom -c &
 nm-applet &
 jetbrains-toolbox --minimize &

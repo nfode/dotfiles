@@ -55,7 +55,7 @@ module-margin-right = 0
 font-0 = NotoSans Nerd Font:style=Regular:size=18;3
 modules-left = i3
 modules-center = date
-modules-right = musicinfo weather xautolock pavolume battery wireless-network
+modules-right = musicinfo weather xautolock pulseaudio battery wireless-network
 tray-position = right
 tray-padding = 9
 tray-transparent = false
@@ -172,17 +172,19 @@ format-padding = 2
 
 ;================================================
 
-[module/pavolume]
+[module/pulseaudio]
 type = custom/script
 tail = true
 format-padding=2
 format-background=${colors.shade2}
-label=%output%
-exec = pavolume.sh --listen
+
+
+exec = pulseaudio-control --icons-volume " , " --icon-muted " " --node-blacklist "*.monitor" --node-nickname "*: " listen
 click-right = exec pavucontrol &
-click-left = pavolume.sh --togmute
-scroll-up = pavolume.sh --up
-scroll-down = pavolume.sh --down
+click-left = pulseaudio-control togmute
+click-middle = pulseaudio-control --node-blacklist "alsa_output.pci-0000_01_00.1.hdmi-stereo-extra2" --node-blacklist "*.monitor" next-node
+scroll-up = pulseaudio-control --volume-max 130 up
+scroll-down = pulseaudio-control --volume-max 130 down
 
 ;================================================
 
@@ -199,12 +201,15 @@ format-full-padding = 2
 format-full-prefix-foreground = ${colors.shade1}
 
 format-charging-background = ${colors.shade1}
-format-charging = "   <label-charging> "
-format-charging-padding = 1
+format-charging = "  <label-charging> "
+format-charging-padding = 2
 
 format-discharging-background = ${colors.shade1}
-format-discharging = "⁣   <label-discharging> "
-format-discharging-padding = 1
+format-discharging =  <label-discharging>
+format-discharging-padding = 2
+
+; Framerate in milliseconds
+animation-discharging-framerate = 500
 
 ;================================================
 

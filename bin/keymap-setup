@@ -2,3 +2,4 @@
 
 setxkbmap -layout us -option caps:swapescape -option compose:ralt
 
+xmodmap $HOME/.custom-keymap

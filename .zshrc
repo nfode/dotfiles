@@ -8,6 +8,8 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 export ZSH=$HOME/.oh-my-zsh
 export TERM=xterm-256color
+
+export FZF_BASE=/usr/share/fzf
 # }}}
 # setup path {{{
 export PATH=$PATH:$HOME/.cargo/env
@@ -23,7 +25,7 @@ export PATH=$PATH:/home/nfode/.gem/ruby/2.6.0/bin
 export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 # }}}
 # plugin setup {{{
-plugins=(archlinux copydir copyfile rsync kubectl git docker history-substring-search colored-man-pages pip helm docker-compose vi-mode zsh-z)
+plugins=(archlinux copyfile copyfile copypath rsync kubectl git docker history-substring-search colored-man-pages pip helm docker-compose vi-mode zsh-z fzf fzf-tab)
 # }}}
 # source all the settings {{{
 #source /usr/share/sodalite/shell-integration.sh
@@ -38,12 +40,6 @@ done
 [ -f $BWHASH_FILE ] && source $BWHASH_FILE
 # }}}
 # fzf {{{
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
-_fzf_compgen_path() {
-    command  fd --follow --exclude ".git" . "$1"
-}
-
 # Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
     command fd --type d --follow --exclude ".git" . "$1"
@@ -90,13 +86,23 @@ POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND="004"
 POWERLEVEL9K_VI_MODE_FOREGROUND="000"
 # }}}
 # asdf {{{
-source /opt/asdf-vm/asdf.sh
+#source /opt/asdf-vm/asdf.sh
 #source /opt/asdf-vm/completion/asdf.bash
 # }}}
 # flip {{{
 flipInit=$FLIP/devops/shell-init.sh
 [ -f "$flipInit" ] && source "$flipInit"
+alias fd=/usr/bin/fd
 # }}}
 # {{{ thefuck
 eval $(thefuck --alias)
 # }}}
+#  {{{ vi-mode
+bindkey -M vicmd 'V' edit-command-line # this remaps `vv` to `V` (but overrides `visual-mode`)
+#  }}}
+
+alias discord='discord --no-sandbox'
+source <(stern --completion=zsh)
+
+source <(k6 completion zsh)
+

@@ -1,7 +1,6 @@
 configuration {
 	lines: 10;
 	columns: 1;
-	font: "Hack Nerd Font 22";
 	bw: 0;
 	fixed-num-lines: true;
 	show-icons: true;
@@ -13,3 +12,5 @@ configuration {
 	display-drun: "";
 	kb-remove-char-back: "BackSpace";
 }
+
+@theme "themes/merged"

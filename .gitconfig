@@ -83,3 +83,5 @@
 	ff = only
 [color]
 	ui = true
+[safe]
+	directory = /opt/flutter

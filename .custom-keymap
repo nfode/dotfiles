@@ -4,4 +4,4 @@ keysym a = a A Left
 keysym d = d D Right
 keysym s = s S Down
 keysym w = w W Up
-
+keycode 183 = F14

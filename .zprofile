@@ -17,3 +17,7 @@ if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 2 ]; then
     source ~/.xprofile
     XKB_DEFAULT_LAYOUT=us exec sway &> log.txt
 fi
+
+
+# Added by Toolbox App
+export PATH="$PATH:/home/nfode/.local/share/JetBrains/Toolbox/scripts"

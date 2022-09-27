@@ -2,22 +2,97 @@ set visualbell
 set noerrorbells
 set surround
 set multiple-cursors
+set hls
+set ignorecase smartcase
+set incsearch
+set showmode
 
 set number relativenumber
 set nu rnu
 
 let mapleader=" "
 
-nnoremap <leader>rl :set relativenumber!<cr>
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :source ~/.ideavimrc<CR>
+
+" nnoremap <leader>rl :set relativenumber!<cr>
 
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+vnoremap <A-j> :m '>+1<CR>gv=gv<CR>
+vnoremap <A-k> :m '<-2<CR>gv=gv<CR>
 
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+
+noremap <leader>y "*y
+noremap <leader>yy "*Y
+noremap <leader>p "*p
+noremap <leader>P "*P
+
+map <leader><leader> :action GotoAction<CR>
+
+" Actions
+map <leader>qq :action Exit<CR>
+
+map <leader>wd :action CloseEditor<CR>
+map <leader>ws :action SplitHorizontally<CR>
+map <leader>wv :action SplitVertically<CR>
+map <leader>wl :action NextSplitter<CR>
+map <leader>wh :action PrevSplitter<CR>
+map <leader>wm :action ToggleDistractionFreeMode<Cr>
+map <leader>wM :action ToggleFullScreen<CR>
+
+nnoremap <leader>c :action CommentByLineComment<CR>
+nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
+nnoremap <Leader>=  :action ReformatCode<CR>
+nnoremap <leader>o :action OptimizeImports<CR>
+
+nnoremap <leader>d :action CloseContent<CR>
+nnoremap <leader>f :action FileStructurePopup<CR>
+nnoremap <leader>a :action GotoAction<CR>
+nnoremap <leader>h :action RecentFiles<CR>
+nnoremap <leader>j :action GotoClass<CR>
+nnoremap <leader>l :action GotoSymbol<CR>
+nnoremap <leader>k :action GotoFile<CR>
+nnoremap <leader>g  :action Generate<CR>
+map <leader>z <Action>(ToggleDistractionFreeMode)
+
+nnoremap <leader>u :action FindUsages<CR>
+nnoremap <leader>h :action CallHierarchy<CR>
+nnoremap <leader>b :action ShowNavBar<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gp :action GotoSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
+nnoremap <c-o> :action Back<CR>
+nnoremap <c-i> :action Forward<CR>
+nnoremap g; :action JumpToLastChange<CR>
+nnoremap g, :action JumpToNextChange<CR>
+
+nnoremap ,r :action ContextRun<CR>
+nnoremap ,c :action RunClass<CR>
+nnoremap ,f :action ChooseRunConfiguration<CR>
+nnoremap ,t :action ActivateRunToolWindow<CR>
+nnoremap ,e :action Rerun<CR>
+
+nnoremap ,b :action ToggleLineBreakpoint<CR>
+nnoremap ,d :action ContextDebug<CR>
+nnoremap ,n :action ActivateDebugToolWindow<CR>
+
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+
+nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
+
+" Project Management
+map <leader>pt :action ActivateProjectToolWindow<CR>
+
+" Search
+map <leader>sf :action Find<CR>
+map <leader>sp :action FindInPath<CR>

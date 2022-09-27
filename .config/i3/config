@@ -88,7 +88,7 @@ bindsym $mod+Shift+r "reload; exec i3-refresh"
 bindsym $mod+d exec --no-startup-id rofi-launch "drun"
 bindsym $mod+apostrophe exec --no-startup-id rofi-launch "window"
 bindsym $mod+slash exec --no-startup-id rofi-launch "run"
-bindsym $mod+comma exec --no-startup-id rofimoji --action type
+bindsym $mod+comma exec --no-startup-id rofi -show emoji -modi "emoji:/usr/bin/rofimoji --action copy"
 
 bindsym control+$mod+l exec screen-lock
 # }}}
@@ -213,8 +213,6 @@ bindsym XF86AudioStop exec --no-startup-id playerctl stop
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
-bindsym XF86Tools exec --no-startup-id spotify
-
 bindsym Print exec --no-startup-id GTK_THEME=Arc-Dark xfce4-screenshooter
 # brightness control
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
@@ -227,6 +225,9 @@ font pango:NotoSans Nerd Font 12
 # disable titlebars -- a bit of a hack
 new_window pixel 2
 hide_edge_borders smart
+
+default_border pixel 1
+
 
 popup_during_fullscreen smart
 
@@ -243,5 +244,4 @@ client.background       #ffffff
 bindsym $mod+F9 "exec $HOME/.screenlayout/laptop.sh"
 bindsym $mod+F10 "exec $HOME/.screenlayout/home_one.sh"
 bindsym $mod+F11 "exec $HOME/.screenlayout/home_big.sh"
-bindsym $mod+F12 "exec $HOME/.screenlayout/work.sh"
 # }}}

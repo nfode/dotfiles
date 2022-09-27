@@ -10,8 +10,8 @@
 
 # previous song
 "playerctl previous"
-b:8
+#b:8
 
 # next song
 "playerctl next"
-b:9
+#b:9

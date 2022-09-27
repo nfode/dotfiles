@@ -1,11 +1,11 @@
 include "%L"
 
-<Multi_key> <a> <a>			: "ä" adiaeresis
-<Multi_key> <A> <A>		: "Ä" Adiaeresis
-<Multi_key> <u> <u>			: "ü" udiaeresis
-<Multi_key> <U> <U>			: "Ü" Udiaeresis
-<Multi_key> <o> <o>			: "ö" odiaeresis
-<Multi_key> <O> <O>			: "Ö" Odiaeresis
+<Multi_key> <a> 			: "ä" adiaeresis
+<Multi_key> <A> 		: "Ä" Adiaeresis
+<Multi_key> <u> 			: "ü" udiaeresis
+<Multi_key> <U> 			: "Ü" Udiaeresis
+<Multi_key> <o> 			: "ö" odiaeresis
+<Multi_key> <O> 			: "Ö" Odiaeresis
 <Multi_key> <s> 			: "ß" Odiaeresis
 <Multi_key> <e> 			: "€" 
 
