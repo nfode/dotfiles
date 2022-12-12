@@ -55,7 +55,7 @@ module-margin-right = 0
 font-0 = NotoSans Nerd Font:style=Regular:size=18;3
 modules-left = i3
 modules-center = date
-modules-right = musicinfo weather xautolock pulseaudio battery wireless-network
+modules-right = musicinfo xautolock pulseaudio battery wireless-network
 tray-position = right
 tray-padding = 9
 tray-transparent = false

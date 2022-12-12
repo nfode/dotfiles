@@ -11,4 +11,5 @@
 	/*"editor_path": "nvim",*/
 	"diff_style": "inline",
 	"expand_merge_commits_by_default": true,
+	"editor_path": "/usr/bin/nvim",
 }

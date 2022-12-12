@@ -25,7 +25,7 @@ export PATH=$PATH:/home/nfode/.gem/ruby/2.6.0/bin
 export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 # }}}
 # plugin setup {{{
-plugins=(archlinux copyfile copyfile copypath rsync kubectl git docker history-substring-search colored-man-pages pip helm docker-compose vi-mode zsh-z fzf fzf-tab)
+plugins=(archlinux copyfile copyfile copypath rsync git docker history-substring-search colored-man-pages pip helm docker-compose vi-mode zsh-z fzf fzf-tab)
 # }}}
 # source all the settings {{{
 #source /usr/share/sodalite/shell-integration.sh
@@ -99,6 +99,19 @@ eval $(thefuck --alias)
 # }}}
 #  {{{ vi-mode
 bindkey -M vicmd 'V' edit-command-line # this remaps `vv` to `V` (but overrides `visual-mode`)
+#  }}}
+#  {{{ fzf-tab
+## disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# preview directory's content with exa when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+# switch group using `,` and `.`
+zstyle ':fzf-tab:*' switch-group ',' '.'
+zstyle ':fzf-tab:*' fzf-bindings 'ctrl-a:toggle-all'
 #  }}}
 
 alias discord='discord --no-sandbox'
